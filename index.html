@@ -2,32 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rational Prince — Institutional Macro Research</title>
-
-<meta name="author" content="Rational Prince">
-<meta name="description" content="Sovereign capital flows, energy markets, and geopolitics — institutional-grade macro research for serious allocators. Think Rationally. Build Wealth.">
-<meta name="keywords" content="sovereign wealth fund, biggest sovereign wealth fund, sovereign wealth fund investment strategy, sovereign wealth fund news, macro research, macro research analyst, energy market analysis, oil market analysis, geopolitical risk investing, defense investing, commodity markets, capital flows">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strait of Hormuz, Defense Stocks &amp; Sovereign Wealth Funds — RationalPrince Macro Research</title>
+<meta name="description" content="Who controls the Strait of Hormuz, how wide it is, and what a closure does to oil. Institutional macro research on energy chokepoints, defense stocks, and sovereign wealth funds.">
 <link rel="canonical" href="https://rationalprince.com/">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#07080A">
-
+<meta property="og:title" content="Strait of Hormuz, Defense Stocks &amp; Sovereign Wealth Funds — RationalPrince">
+<meta property="og:description" content="Why the Strait of Hormuz matters, who controls it, and how energy chokepoints, defense procurement, and sovereign wealth funds price risk.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Rational Prince">
-<meta property="og:title" content="Rational Prince — Institutional Macro Research">
-<meta property="og:description" content="Sovereign capital flows, energy markets, and geopolitics for serious allocators.">
 <meta property="og:url" content="https://rationalprince.com/">
-<meta property="og:image" content="https://rationalprince.com/og-cover.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rational Prince — Institutional Macro Research">
-<meta name="twitter:description" content="Sovereign capital flows, energy markets, and geopolitics for serious allocators.">
-<meta name="twitter:image" content="https://rationalprince.com/og-cover.jpg">
+<meta name="theme-color" content="#07090B">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- ==== GOOGLE ANALYTICS: paste your GA4 ID below (replace G-XXXXXXXXXX) ==== -->
+<!-- ================= GA4 — paste your Measurement ID where marked ================= -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -37,577 +26,700 @@
 </script>
 
 <style>
+/* ============================ TOKENS ============================ */
 :root{
-  --ink:#07080A;
-  --ink-2:#0C0E11;
-  --ink-3:#111418;
-  --gold:#C6A15B;
-  --gold-soft:#E3C88C;
-  --rule:rgba(198,161,91,.20);
-  --rule-soft:rgba(216,214,209,.10);
-  --text:#DCDAD4;
-  --muted:#8B8880;
-  --up:#5AA277;
-  --down:#B45A50;
-  --display:"Cormorant Garamond",Georgia,serif;
-  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  --wrap:1180px;
-  --gut:clamp(20px,5vw,56px);
+  --ink:        #07090B;   /* page ground */
+  --panel:      #0D1116;   /* raised surface */
+  --panel-2:    #11161C;   /* deeper inset */
+  --rule:       #1E252D;   /* hairlines */
+  --gold:       #C8A96B;   /* antique gold — primary accent */
+  --gold-lift:  #E3C88E;   /* hover / highlight */
+  --bone:       #E9E5DC;   /* primary text */
+  --muted:      #79838F;   /* secondary text */
+  --signal:     #B4423A;   /* risk / scarcity only */
+
+  --display: 'Cormorant Garamond', Georgia, serif;
+  --body:    'IBM Plex Sans', system-ui, sans-serif;
+  --mono:    'IBM Plex Mono', ui-monospace, monospace;
+
+  --gut: clamp(20px, 5vw, 64px);
+  --maxw: 1220px;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
 body{
-  margin:0;background:var(--ink);color:var(--text);
-  font-family:var(--mono);font-weight:300;font-size:15px;line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-  background-image:
-    radial-gradient(900px 480px at 12% -10%, rgba(198,161,91,.07), transparent 70%),
-    radial-gradient(700px 400px at 95% 5%, rgba(198,161,91,.04), transparent 70%);
-  background-attachment:fixed;
+  margin:0; background:var(--ink); color:var(--bone);
+  font-family:var(--body); font-weight:300; font-size:16.5px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
 }
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.01em;margin:0}
-p{margin:0 0 1em}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+
+/* faint terminal column grid */
+body::before{
+  content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:linear-gradient(90deg, rgba(200,169,107,.055) 1px, transparent 1px);
+  background-size:min(16.6vw,180px) 100%;
+  mask-image:linear-gradient(180deg, transparent, #000 18%, #000 72%, transparent);
+}
+
+.wrap{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--gut); position:relative; z-index:1; }
+.rule{ height:1px; background:var(--rule); border:0; margin:0; }
+
+/* ============================ TYPE ============================ */
 .eyebrow{
-  font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;
-  color:var(--gold);font-weight:500;
+  font-family:var(--mono); font-size:11px; font-weight:500;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--gold);
 }
-.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:#0A0A0A;padding:10px 16px;z-index:99}
-.skip:focus{left:8px;top:8px}
-a:focus-visible,button:focus-visible,input:focus-visible{
-  outline:2px solid var(--gold-soft);outline-offset:3px;border-radius:2px;
-}
+.eyebrow.dim{ color:var(--muted); }
 
-/* ---------- TICKER ---------- */
-.tape{
-  border-bottom:1px solid var(--rule);background:#050608;
-  position:relative;overflow:hidden;
-}
-.tape-inner{display:flex;align-items:center;gap:0}
-.tape-label{
-  flex:0 0 auto;padding:0 14px;height:34px;display:flex;align-items:center;gap:8px;
-  border-right:1px solid var(--rule);background:var(--ink-2);
-  font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);white-space:nowrap;
-}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold)}
-.tape-track{flex:1 1 auto;overflow:hidden;height:34px;display:flex;align-items:center;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 94%,transparent)}
-.tape-run{display:flex;gap:34px;white-space:nowrap;padding-left:34px;animation:tape 46s linear infinite}
-.tape:hover .tape-run{animation-play-state:paused}
-.tick{font-size:11px;letter-spacing:.09em;color:var(--muted)}
-.tick b{color:var(--text);font-weight:500;margin:0 4px}
-.tick .u{color:var(--up)} .tick .d{color:var(--down)}
-@keyframes tape{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; margin:0; }
+h1{ font-size:clamp(46px, 8.4vw, 108px); line-height:.96; }
+h2{ font-size:clamp(32px, 4.6vw, 58px); line-height:1.06; }
+h3{ font-size:clamp(24px, 2.8vw, 33px); line-height:1.15; }
+.lede{ font-size:clamp(17px,1.9vw,20px); color:#B9C0C8; max-width:60ch; }
+em{ font-style:italic; color:var(--gold-lift); }
 
-/* ---------- HEADER ---------- */
-header{
-  position:sticky;top:0;z-index:40;
-  background:rgba(7,8,10,.86);backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--rule-soft);
+/* ============================ NAV ============================ */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:60;
+  border-bottom:1px solid transparent; transition:background .4s, border-color .4s, backdrop-filter .4s;
 }
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px}
-.brand{font-family:var(--display);font-size:22px;letter-spacing:.06em;color:#fff}
-.brand span{color:var(--gold)}
-.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
-.nav a.link{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);transition:color .2s}
-.nav a.link:hover{color:var(--gold-soft)}
+.nav.stuck{ background:rgba(7,9,11,.86); backdrop-filter:blur(14px); border-bottom-color:var(--rule); }
+.nav-in{ display:flex; align-items:center; justify-content:space-between; gap:24px; height:66px; }
+.mark{ display:flex; align-items:baseline; gap:11px; }
+.mark b{ font-family:var(--display); font-weight:500; font-size:23px; letter-spacing:.02em; }
+.mark span{ font-family:var(--mono); font-size:9.5px; letter-spacing:.24em; color:var(--gold); text-transform:uppercase; }
+.nav-links{ display:flex; align-items:center; gap:34px; }
+.nav-links a{ font-family:var(--mono); font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); transition:color .25s; }
+.nav-links a:hover, .nav-links a:focus-visible{ color:var(--bone); }
+.nav-cta{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--gold); border:1px solid rgba(200,169,107,.4); padding:9px 17px; transition:background .25s, color .25s;
+}
+.nav-cta:hover{ background:var(--gold); color:var(--ink); }
+@media(max-width:820px){ .nav-links{ display:none; } }
+
+/* ============================ HERO ============================ */
+.hero{ padding:min(23vh,190px) 0 0; position:relative; }
+.status{ display:flex; align-items:center; gap:12px; margin-bottom:34px; }
+.dot{ width:6px; height:6px; background:var(--gold); border-radius:50%; box-shadow:0 0 0 0 rgba(200,169,107,.6); animation:pulse 2.6s infinite; }
+@keyframes pulse{ 70%{ box-shadow:0 0 0 9px rgba(200,169,107,0);} 100%{ box-shadow:0 0 0 0 rgba(200,169,107,0);} }
+
+h1 .line{ display:block; }
+h1 .gold{ color:var(--gold); font-style:italic; font-weight:300; }
+.typed{ font-family:var(--mono); font-size:clamp(12px,1.5vw,14px); letter-spacing:.06em; color:var(--muted); margin:30px 0 0; min-height:1.6em; }
+.typed .cur{ display:inline-block; width:8px; height:1em; background:var(--gold); transform:translateY(2px); animation:blink 1s steps(1) infinite; }
+@keyframes blink{ 50%{ opacity:0; } }
+
+.hero-grid{ display:grid; grid-template-columns:1.35fr .65fr; gap:clamp(28px,5vw,72px); align-items:end; margin-top:44px; }
+@media(max-width:900px){ .hero-grid{ grid-template-columns:1fr; align-items:start; } }
+.hero-aside{ border-left:1px solid var(--rule); padding-left:26px; }
+.hero-aside p{ margin:0 0 22px; font-size:15.5px; color:#AEB6BF; }
+
+.btn-row{ display:flex; flex-wrap:wrap; gap:14px; margin-top:6px; }
 .btn{
-  display:inline-block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
-  padding:11px 20px;border:1px solid var(--gold);color:var(--gold);transition:.22s;
+  font-family:var(--mono); font-size:12px; letter-spacing:.17em; text-transform:uppercase;
+  padding:15px 26px; border:1px solid var(--gold); color:var(--ink); background:var(--gold);
+  cursor:pointer; transition:background .25s, color .25s, border-color .25s;
 }
-.btn:hover{background:var(--gold);color:#0A0A0A}
-.btn-solid{background:var(--gold);color:#0A0A0A;font-weight:500}
-.btn-solid:hover{background:var(--gold-soft);border-color:var(--gold-soft)}
-.nav-toggle{display:none;background:none;border:1px solid var(--rule);color:var(--gold);padding:8px 12px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;cursor:pointer}
+.btn:hover{ background:var(--gold-lift); border-color:var(--gold-lift); }
+.btn.ghost{ background:transparent; color:var(--gold); }
+.btn.ghost:hover{ background:rgba(200,169,107,.1); color:var(--gold-lift); }
 
-/* ---------- HERO ---------- */
-.hero{padding:clamp(64px,11vw,130px) 0 clamp(48px,7vw,80px);position:relative}
-.hero h1{
-  font-size:clamp(46px,9vw,104px);line-height:.98;color:#fff;margin:22px 0 26px;letter-spacing:-.01em;
+/* ---- signature: coverage tape ---- */
+.tape{
+  margin-top:clamp(56px,9vh,110px); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+  background:linear-gradient(180deg, rgba(200,169,107,.045), transparent);
+  overflow:hidden; position:relative; z-index:1;
 }
-.hero h1 em{font-style:italic;color:var(--gold)}
-.hero p.lede{max-width:62ch;color:var(--muted);font-size:clamp(14px,1.5vw,16px)}
-.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
-.stats{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);
-  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-top:clamp(48px,8vw,86px);
+.tape-track{ display:flex; width:max-content; animation:slide 64s linear infinite; }
+.tape:hover .tape-track{ animation-play-state:paused; }
+@keyframes slide{ to{ transform:translateX(-50%); } }
+.tape-seq{ display:flex; }
+.tape span{
+  font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--muted); padding:14px 26px; white-space:nowrap; display:flex; align-items:center; gap:26px;
 }
-.stat{background:var(--ink);padding:26px 22px}
-.stat b{display:block;font-family:var(--display);font-size:clamp(30px,4.4vw,46px);color:var(--gold-soft);font-weight:300;line-height:1}
-.stat span{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:block;margin-top:10px}
+.tape span::after{ content:''; width:3px; height:3px; background:var(--gold); opacity:.55; }
 
-/* ---------- SECTIONS ---------- */
-section{padding:clamp(64px,9vw,110px) 0;border-top:1px solid var(--rule-soft)}
-.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,5vw,56px)}
-.sec-head h2{font-size:clamp(30px,5vw,52px);color:#fff;line-height:1.06;max-width:16ch}
-.rail{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
-.rail i{font-style:normal;color:var(--gold)}
+/* ============================ SECTIONS ============================ */
+section{ padding:clamp(76px,11vh,132px) 0; position:relative; }
+.head{ max-width:74ch; margin-bottom:clamp(40px,6vh,66px); }
+.head .eyebrow{ display:block; margin-bottom:18px; }
+.head p{ margin:20px 0 0; }
 
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft)}
-.pillar{background:var(--ink-2);padding:clamp(26px,3.4vw,38px);transition:background .25s}
-.pillar:hover{background:var(--ink-3)}
-.pillar h3{font-size:clamp(22px,2.6vw,29px);color:#fff;margin:14px 0 14px}
-.pillar p{color:var(--muted);margin:0;font-size:14px}
+/* coverage */
+.cov{ display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--rule); }
+@media(max-width:860px){ .cov{ grid-template-columns:1fr; } }
+.cov article{ padding:34px 30px 40px; border-bottom:1px solid var(--rule); border-right:1px solid var(--rule); transition:background .35s; }
+.cov article:last-child{ border-right:0; }
+.cov article:hover{ background:var(--panel); }
+.cov h3{ margin:16px 0 12px; }
+.cov p{ margin:0; color:var(--muted); font-size:15px; }
+.cov .num{ font-family:var(--mono); font-size:11px; letter-spacing:.2em; color:var(--gold); }
 
-/* ---------- VAULT ---------- */
-.flagship{
-  display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(24px,4vw,48px);align-items:end;
-  border:1px solid var(--rule);background:linear-gradient(135deg,#0E1014 0%,#0A0B0E 60%);
-  padding:clamp(28px,4vw,48px);margin-bottom:1px;
+/* ============================ THE LADDER ============================ */
+.ladder{ border-top:1px solid var(--rule); }
+.dossier{
+  display:grid; grid-template-columns:110px 1fr 260px; gap:clamp(20px,3vw,44px);
+  padding:38px 0; border-bottom:1px solid var(--rule); align-items:start; transition:background .35s;
 }
-.flagship h3{font-size:clamp(28px,4.2vw,46px);color:#fff;margin:14px 0 16px;line-height:1.04}
-.flagship p{color:var(--muted);max-width:52ch;margin:0}
-.price{font-family:var(--display);font-size:clamp(34px,5vw,54px);color:var(--gold);line-height:1;display:block;margin-bottom:18px}
-.vault-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin-top:1px}
-.item{
-  background:var(--ink-2);padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;gap:12px;
-  transition:background .25s,transform .25s;
-}
-.item:hover{background:var(--ink-3)}
-.item h3{font-size:clamp(19px,2.2vw,25px);color:#fff}
-.item p{color:var(--muted);font-size:13.5px;margin:0;flex:1}
-.item-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;border-top:1px solid var(--rule-soft)}
-.item-foot .p{font-family:var(--display);font-size:26px;color:var(--gold)}
-.item-foot .go{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-.item:hover .go{color:var(--gold-soft)}
+.dossier:hover{ background:linear-gradient(90deg, rgba(200,169,107,.05), transparent 65%); }
+@media(max-width:900px){ .dossier{ grid-template-columns:1fr; gap:20px; padding:34px 0; } }
 
-/* ---------- DESK ---------- */
-.desk{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,72px);align-items:start}
-.desk p{color:var(--muted);font-size:14.5px}
-.desk strong{color:var(--text);font-weight:500}
-blockquote{
-  margin:0;padding:clamp(24px,3.4vw,38px);border-left:2px solid var(--gold);background:var(--ink-2);
-  font-family:var(--display);font-size:clamp(21px,2.7vw,30px);line-height:1.35;color:#fff;font-style:italic;
-}
-blockquote cite{display:block;margin-top:18px;font-family:var(--mono);font-style:normal;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.dos-idx{ font-family:var(--mono); font-size:11px; letter-spacing:.2em; color:var(--gold); padding-top:9px; }
+.dos-idx .tier{ display:block; color:var(--muted); margin-top:7px; }
+.dos-body h3{ margin-bottom:12px; }
+.dos-body > p{ margin:0 0 20px; color:#AEB6BF; max-width:58ch; font-size:15.5px; }
+.specs{ list-style:none; margin:0; padding:0; display:grid; gap:9px; }
+.specs li{ font-family:var(--mono); font-size:12px; letter-spacing:.04em; color:var(--muted); display:flex; gap:12px; }
+.specs li::before{ content:'—'; color:var(--gold); flex:none; }
 
-/* ---------- FIELD NOTES / FAQ ---------- */
-.faq{border-top:1px solid var(--rule-soft)}
-.faq details{border-bottom:1px solid var(--rule-soft);background:transparent}
+.dos-buy{ text-align:right; }
+@media(max-width:900px){ .dos-buy{ text-align:left; } }
+.price{ font-family:var(--display); font-size:52px; line-height:1; color:var(--bone); }
+.price sup{ font-family:var(--mono); font-size:14px; top:-1.4em; color:var(--gold); margin-right:2px; }
+.price .per{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; color:var(--muted); display:block; margin-top:10px; text-transform:uppercase; }
+.buy{
+  display:inline-block; margin-top:20px; font-family:var(--mono); font-size:11.5px; letter-spacing:.17em;
+  text-transform:uppercase; padding:13px 24px; border:1px solid rgba(200,169,107,.45); color:var(--gold);
+  transition:background .25s, color .25s, border-color .25s;
+}
+.buy:hover{ background:var(--gold); color:var(--ink); border-color:var(--gold); }
+.buy.solid{ background:var(--gold); color:var(--ink); }
+.buy.solid:hover{ background:var(--gold-lift); }
+.free{ color:var(--gold); font-family:var(--display); font-size:44px; font-style:italic; }
+
+/* ============================ DESK (membership) ============================ */
+.desk{
+  border:1px solid rgba(200,169,107,.28); background:
+    radial-gradient(120% 140% at 100% 0%, rgba(200,169,107,.09), transparent 58%), var(--panel);
+  padding:clamp(34px,5.5vw,68px);
+  display:grid; grid-template-columns:1.25fr .75fr; gap:clamp(30px,5vw,64px); align-items:center;
+}
+@media(max-width:900px){ .desk{ grid-template-columns:1fr; } }
+.desk h2{ margin:16px 0 18px; }
+.desk .incl{ list-style:none; margin:26px 0 0; padding:0; display:grid; gap:12px; }
+.desk .incl li{ display:flex; gap:14px; font-size:15.5px; color:#C2C9D1; }
+.desk .incl li::before{ content:'+'; font-family:var(--mono); color:var(--gold); flex:none; }
+.desk-buy{ border-left:1px solid var(--rule); padding-left:clamp(24px,3vw,44px); }
+@media(max-width:900px){ .desk-buy{ border-left:0; border-top:1px solid var(--rule); padding-left:0; padding-top:30px; } }
+.desk-buy .price{ font-size:66px; }
+
+/* ============================ DISTRIBUTION ============================ */
+.stats{ display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }
+@media(max-width:760px){ .stats{ grid-template-columns:1fr; } }
+.stats div{ padding:32px 28px; border-right:1px solid var(--rule); }
+.stats div:last-child{ border-right:0; }
+.stats b{ font-family:var(--display); font-weight:400; font-size:48px; display:block; line-height:1; }
+.stats small{ font-family:var(--mono); font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); display:block; margin-top:14px; }
+
+/* ============================ CAPTURE ============================ */
+.capture{ background:var(--panel-2); border:1px solid var(--rule); padding:clamp(32px,5vw,60px); }
+.capture .lede{ margin-top:18px; }
+.form{ display:flex; gap:12px; margin-top:32px; max-width:560px; }
+@media(max-width:560px){ .form{ flex-direction:column; } }
+.form input{
+  flex:1; background:var(--ink); border:1px solid var(--rule); color:var(--bone);
+  font-family:var(--mono); font-size:13px; padding:15px 17px; min-width:0;
+}
+.form input::placeholder{ color:#5B646E; }
+.form input:focus{ outline:none; border-color:var(--gold); }
+.fineprint{ font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; color:#5B646E; margin-top:16px; text-transform:uppercase; }
+
+/* ============================ FOOTER ============================ */
+footer{ border-top:1px solid var(--rule); padding:60px 0 46px; }
+.foot-top{ display:flex; flex-wrap:wrap; gap:30px; justify-content:space-between; align-items:flex-start; }
+.foot-links{ display:flex; flex-wrap:wrap; gap:26px; }
+.foot-links a{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); transition:color .25s; }
+.foot-links a:hover{ color:var(--gold); }
+.disc{ margin-top:44px; padding-top:26px; border-top:1px solid var(--rule); font-size:12.5px; color:#5B646E; max-width:88ch; line-height:1.75; }
+
+/* ============================ FAQ / REFERENCE ============================ */
+.faq{ border-top:1px solid var(--rule); }
+.faq details{ border-bottom:1px solid var(--rule); }
 .faq summary{
-  list-style:none;cursor:pointer;padding:22px 44px 22px 0;position:relative;
-  font-family:var(--display);font-size:clamp(19px,2.4vw,27px);color:#fff;line-height:1.25;
+  list-style:none; cursor:pointer; padding:26px 0; display:flex; gap:22px; align-items:baseline;
+  font-family:var(--display); font-size:clamp(19px,2.2vw,26px); line-height:1.3; transition:color .25s;
 }
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{
-  content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);
-  font-family:var(--mono);font-size:20px;color:var(--gold);transition:transform .25s;
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary:hover{ color:var(--gold-lift); }
+.faq summary::before{
+  content:'+'; font-family:var(--mono); font-size:15px; color:var(--gold); flex:none; transition:transform .3s;
 }
-.faq details[open] summary::after{content:"–"}
-.faq summary:hover{color:var(--gold-soft)}
-.faq .ans{padding:0 clamp(0px,6vw,80px) 26px 0;color:var(--muted);font-size:14px;max-width:78ch}
-.faq .ans p{margin:0 0 .9em}
-.faq .ans p:last-child{margin:0}
-.faq .ans strong{color:var(--text);font-weight:500}
+.faq details[open] summary::before{ transform:rotate(45deg); }
+.faq .ans{ padding:0 0 30px 44px; max-width:70ch; }
+.faq .ans p{ margin:0 0 14px; color:#AEB6BF; font-size:15.5px; }
+.faq .ans p:last-child{ margin-bottom:0; }
+.faq .ans a{ color:var(--gold); border-bottom:1px solid rgba(200,169,107,.35); }
+.faq .ans a:hover{ color:var(--gold-lift); }
+@media(max-width:600px){ .faq .ans{ padding-left:0; } }
 
-/* ---------- BRIEF ---------- */
-.brief{background:var(--ink-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.brief-box{max-width:720px}
-.brief h2{font-size:clamp(30px,5vw,52px);color:#fff;margin:16px 0 18px;line-height:1.06}
-.subscribe{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-.subscribe input{
-  flex:1 1 280px;background:transparent;border:1px solid var(--rule);color:var(--text);
-  font-family:var(--mono);font-size:14px;padding:14px 16px;
-}
-.subscribe input::placeholder{color:#6E6C66}
-.subscribe input:hover{border-color:var(--gold)}
-.subscribe button{border:none;cursor:pointer;font-family:var(--mono);padding:14px 26px}
-.fine{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:18px}
-
-/* ---------- FOOTER ---------- */
-footer{padding:clamp(52px,7vw,78px) 0 34px}
-.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:clamp(24px,4vw,44px)}
-.foot-grid h4{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin:0 0 16px;font-weight:500;font-family:var(--mono)}
-.foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
-.foot-grid a{font-size:13px;color:var(--muted);transition:color .2s}
-.foot-grid a:hover{color:var(--gold-soft)}
-.foot-brand .brand{font-size:26px}
-.foot-brand p{color:var(--muted);font-size:13px;margin-top:12px}
-.legal{
-  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
-  margin-top:clamp(40px,6vw,62px);padding-top:24px;border-top:1px solid var(--rule-soft);
-  font-size:11px;letter-spacing:.12em;color:#6E6C66;
-}
-
-/* ---------- REVEAL ---------- */
-.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.rv.in{opacity:1;transform:none}
-
-/* ---------- RESPONSIVE ---------- */
-@media(max-width:960px){
-  .grid-3,.vault-list,.desk,.flagship{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr 1fr}
-  .flagship{align-items:start}
-}
-@media(max-width:720px){
-  .nav ul{
-    display:none;position:absolute;top:66px;left:0;right:0;background:#0A0B0E;
-    border-bottom:1px solid var(--rule);flex-direction:column;gap:0;padding:8px 0;
-  }
-  .nav ul.open{display:flex}
-  .nav ul li{padding:0 var(--gut)}
-  .nav a.link{display:block;padding:14px 0;border-bottom:1px solid var(--rule-soft)}
-  .nav-toggle{display:block}
-  .nav .btn{display:none}
-  .stats{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr}
-}
+/* ============================ MOTION ============================ */
+.rv{ opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+.rv.in{ opacity:1; transform:none; }
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
 @media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .tape-run{animation:none}
-  .tape-track{overflow-x:auto}
-  .rv{opacity:1;transform:none;transition:none}
+  *{ animation:none !important; transition:none !important; }
+  .rv{ opacity:1; transform:none; }
+  html{ scroll-behavior:auto; }
 }
 </style>
-</head>
-<body id="top">
-<a class="skip" href="#main">Skip to content</a>
-
-<!-- ===== MARKET TAPE (snapshot — edit the array in the script at the bottom) ===== -->
-<div class="tape">
-  <div class="tape-inner">
-    <div class="tape-label"><span class="dot"></span> Tape · <span id="tape-date">Snapshot</span></div>
-    <div class="tape-track"><div class="tape-run" id="tape-run"></div></div>
-  </div>
-</div>
-
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top">Rational<span>Prince</span></a>
-    <nav aria-label="Primary">
-      <ul id="menu">
-        <li><a class="link" href="#thesis">Thesis</a></li>
-        <li><a class="link" href="#vault">The Vault</a></li>
-        <li><a class="link" href="#desk">The Desk</a></li>
-        <li><a class="link" href="#notes">Field Notes</a></li>
-        <li><a class="link" href="#brief">The Brief</a></li>
-      </ul>
-    </nav>
-    <a class="btn btn-solid" href="https://stan.store/rationalprince">Subscribe</a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="menu">Menu</button>
-  </div>
-</header>
-
-<main id="main">
-
-  <!-- ===== HERO ===== -->
-  <div class="hero wrap">
-    <p class="eyebrow rv">Sovereign Capital · Energy · Geopolitics</p>
-    <h1 class="rv">Think <em>Rationally.</em><br>Build Wealth.</h1>
-    <p class="lede rv">Institutional-grade macro research on the flows that actually move markets — barrels, balance sheets, and the sovereigns deploying capital at scale. Written for allocators, not audiences.</p>
-    <div class="hero-cta rv">
-      <a class="btn btn-solid" href="https://stan.store/rationalprince">Enter the Vault</a>
-      <a class="btn" href="#brief">Read the Daily Brief</a>
-    </div>
-    <div class="stats rv">
-      <div class="stat"><b>25M+</b><span>Research Impressions</span></div>
-      <div class="stat"><b>Daily</b><span>Macro Briefings</span></div>
-      <div class="stat"><b>3</b><span>Coverage Pillars</span></div>
-    </div>
-  </div>
-
-  <!-- ===== THESIS ===== -->
-  <section id="thesis">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <h2>Three lenses on every move.</h2>
-        <p class="rail"><i>01</i> / Thesis</p>
-      </div>
-      <div class="grid-3">
-        <article class="pillar rv">
-          <p class="eyebrow">Energy</p>
-          <h3>Follow the Barrels</h3>
-          <p>Crude, gas, and uranium are the bloodstream of the real economy. We track the physical flow — chokepoints, spare capacity, OPEC+ intent — before it prints on the screen.</p>
-        </article>
-        <article class="pillar rv">
-          <p class="eyebrow">Geopolitics</p>
-          <h3>Map the Power</h3>
-          <p>Conflict, sanctions, and reconstruction redraw the map of who gets paid. We connect the political event to the capital consequence and the tradable second-order effect.</p>
-        </article>
-        <article class="pillar rv">
-          <p class="eyebrow">Sovereign Flows</p>
-          <h3>Track the Sovereigns</h3>
-          <p>Wealth funds and central banks move first and largest. We follow where sovereign money is allocating — and what it signals for the cycle ahead.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== VAULT ===== -->
-  <section id="vault">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <h2>Research, built to be used.</h2>
-        <p class="rail"><i>02</i> / The Vault</p>
-      </div>
-
-      <a class="flagship rv" href="https://stan.store/rationalprince">
-        <div>
-          <p class="eyebrow">Flagship Bundle</p>
-          <h3>The Geopolitical Wealth Vault</h3>
-          <p>Every playbook, every thesis, every framework in one archive — plus priority access to new drops. The complete desk for the serious allocator.</p>
-        </div>
-        <div>
-          <span class="price">$497</span>
-          <span class="btn btn-solid">Claim the Vault →</span>
-        </div>
-      </a>
-
-      <div class="vault-list">
-        <a class="item rv" href="https://stan.store/rationalprince">
-          <p class="eyebrow">Energy · Blueprint</p>
-          <h3>Energy Trading Blueprint</h3>
-          <p>The framework for reading the oil complex like a flow desk — inventories, curve structure, and the signals that front-run price.</p>
-          <div class="item-foot"><span class="p">$47</span><span class="go">Get it →</span></div>
-        </a>
-        <a class="item rv" href="https://stan.store/rationalprince">
-          <p class="eyebrow">Defense · Thesis</p>
-          <h3>Defense &amp; Reconstruction Thesis</h3>
-          <p>Where rearmament and rebuild budgets flow next — the contractors, commodities, and corridors set to absorb the capital.</p>
-          <div class="item-foot"><span class="p">$97</span><span class="go">Get it →</span></div>
-        </a>
-        <a class="item rv" href="https://stan.store/rationalprince">
-          <p class="eyebrow">Sovereign · Playbook</p>
-          <h3>Sovereign Wealth Playbook</h3>
-          <p>Decode how the largest pools of capital on earth allocate — and how to read their moves as a leading indicator for the cycle.</p>
-          <div class="item-foot"><span class="p">$297</span><span class="go">Get it →</span></div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== DESK ===== -->
-  <section id="desk">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <h2>Who's behind the research.</h2>
-        <p class="rail"><i>03</i> / The Desk</p>
-      </div>
-      <div class="desk">
-        <div class="rv">
-          <p><strong>Rational Prince is a one-desk research operation</strong> covering the intersection of energy markets, geopolitics, and sovereign capital — the three forces that set the tone for every other asset.</p>
-          <p>The work is built on a simple conviction: the move you can see on the chart was caused by a flow you could have seen earlier. The job is to find that flow, name the consequence, and hand you something you can act on.</p>
-          <p>No noise, no permabull cheerleading, no recycled headlines. Just the read — daily.</p>
-        </div>
-        <blockquote class="rv">
-          Markets reward the rational and the early. We try to be both — and show our work.
-          <cite>— Rational Prince</cite>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== FIELD NOTES (organic search) ===== -->
-  <section id="notes">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <h2>Sovereign capital, in plain terms.</h2>
-        <p class="rail"><i>04</i> / Field Notes</p>
-      </div>
-      <div class="faq rv">
-
-        <details open>
-          <summary>What is a sovereign wealth fund?</summary>
-          <div class="ans">
-            <p>A sovereign wealth fund is a state-owned investment fund. A government takes money it does not need to spend today — oil and gas royalties, trade surpluses, or central bank reserves — and invests it in assets abroad: listed equities, bonds, real estate, infrastructure, and private companies.</p>
-            <p>The purpose is <strong>intergenerational</strong>. A commodity exporter is converting a depleting asset in the ground into a permanent financial one, so the income outlives the resource. That mandate is why these funds behave differently from hedge funds or pensions: the holding period is measured in decades, and the flows are steady rather than tactical.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Which country has the biggest sovereign wealth fund?</summary>
-          <div class="ans">
-            <p>Norway. The Government Pension Fund Global — the "oil fund," managed by Norges Bank Investment Management — is the largest single sovereign wealth fund in the world, valued at roughly <strong>$2.3 trillion</strong> as of mid-2026, with around 72% of that in equities.</p>
-            <p>Its scale is the point: the fund holds on average about <strong>1.5% of every listed company on earth</strong>. When Norway rebalances, it is not expressing a view — it is mechanically moving size across global markets. That is why the fund's allocation shifts are worth reading even if you never trade a Norwegian asset.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Which countries have sovereign wealth funds?</summary>
-          <div class="ans">
-            <p>Roughly a hundred funds exist across some 60 countries. The ones that move markets cluster in two groups.</p>
-            <p><strong>Commodity exporters:</strong> Norway (GPFG), Saudi Arabia (PIF), the UAE (ADIA, Mubadala, ADQ), Qatar (QIA), Kuwait (KIA), Russia (NWF), and Oman. <strong>Surplus and reserve funds:</strong> China (CIC), Singapore (GIC and Temasek), and South Korea (KIC). Several U.S. states run their own — Alaska's Permanent Fund and the Texas Permanent School Fund being the largest.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Does the United States have a sovereign wealth fund?</summary>
-          <div class="ans">
-            <p>Not at the federal level, historically. Unlike Norway or Saudi Arabia, the U.S. runs deficits rather than surpluses, and Congress has generally directed federal resource royalties toward specific appropriations rather than a permanent savings vehicle.</p>
-            <p>That may change. Executive Order 14196, signed February 2025, directed Treasury and Commerce to produce a plan for a U.S. sovereign wealth fund covering funding mechanisms, structure, and governance. Standing one up at scale would likely require legislation. Watch the funding mechanism above all — <strong>where the capital comes from determines what the fund is actually allowed to buy</strong>, and therefore which sectors would absorb the flow.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>How do sovereign wealth funds invest?</summary>
-          <div class="ans">
-            <p>Most run a long-horizon, index-anchored core — global equities and fixed income — with a satellite sleeve for real estate, infrastructure, and direct private stakes. Norway sits at the transparent, near-passive end. The Gulf funds sit at the other: PIF and Mubadala use capital as industrial policy, buying stakes that build domestic capability, not just returns.</p>
-            <p>For an allocator, the useful distinction is <strong>mandate</strong>. A stabilization fund sells into strength to plug a budget hole. A savings fund buys weakness and holds. Knowing which type is on the other side of a large print tells you whether the flow is likely to continue.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Why do sovereign wealth funds matter for energy and commodity markets?</summary>
-          <div class="ans">
-            <p>Because the funding source and the market are the same trade. When crude runs hot, exporters accumulate surplus and sovereign funds deploy it — into equities, infrastructure, and increasingly into energy transition and data-centre capacity. When crude breaks, the same governments draw down to cover fiscal deficits, and the fund becomes a seller.</p>
-            <p>That makes sovereign flows a <strong>lagged, leveraged echo of the oil price</strong> — and a leading indicator for which sectors get bid next. Tracking the barrel tells you what the sovereign will do six to twelve months out. Tracking the sovereign tells you where the capital lands.</p>
-          </div>
-        </details>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BRIEF ===== -->
-  <section id="brief" class="brief">
-    <div class="wrap brief-box">
-      <p class="eyebrow rv">The Macro Daily Brief</p>
-      <h2 class="rv">The flow, the tape, the read.</h2>
-      <p class="rv" style="color:var(--muted);max-width:58ch">A tight daily briefing on energy, sovereign capital, and the geopolitics moving the cycle. Free. No filler. Unsubscribe anytime.</p>
-
-      <!-- ==== BEEHIIV: replace YOURPUB with your beehiiv subdomain ==== -->
-      <form class="subscribe rv" action="https://YOURPUB.beehiiv.com/subscribe" method="get" target="_blank" rel="noopener">
-        <label for="email" class="sr-only" style="position:absolute;left:-9999px">Email address</label>
-        <input id="email" type="email" name="email" placeholder="you@domain.com" required autocomplete="email">
-        <button class="btn btn-solid" type="submit">Subscribe</button>
-      </form>
-      <p class="fine rv">Delivered most mornings · Read by 25M+ impressions of audience</p>
-    </div>
-  </section>
-</main>
-
-<!-- ===== FOOTER ===== -->
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <span class="brand">Rational<span style="color:var(--gold)">Prince</span></span>
-        <p>Think Rationally. Build Wealth.</p>
-      </div>
-      <div>
-        <h4>Research</h4>
-        <ul>
-          <li><a href="#thesis">Thesis</a></li>
-          <li><a href="#vault">The Vault</a></li>
-          <li><a href="#notes">Field Notes</a></li>
-          <li><a href="#brief">Daily Brief</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Store</h4>
-        <ul>
-          <li><a href="https://stan.store/rationalprince">Stan Store</a></li>
-          <li><a href="https://stan.store/rationalprince">The Vault Bundle</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="https://www.facebook.com/share/1BC6cAdBQ3/?mibextid=wwXIfr" rel="noopener">Facebook</a></li>
-          <li><a href="https://my.linkpod.site/RationalPrince" rel="noopener">All Links</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="legal">
-      <span>© <span id="yr">2026</span> Rational Prince. All rights reserved.</span>
-      <span>Research only · Not investment advice</span>
-    </div>
-  </div>
-</footer>
-
+<!-- ================= Structured data: FAQ rich results + brand ================= -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@graph":[
     {
-      "@type":"WebSite",
-      "@id":"https://rationalprince.com/#website",
-      "url":"https://rationalprince.com/",
-      "name":"Rational Prince",
-      "description":"Institutional-grade macro research on energy markets, geopolitics, and sovereign capital flows.",
-      "inLanguage":"en"
-    },
-    {
       "@type":"Organization",
       "@id":"https://rationalprince.com/#org",
-      "name":"Rational Prince",
+      "name":"RationalPrince",
       "url":"https://rationalprince.com/",
-      "slogan":"Think Rationally. Build Wealth.",
+      "slogan":"Think rationally. Build wealth.",
+      "description":"Independent institutional macro research covering energy chokepoints, defense procurement, and sovereign wealth funds.",
       "sameAs":[
-        "https://stan.store/rationalprince",
-        "https://www.facebook.com/share/1BC6cAdBQ3/?mibextid=wwXIfr",
-        "https://my.linkpod.site/RationalPrince"
+        "https://www.threads.net/@rationalprince_",
+        "https://www.instagram.com/rationalprince_",
+        "https://www.amazon.com/shop/pprinceandy1k"
       ]
     },
     {
-      "@type":"WebPage",
-      "@id":"https://rationalprince.com/#webpage",
+      "@type":"WebSite",
+      "@id":"https://rationalprince.com/#site",
       "url":"https://rationalprince.com/",
-      "name":"Rational Prince — Institutional Macro Research",
-      "isPartOf":{"@id":"https://rationalprince.com/#website"},
-      "about":{"@id":"https://rationalprince.com/#org"}
+      "name":"RationalPrince",
+      "publisher":{"@id":"https://rationalprince.com/#org"}
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"https://rationalprince.com/#faq",
+      "isPartOf":{"@id":"https://rationalprince.com/#site"},
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"Where is the Strait of Hormuz, and who controls it?",
+          "acceptedAnswer":{"@type":"Answer","text":"The Strait of Hormuz connects the Persian Gulf to the Gulf of Oman and the Arabian Sea. Iran lies on the northern shore; Oman and the UAE lie to the south, with the shipping lanes running through Omani territorial waters at the narrowest point. No single state owns it — transit passage is governed by the UN Convention on the Law of the Sea, and the US Fifth Fleet operates in the region."}
+        },
+        {
+          "@type":"Question",
+          "name":"How wide is the Strait of Hormuz?",
+          "acceptedAnswer":{"@type":"Answer","text":"About 21 miles (33 km) at its narrowest point. The usable shipping lanes are much tighter — roughly two miles in each direction, separated by a buffer zone — which is what makes it a genuine bottleneck."}
+        },
+        {
+          "@type":"Question",
+          "name":"Why is the Strait of Hormuz important to oil markets?",
+          "acceptedAnswer":{"@type":"Answer","text":"Around a fifth of global petroleum liquids consumption transits the strait, along with a large share of seaborne LNG. Saudi Arabia, Iraq, the UAE, Kuwait, Qatar and Iran all export through it. Disruption shows up first in war-risk insurance premiums, then freight rates, then the shape of the crude curve."}
+        },
+        {
+          "@type":"Question",
+          "name":"What would happen if the Strait of Hormuz closed?",
+          "acceptedAnswer":{"@type":"Answer","text":"Two bypass pipelines exist — Saudi Arabia's East–West line to the Red Sea and the UAE's Habshan–Fujairah line to the Gulf of Oman — but their combined spare capacity covers only a fraction of normal transit volumes, and Kuwait, Qatar and southern Iraq have no bypass at all. A short interruption is a freight and insurance event; a sustained one becomes a supply event."}
+        },
+        {
+          "@type":"Question",
+          "name":"Which sovereign wealth funds are exposed to Strait of Hormuz risk?",
+          "acceptedAnswer":{"@type":"Answer","text":"The Gulf sovereign wealth funds — Saudi PIF, ADIA, Kuwait's KIA and QIA — are funded by the barrels that transit the strait, making chokepoint risk and sovereign allocation the same story at two speeds. Norway's Norges Bank is the mirror case: an oil-funded allocator diversifying away from oil."}
+        }
+      ]
     }
   ]
 }
 </script>
+</head>
+<body>
 
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="mark" href="#top"><b>RationalPrince</b><span>Est. Desk</span></a>
+    <div class="nav-links">
+      <a href="#coverage">Coverage</a>
+      <a href="/strait-of-hormuz/">Hormuz</a>
+      <a href="#research">Research</a>
+      <a href="#desk">Sovereign Desk</a>
+      <a href="#brief">Free brief</a>
+    </div>
+    <a class="nav-cta" href="#research">Buy research</a>
+  </div>
+</nav>
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "@id":"https://rationalprince.com/#faq",
-  "mainEntity":[
-    {"@type":"Question","name":"What is a sovereign wealth fund?","acceptedAnswer":{"@type":"Answer","text":"A sovereign wealth fund is a state-owned investment fund. A government invests money it does not need to spend today — oil and gas royalties, trade surpluses, or central bank reserves — in assets abroad such as equities, bonds, real estate, infrastructure and private companies. The purpose is intergenerational: converting a depleting resource into a permanent financial asset, with holding periods measured in decades."}},
-    {"@type":"Question","name":"Which country has the biggest sovereign wealth fund?","acceptedAnswer":{"@type":"Answer","text":"Norway. The Government Pension Fund Global, managed by Norges Bank Investment Management, is the largest single sovereign wealth fund in the world at roughly $2.3 trillion as of mid-2026, with about 72% in equities. It holds on average around 1.5% of every listed company on earth."}},
-    {"@type":"Question","name":"Which countries have sovereign wealth funds?","acceptedAnswer":{"@type":"Answer","text":"Around a hundred funds across some 60 countries. The largest are commodity-funded — Norway, Saudi Arabia (PIF), the UAE (ADIA, Mubadala, ADQ), Qatar (QIA), Kuwait (KIA), Russia and Oman — or surplus and reserve funded, including China (CIC), Singapore (GIC and Temasek) and South Korea (KIC). Several U.S. states run their own, notably Alaska's Permanent Fund and the Texas Permanent School Fund."}},
-    {"@type":"Question","name":"Does the United States have a sovereign wealth fund?","acceptedAnswer":{"@type":"Answer","text":"Not at the federal level, historically. The U.S. runs deficits rather than surpluses and has directed federal resource royalties to specific appropriations. Executive Order 14196, signed in February 2025, directed Treasury and Commerce to develop a plan for a U.S. sovereign wealth fund covering funding mechanisms, structure and governance; establishing one at scale would likely require legislation."}},
-    {"@type":"Question","name":"How do sovereign wealth funds invest?","acceptedAnswer":{"@type":"Answer","text":"Most run a long-horizon, index-anchored core of global equities and fixed income, plus a satellite allocation to real estate, infrastructure and direct private stakes. Norway is transparent and near-passive; Gulf funds such as PIF and Mubadala use capital as industrial policy. The key distinction is mandate: stabilization funds sell into strength to cover budget gaps, while savings funds buy weakness and hold."}},
-    {"@type":"Question","name":"Why do sovereign wealth funds matter for energy and commodity markets?","acceptedAnswer":{"@type":"Answer","text":"The funding source and the market are linked. High crude prices build exporter surpluses that sovereign funds deploy into equities, infrastructure and energy capacity; falling crude forces drawdowns to cover fiscal deficits, turning the fund into a seller. Sovereign flows therefore act as a lagged echo of the oil price and a leading indicator of which sectors get bid next."}}
-  ]
-}
-</script>
+<!-- ============================ HERO ============================ -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="status">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="eyebrow">Desk active — <span id="today">2026</span></span>
+    </div>
+
+    <h1>
+      <span class="line">Think rationally.</span>
+      <span class="line gold">Build wealth.</span>
+    </h1>
+
+    <p class="typed" id="typed" aria-live="off"><span class="cur"></span></p>
+    <p class="visually-hidden" hidden>Energy. Defense. Sovereign capital. Research for self-directed allocators.</p>
+
+    <div class="hero-grid">
+      <div>
+        <p class="lede">Most macro commentary explains yesterday. This desk publishes the structural positions behind energy, defense, and sovereign capital — the flows that move before the headline does, written the way an allocator would want them: thesis, evidence, risk, invalidation.</p>
+      </div>
+      <aside class="hero-aside">
+        <p>Research sold directly. No advisory relationship, no upsell funnel, no signal group.</p>
+        <div class="btn-row">
+          <a class="btn" href="#research">View the research</a>
+          <a class="btn ghost" href="#brief">Read a brief free</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- SIGNATURE: coverage tape -->
+  <div class="tape" aria-hidden="true">
+    <div class="tape-track">
+      <div class="tape-seq">
+        <span>Brent</span><span>TTF</span><span>Henry Hub</span><span>Strait of Hormuz</span><span>Bab el-Mandeb</span><span>LNG offtake</span><span>Refining spreads</span><span>Uranium</span><span>Norges Bank</span><span>Saudi PIF</span><span>ADIA</span><span>GIC</span><span>Temasek</span><span>Defense primes</span><span>NATO 2%</span><span>Shipbuilding</span><span>Rare earths</span><span>Petrodollar flows</span>
+      </div>
+      <div class="tape-seq">
+        <span>Brent</span><span>TTF</span><span>Henry Hub</span><span>Strait of Hormuz</span><span>Bab el-Mandeb</span><span>LNG offtake</span><span>Refining spreads</span><span>Uranium</span><span>Norges Bank</span><span>Saudi PIF</span><span>ADIA</span><span>GIC</span><span>Temasek</span><span>Defense primes</span><span>NATO 2%</span><span>Shipbuilding</span><span>Rare earths</span><span>Petrodollar flows</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ COVERAGE ============================ -->
+<section id="coverage">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Coverage</span>
+      <h2>Three domains. One thesis: <em>capital follows control.</em></h2>
+      <p class="lede">The desk covers what a state can restrict, defend, or deploy. Everything published sits inside one of these three.</p>
+    </div>
+
+    <div class="cov rv">
+      <article>
+        <span class="num">Energy</span>
+        <h3>Oil chokepoints and energy trading</h3>
+        <p>Crude and gas pricing, refining and shipping constraints, LNG contracting, and the transit chokepoints — the Strait of Hormuz, Bab el-Mandeb, Malacca — that decide whether supply arrives at all.</p>
+      </article>
+      <article>
+        <span class="num">Defense</span>
+        <h3>Defense stocks, read from budgets</h3>
+        <p>Procurement cycles, European and US rearmament programs, and industrial-base bottlenecks — read from appropriations and backlogs rather than from headlines.</p>
+      </article>
+      <article>
+        <span class="num">Sovereign capital</span>
+        <h3>Sovereign wealth funds and state flows</h3>
+        <p>How the largest sovereign wealth funds — Norway's Norges Bank, Saudi PIF, ADIA, GIC — are mandated, what they disclose, and what their rotations signal about the next cycle.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HORMUZ REFERENCE (organic entry point) ============================ -->
+<section id="hormuz">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Desk reference</span>
+      <h2>The Strait of Hormuz, answered properly.</h2>
+      <p class="lede">The most-asked questions about the world's most important oil chokepoint — with the part most coverage leaves out: what each answer actually does to price.</p>
+    </div>
+
+    <div class="faq rv">
+      <details open>
+        <summary>Where is the Strait of Hormuz, and who controls it?</summary>
+        <div class="ans">
+          <p>It connects the Persian Gulf to the Gulf of Oman and the Arabian Sea. Iran sits on the northern shore; Oman and the UAE sit on the southern shore, with the shipping lanes running through Omani territorial waters at the narrowest point.</p>
+          <p>No single state owns it. Transit passage through an international strait is governed by the UN Convention on the Law of the Sea, and the United States Fifth Fleet, based in Bahrain, operates in the region. Control is therefore contested in practice rather than settled in law — which is precisely why it prices risk.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How wide is the Strait of Hormuz?</summary>
+        <div class="ans">
+          <p>Roughly 21 miles (about 33 km) at its narrowest. The usable shipping lanes are far tighter than that: two lanes of about two miles each, separated by a buffer, which is why the chokepoint is a genuine bottleneck rather than a wide sea lane.</p>
+          <p>The width matters for one reason. It puts every transiting cargo inside range of shore-based systems on the northern coast, and it means disruption does not require closure — it only requires enough uncertainty to move insurance.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Why is the Strait of Hormuz important to oil markets?</summary>
+        <div class="ans">
+          <p>Around a fifth of global petroleum liquids consumption transits it, along with a substantial share of seaborne LNG. Saudi Arabia, Iraq, the UAE, Kuwait, Qatar, and Iran all export through it. No other chokepoint concentrates that much supply in that little water.</p>
+          <p>The market impact is rarely about the barrels themselves. It shows up first in war-risk insurance premiums, then in freight rates, then in the shape of the crude curve as buyers pay up for prompt cargoes — usually before any physical shortfall exists.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What would happen if the Strait of Hormuz closed?</summary>
+        <div class="ans">
+          <p>Closure has been threatened many times. The question that matters for positioning is not whether transit stops but for how long, and how much the bypass routes absorb.</p>
+          <p>Two pipelines exist to route around it: Saudi Arabia's East–West line to the Red Sea and the UAE's Habshan–Fujairah line to the Gulf of Oman. Their combined spare capacity covers only a fraction of normal transit volumes, and Kuwait, Qatar, and Iraq's southern exports have no bypass at all. A short interruption is a freight and insurance event. A sustained one is a supply event — a distinction that decides whether the trade is days long or months long.</p>
+          <p><a href="/strait-of-hormuz/">The full Strait of Hormuz reference</a> covers the bypass routes in detail, and <a href="/research/strait-of-hormuz-playbook/">the Playbook</a> maps the escalation tiers, the bypass capacity line by line, and where each tier shows up in instruments first.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Is the Strait of Hormuz open right now?</summary>
+        <div class="ans">
+          <p>This page is a reference, not a live tracker — check current shipping advisories for real-time status. What the desk publishes instead is the framework: the observable triggers that precede a disruption, and the sequence in which markets reprice once one appears.</p>
+          <p>Waiting for a headline to confirm status is, structurally, the losing side of this trade. The move is usually in insurance and freight before it is in the news.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Which sovereign wealth funds and defense names does this touch?</summary>
+        <div class="ans">
+          <p>The Gulf sovereign wealth funds — Saudi PIF, ADIA, Kuwait's KIA, QIA — are funded by exactly the barrels transiting this water, so chokepoint risk and sovereign allocation are the same story told at two speeds. Norway's Norges Bank is the mirror: an oil-funded allocator hedging away from oil.</p>
+          <p>On the defense side, naval presence, minesweeping, air defense, and munitions restocking are the procurement lines that move on Gulf escalation — which is why the desk covers <a href="#research">defense stocks</a> and energy under one thesis rather than two.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RESEARCH LADDER ============================ -->
+<section id="research">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">The research</span>
+      <h2>Buy the dossier, not the subscription.</h2>
+      <p class="lede">Each is a standalone piece of work with a stated thesis and a stated invalidation point. Delivered instantly as a PDF. Priced by depth, ordered by depth.</p>
+    </div>
+
+    <div class="ladder">
+
+      <article class="dossier rv">
+        <div class="dos-idx">01<span class="tier">Entry</span></div>
+        <div class="dos-body">
+          <h3>The Strait of Hormuz Playbook</h3>
+          <p>A single chokepoint, fully mapped: transit volumes, the alternatives that exist on paper versus in practice, escalation tiers, and what each tier does to freight, insurance, and the crude curve.</p>
+          <ul class="specs">
+            <li>Escalation ladder with observable triggers</li>
+            <li>Bypass capacity: pipeline routes and real throughput ceilings</li>
+            <li>Instrument map — where the move shows up first</li>
+          </ul>
+        </div>
+        <div class="dos-buy">
+          <div class="price"><sup>$</sup>17<span class="per">One-time</span></div>
+          <a class="buy" data-buy="hormuz" href="#">Buy the playbook</a>
+        </div>
+      </article>
+
+      <article class="dossier rv">
+        <div class="dos-idx">02<span class="tier">Core</span></div>
+        <div class="dos-body">
+          <h3>The Energy Trading Desk</h3>
+          <p>How an energy book is actually framed — the curve structures, spreads, and inventory signals a desk reads before it takes a view, and the ones it ignores.</p>
+          <ul class="specs">
+            <li>Contango and backwardation as positioning evidence</li>
+            <li>Crack spreads, storage builds, and freight as confirmation</li>
+            <li>Position sizing and invalidation discipline</li>
+            <li>Worked examples across a full cycle</li>
+          </ul>
+        </div>
+        <div class="dos-buy">
+          <div class="price"><sup>$</sup>47<span class="per">One-time</span></div>
+          <a class="buy" data-buy="energydesk" href="#">Buy the desk manual</a>
+        </div>
+      </article>
+
+      <article class="dossier rv">
+        <div class="dos-idx">03<span class="tier">Thesis</span></div>
+        <div class="dos-body">
+          <h3>The Defense Investment Thesis</h3>
+          <p>The rearmament cycle read from the budget line down: which programs are funded through the decade, which primes and suppliers hold the backlog, and where the industrial base physically cannot expand.</p>
+          <ul class="specs">
+            <li>Appropriations to backlog to revenue — the full chain</li>
+            <li>Prime, tier-one, and bottleneck supplier map</li>
+            <li>European and Asian rearmament compared</li>
+            <li>What breaks the thesis, stated up front</li>
+          </ul>
+        </div>
+        <div class="dos-buy">
+          <div class="price"><sup>$</sup>97<span class="per">One-time</span></div>
+          <a class="buy" data-buy="defense" href="#">Buy the thesis</a>
+        </div>
+      </article>
+
+      <article class="dossier rv">
+        <div class="dos-idx">04<span class="tier">Flagship</span></div>
+        <div class="dos-body">
+          <h3>The Sovereign Wealth Playbook</h3>
+          <p>The desk's most complete work: how the largest state allocators are structured, what mandates constrain them, how they have rotated, and how a private allocator can read their disclosures as a forward indicator.</p>
+          <ul class="specs">
+            <li>Fund-by-fund mandate, structure, and disclosure map</li>
+            <li>Rotation history and what it signalled in advance</li>
+            <li>Reserve management and petrodollar recycling mechanics</li>
+            <li>A repeatable framework for tracking flows yourself</li>
+            <li>Includes the Hormuz Playbook</li>
+          </ul>
+        </div>
+        <div class="dos-buy">
+          <div class="price"><sup>$</sup>297<span class="per">One-time</span></div>
+          <a class="buy solid" data-buy="sovereign" href="#">Buy the playbook</a>
+        </div>
+      </article>
+
+      <article class="dossier rv">
+        <div class="dos-idx">00<span class="tier">Start here</span></div>
+        <div class="dos-body">
+          <h3>The Sovereign Brief</h3>
+          <p>The desk note itself — the recurring brief on energy, defense, and sovereign flows. Read it before you buy anything. If the reasoning isn't worth your time, nothing further will be.</p>
+          <ul class="specs">
+            <li>Delivered to your inbox</li>
+            <li>Unsubscribe in one click</li>
+          </ul>
+        </div>
+        <div class="dos-buy">
+          <div class="price free">Free<span class="per">No card</span></div>
+          <a class="buy" href="#brief">Get the brief</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SOVEREIGN DESK ============================ -->
+<section id="desk">
+  <div class="wrap">
+    <div class="desk rv">
+      <div>
+        <span class="eyebrow">Membership</span>
+        <h2>The Sovereign Desk</h2>
+        <p class="lede">For allocators who want the work as it's produced rather than after it's packaged. Every dossier, every revision, and the running notes that never become a product.</p>
+        <ul class="incl">
+          <li>The full research library, including everything above</li>
+          <li>New dossiers released to members first</li>
+          <li>Revisions when a thesis is invalidated — not silent deletions</li>
+          <li>Working notes on positions the desk is still forming</li>
+          <li>Cancel any time; the library stays yours through the term</li>
+        </ul>
+      </div>
+      <div class="desk-buy">
+        <div class="price"><sup>$</sup>97<span class="per">Per month</span></div>
+        <a class="buy solid" data-buy="desk" href="#">Join the desk</a>
+        <p class="fineprint">Membership opens in limited cohorts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DISTRIBUTION ============================ -->
+<section>
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow dim">Distribution</span>
+      <h2>The research travels before it sells.</h2>
+    </div>
+    <div class="stats rv">
+      <div><b>4.3M</b><small>Views across the network, trailing period</small></div>
+      <div><b>1,712</b><small>Followers, Threads</small></div>
+      <div><b>Daily</b><small>Publishing cadence</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CAPTURE ============================ -->
+<section id="brief">
+  <div class="wrap">
+    <div class="capture rv">
+      <span class="eyebrow">The Sovereign Brief</span>
+      <h2 style="margin-top:16px">Start with the free brief.</h2>
+      <p class="lede">Energy, defense, and sovereign capital — the desk's reasoning, in your inbox. Read a few. Buy only if the work holds up.</p>
+
+      <!-- Replace action with your Beehiiv form endpoint -->
+      <form class="form" action="REPLACE_WITH_BEEHIIV_FORM_ACTION" method="post" target="_blank">
+        <label for="email" class="visually-hidden" hidden>Email address</label>
+        <input id="email" type="email" name="email" placeholder="you@domain.com" required autocomplete="email">
+        <button class="btn" type="submit">Send me the brief</button>
+      </form>
+      <p class="fineprint">One click to unsubscribe. No list sharing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="mark" href="#top"><b>RationalPrince</b><span>Think rationally. Build wealth.</span></a>
+      <div class="foot-links">
+        <a href="#research">Research</a>
+        <a href="/strait-of-hormuz/">Strait of Hormuz</a>
+        <a href="#desk">Sovereign Desk</a>
+        <a href="#brief">Free brief</a>
+        <a href="https://amazon.com/shop/pprinceandy1k" rel="noopener">Reading list</a>
+        <a href="mailto:hello@rationalprince.com">Contact</a>
+      </div>
+    </div>
+    <p class="disc">
+      RationalPrince publishes independent research and educational material. Nothing on this site or in any product is investment advice, a recommendation to buy or sell any security or instrument, or an offer or solicitation of any kind. No advisory or fiduciary relationship is created by purchasing a research product or reading a brief. Markets involve risk of loss, including total loss of capital. Conduct your own due diligence and consult a licensed professional before acting on anything published here. All research products are digital and delivered on purchase; refunds are handled under the checkout provider's stated policy.
+      <br><br>© <span id="yr">2026</span> RationalPrince. All rights reserved.
+    </p>
+  </div>
+</footer>
 
 <script>
-/* ===== 1. MARKET TAPE — edit these values when you update the snapshot ===== */
-const TAPE_DATE = "12 Aug 2026";
-const TAPE = [
-  {name:"BRENT",      val:"$78.40", chg:"1.2%",  dir:"u"},
-  {name:"WTI",        val:"$74.10", chg:"0.9%",  dir:"u"},
-  {name:"HENRY HUB",  val:"$3.18",  chg:"0.4%",  dir:"d"},
-  {name:"U3O8",       val:"$84.50", chg:"2.1%",  dir:"u"},
-  {name:"DXY",        val:"104.2",  chg:"0.3%",  dir:"d"},
-  {name:"US 10Y",     val:"4.28%",  chg:"3bp",   dir:"u"},
-  {name:"GOLD",       val:"$2,332", chg:"0.6%",  dir:"u"}
-];
-
-document.getElementById('tape-date').textContent = TAPE_DATE;
-const row = TAPE.map(t =>
-  `<span class="tick">${t.name} <b>${t.val}</b> <span class="${t.dir}">${t.dir==='u'?'▲':'▼'} ${t.chg}</span></span>`
-).join('');
-document.getElementById('tape-run').innerHTML = row + row; /* duplicated for seamless loop */
-
-/* ===== 2. MOBILE MENU ===== */
-const toggle = document.getElementById('navToggle');
-const menu = document.getElementById('menu');
-toggle.addEventListener('click', () => {
-  const open = menu.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', open);
-});
-menu.addEventListener('click', e => {
-  if (e.target.tagName === 'A') { menu.classList.remove('open'); toggle.setAttribute('aria-expanded', false); }
+/* ---------- checkout links: put your Stan Store URLs here ---------- */
+const CHECKOUT = {
+  // Internal sales pages (start with /) open in this tab. External Stan links open in a new tab.
+  hormuz:     "/research/strait-of-hormuz-playbook/",  // $17  — sales page, then Stan
+  sovereign:  "/research/sovereign-wealth-playbook/",  // $297 — sales page, then Stan
+  energydesk: "https://stan.store/rationalprince",     // $47  — paste real Stan link
+  defense:    "https://stan.store/rationalprince",     // $97  — paste real Stan link
+  desk:       "https://stan.store/rationalprince"      // membership — paste real Stan link
+};
+document.querySelectorAll('[data-buy]').forEach(el=>{
+  const url = CHECKOUT[el.dataset.buy];
+  if(!url) return;
+  el.href = url;
+  if (/^https?:/.test(url)) { el.target = "_blank"; el.rel = "noopener"; }
+  el.addEventListener('click', ()=>{
+    if(typeof gtag === 'function'){
+      gtag('event','begin_checkout',{ item_id: el.dataset.buy });
+    }
+  });
 });
 
-/* ===== 3. SCROLL REVEAL ===== */
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-}, {threshold:.12, rootMargin:"0px 0px -40px 0px"});
-document.querySelectorAll('.rv').forEach((el,i) => { el.style.transitionDelay = (i%4)*60 + 'ms'; io.observe(el); });
+/* ---------- date ---------- */
+const now = new Date();
+document.getElementById('today').textContent =
+  now.toLocaleDateString('en-US',{ month:'short', day:'2-digit', year:'numeric' }).toUpperCase();
+document.getElementById('yr').textContent = now.getFullYear();
 
-/* ===== 4. YEAR ===== */
-document.getElementById('yr').textContent = new Date().getFullYear();
+/* ---------- sticky nav ---------- */
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('stuck', window.scrollY > 40);
+onScroll(); window.addEventListener('scroll', onScroll, { passive:true });
+
+/* ---------- typed thesis line ---------- */
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const LINE = 'Energy  ·  Defense  ·  Sovereign capital  —  research for self-directed allocators';
+const target = document.getElementById('typed');
+const cursor = target.querySelector('.cur');
+if (reduce) {
+  target.insertBefore(document.createTextNode(LINE), cursor);
+} else {
+  let i = 0;
+  const tick = () => {
+    if (i >= LINE.length) return;
+    target.insertBefore(document.createTextNode(LINE[i++]), cursor);
+    setTimeout(tick, LINE[i-1] === '·' ? 90 : 26);
+  };
+  setTimeout(tick, 620);
+}
+
+/* ---------- scroll reveals ---------- */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold:.12, rootMargin:'0px 0px -8% 0px' });
+document.querySelectorAll('.rv').forEach((el,idx)=>{
+  el.style.transitionDelay = Math.min(idx % 4, 3) * 70 + 'ms';
+  io.observe(el);
+});
 </script>
 </body>
 </html>
