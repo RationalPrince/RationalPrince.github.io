@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oil Price Forecast: How Crude Forecasts Are Built and How to Read One</title>
+<meta name="description" content="How a crude oil price forecast is built, why a next-week oil price forecast cannot work, why bank targets disagree, and how to read the EIA oil price forecast critically.">
+<link rel="canonical" href="https://rationalprince.com/oil-price-forecast/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RationalPrince">
+<meta property="og:title" content="Oil Price Forecast: How Crude Forecasts Are Built and How to Read One">
+<meta property="og:description" content="The assumptions matter more than the number. How to read a crude oil price forecast critically.">
+<meta property="og:url" content="https://rationalprince.com/oil-price-forecast/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- GA4 property: RationalPrince -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YGPK63N7G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YGPK63N7G7');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","headline":"Oil Price Forecasts: How They Are Built and How to Read One","description":"How bank and agency crude oil price forecasts are constructed, why they disagree, what a next-week forecast can and cannot tell you, and how to read one critically.","author":{"@type":"Organization","name":"RationalPrince"},"publisher":{"@type":"Organization","name":"RationalPrince"},"mainEntityOfPage":"https://rationalprince.com/oil-price-forecast/","inLanguage":"en-US"},
+{"@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://rationalprince.com/"},
+{"@type":"ListItem","position":2,"name":"Oil price forecasts","item":"https://rationalprince.com/oil-price-forecast/"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How accurate are crude oil price forecasts?","acceptedAnswer":{"@type":"Answer","text":"Poor at short horizons and mixed at long ones. Studies of published forecasts consistently find that few beat the simple assumption that tomorrow's price equals today's. Forecasts are more useful for the assumptions they expose than for the numbers they print."}},
+{"@type":"Question","name":"Can anyone forecast the oil price for next week?","acceptedAnswer":{"@type":"Answer","text":"Not reliably. At a one-week horizon crude is dominated by inventory surprises, positioning flows and headlines, none of which are forecastable. Anyone selling a next-week price target is selling confidence, not analysis."}},
+{"@type":"Question","name":"Why do bank oil price forecasts disagree with each other?","acceptedAnswer":{"@type":"Answer","text":"Because they rest on different assumptions about the same three variables: demand growth, OPEC+ policy, and non-OPEC supply. Small differences in those inputs compound into large differences in the headline number, which is why the assumption table matters more than the target."}},
+{"@type":"Question","name":"What is the EIA oil price forecast?","acceptedAnswer":{"@type":"Answer","text":"The US Energy Information Administration publishes crude price projections in its monthly Short-Term Energy Outlook, alongside the supply, demand and inventory assumptions behind them. Because the workings are public, it is a better reference point than a bank target quoted without context."}}]}]}
+</script>
+<style>
+  :root{
+    --ink:#0A0A0B;
+    --ink-2:#111114;
+    --ivory:#EFEAE0;
+    --dim:#9E9689;
+    --gold:#B98F3E;
+    --gold-soft:rgba(185,143,62,.20);
+    --slate:#55585F;
+    --measure:64ch;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--ink);color:var(--ivory);
+    font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    font-size:clamp(1.06rem,.99rem + .34vw,1.22rem);
+    line-height:1.72;font-weight:300;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{width:min(73rem,100% - 2.6rem);margin-inline:auto}
+  a{color:inherit}
+  p{max-width:var(--measure)}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+
+  /* masthead */
+  .bar{position:sticky;top:0;z-index:20;background:rgba(10,10,11,.86);
+       backdrop-filter:blur(10px);border-bottom:1px solid var(--gold-soft)}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;gap:1.5rem;padding:1.25rem 0}
+  .wordmark{font-size:1.4rem;letter-spacing:.055em;text-decoration:none}
+  .wordmark b{font-weight:400}
+  .wordmark i{font-style:normal;color:var(--gold)}
+  nav{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:.72rem;letter-spacing:.1em;color:var(--dim)}
+  nav a{text-decoration:none;padding-bottom:.25rem;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+  nav a:hover{color:var(--ivory);border-bottom-color:var(--gold)}
+  @media(max-width:700px){.masthead{flex-direction:column;align-items:flex-start;gap:.85rem}nav{gap:1.15rem}}
+
+  /* hero */
+  .hero{padding:clamp(4rem,11vw,8.5rem) 0 clamp(3rem,7vw,5rem);position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:auto -20% -60% 40%;height:70%;
+    background:radial-gradient(ellipse at center,rgba(185,143,62,.10),transparent 68%);pointer-events:none}
+  .kicker{font-size:.71rem;letter-spacing:.16em;color:var(--gold);margin:0 0 2.1rem}
+  h1{font-size:clamp(2.5rem,1.5rem + 5vw,5.4rem);line-height:1.02;font-weight:300;
+     margin:0;max-width:17ch;letter-spacing:-.015em}
+  h1 i{font-style:italic;color:var(--gold);font-weight:300}
+  .lede{max-width:var(--measure);margin:2rem 0 0;color:var(--dim);font-size:1.15em}
+  .actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.8rem;position:relative;z-index:1}
+
+  .btn{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.75rem;letter-spacing:.11em;
+       text-decoration:none;padding:1rem 1.9rem;border:1px solid var(--gold);
+       background:var(--gold);color:#0A0A0B;transition:background .2s,color .2s}
+  .btn:hover{background:transparent;color:var(--gold)}
+  .btn.alt{background:transparent;color:var(--ivory);border-color:var(--slate)}
+  .btn.alt:hover{border-color:var(--ivory);color:var(--ivory)}
+
+  /* ticker strip */
+  .strip{border-block:1px solid var(--gold-soft);background:var(--ink-2)}
+  .strip .wrap{display:grid;gap:1.5rem 2.5rem;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));padding:2rem 0}
+  .strip dt{font-size:.68rem;letter-spacing:.12em;color:var(--dim)}
+  .strip dd{margin:.45rem 0 0;font-size:1.32rem;color:var(--ivory);line-height:1.35}
+  .strip dd span{color:var(--gold)}
+
+  section{padding:clamp(3.4rem,8vw,6rem) 0;border-top:1px solid var(--gold-soft)}
+  section:first-of-type{border-top:0}
+  h2{font-size:clamp(1.85rem,1.35rem + 2.1vw,3rem);font-weight:300;line-height:1.16;
+     margin:0 0 1.5rem;letter-spacing:-.008em;max-width:20ch}
+  .sub{color:var(--dim);margin:0 0 2.8rem}
+
+  .cols{display:grid;gap:2.6rem;grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr))}
+  .cols article{border-left:1px solid var(--gold-soft);padding-left:1.5rem}
+  .cols h3{font-size:1.55rem;font-weight:400;margin:0 0 .65rem}
+  .cols p{margin:0;color:var(--dim);max-width:38ch}
+  .cols a{color:var(--ivory);text-decoration:none;border-bottom:1px solid var(--gold-soft)}
+  .cols a:hover{border-bottom-color:var(--gold)}
+
+  .rows{border-top:1px solid var(--gold-soft)}
+  .row{display:grid;grid-template-columns:1fr auto;gap:.5rem 2rem;align-items:baseline;
+       padding:1.75rem 0;border-bottom:1px solid var(--gold-soft);text-decoration:none}
+  .row:hover .rt{color:var(--gold)}
+  .rt{font-size:1.5rem;font-weight:400;transition:color .18s}
+  .rn{grid-column:1;margin:.4rem 0 0;color:var(--dim);font-size:.95em;max-width:54ch}
+  .rp{font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--gold);white-space:nowrap}
+
+  .brief{background:var(--ink-2)}
+  .note{font-size:.9em;color:var(--slate);margin-top:1.2rem}
+
+  footer{border-top:1px solid var(--gold-soft);padding:3.2rem 0 4rem;
+         font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.06em;
+         color:var(--slate);line-height:2}
+  .social{display:flex;flex-wrap:wrap;gap:1.6rem;margin-bottom:1.6rem}
+  .social a{color:var(--dim);text-decoration:none}
+  .social a:hover{color:var(--gold)}
+  .legal{max-width:72ch;margin-top:1.3rem;line-height:1.8}
+
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<style>
+  .narrow{width:min(46rem,100% - 2.6rem);margin-inline:auto}
+  .crumbs{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.09em;
+          color:var(--slate);padding-top:1.9rem}
+  .crumbs a{color:var(--dim);text-decoration:none}
+  .crumbs a:hover{color:var(--gold)}
+  article{padding:1.5rem 0 4.5rem}
+  article h1{font-size:clamp(2.1rem,1.4rem + 3.4vw,3.7rem);max-width:23ch}
+  article h2{font-size:clamp(1.6rem,1.3rem + 1.4vw,2.2rem);margin:3rem 0 1.1rem;max-width:24ch}
+  article h3{font-size:1.32rem;font-weight:400;margin:2.2rem 0 .5rem}
+  article p{margin:0 0 1.35rem}
+  article ul{max-width:var(--measure);padding-left:1.25rem;margin:0 0 1.35rem}
+  article li{margin-bottom:.65rem}
+  article strong{font-weight:600;color:var(--ivory)}
+  .figures{display:grid;gap:1.9rem;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));
+           margin:2.6rem 0;padding:1.9rem 0;border-block:1px solid var(--gold-soft)}
+  .fig-n{font-size:2.15rem;color:var(--gold);line-height:1.1}
+  .fig-l{font-family:"IBM Plex Mono",monospace;font-size:.69rem;letter-spacing:.08em;
+         color:var(--dim);margin-top:.45rem;max-width:22ch;line-height:1.6}
+  .faq{border-top:1px solid var(--gold-soft);margin-top:3rem;padding-top:.5rem}
+  .related{margin-top:2.2rem;color:var(--dim);font-size:.95em}
+  .related a{color:var(--ivory);border-bottom:1px solid var(--gold-soft);text-decoration:none}
+  .related a:hover{border-bottom-color:var(--gold)}
+</style>
+<style>
+  .authorbar{display:flex;flex-wrap:wrap;gap:1.4rem 2.2rem;margin:2rem 0 0;padding:1.2rem 0;
+             border-block:1px solid var(--gold-soft);font-family:"IBM Plex Mono",monospace;
+             font-size:.68rem;letter-spacing:.09em;color:var(--dim)}
+  .authorbar span b{color:var(--gold);font-weight:400}
+  .toc{margin:2.6rem 0 0;padding:1.5rem 1.6rem;background:var(--ink-2);border-left:2px solid var(--gold)}
+  .toc h4{margin:0 0 .8rem;font-family:"IBM Plex Mono",monospace;font-size:.66rem;
+          letter-spacing:.14em;color:var(--gold);font-weight:400;text-transform:uppercase}
+  .toc ol{margin:0;padding-left:1.1rem;color:var(--dim);font-size:.97em}
+  .toc li{margin-bottom:.45rem}
+  .toc a{color:var(--ivory);text-decoration:none;border-bottom:1px solid transparent}
+  .toc a:hover{border-bottom-color:var(--gold)}
+  .dtable{width:100%;border-collapse:collapse;margin:2rem 0;font-size:.95em}
+  .dtable caption{text-align:left;font-family:"IBM Plex Mono",monospace;font-size:.66rem;
+                  letter-spacing:.12em;color:var(--gold);padding-bottom:.9rem}
+  .dtable th{text-align:left;font-family:"IBM Plex Mono",monospace;font-weight:400;font-size:.66rem;
+             letter-spacing:.1em;color:var(--dim);border-bottom:1px solid var(--gold-soft);
+             padding:.6rem .8rem .6rem 0}
+  .dtable td{padding:.85rem .8rem .85rem 0;border-bottom:1px solid rgba(185,143,62,.10);
+             vertical-align:top;color:var(--ivory)}
+  .dtable td:last-child,.dtable th:last-child{text-align:right;padding-right:0;
+             font-family:"IBM Plex Mono",monospace;font-size:.85em;color:var(--gold)}
+  .pull{margin:2.8rem 0;padding:0 0 0 1.6rem;border-left:2px solid var(--gold);
+        font-size:1.28em;line-height:1.5;color:var(--ivory);font-style:italic;max-width:52ch}
+  .sources{margin-top:3rem;padding-top:1.6rem;border-top:1px solid var(--gold-soft)}
+  .sources h4{margin:0 0 .9rem;font-family:"IBM Plex Mono",monospace;font-size:.66rem;
+              letter-spacing:.14em;color:var(--gold);font-weight:400;text-transform:uppercase}
+  .sources ul{margin:0;padding-left:1.1rem;color:var(--dim);font-size:.92em;line-height:1.8}
+  .offer{margin:3.5rem 0 0;padding:2.2rem 0 0;border-top:1px solid var(--gold-soft)}
+  .offer h2{margin-top:0}
+  .plist{border-top:1px solid var(--gold-soft);margin-top:1.8rem}
+  .pitem{display:grid;grid-template-columns:1fr auto;gap:.45rem 1.8rem;align-items:baseline;
+         padding:1.5rem 0;border-bottom:1px solid var(--gold-soft);text-decoration:none}
+  .pitem:hover .pt{color:var(--gold)}
+  .pt{font-size:1.35rem;font-weight:400;transition:color .18s}
+  .pd2{grid-column:1;margin:.35rem 0 0;color:var(--dim);font-size:.93em;max-width:52ch}
+  .pp{font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--gold);white-space:nowrap}
+  .pflag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.6rem;
+         letter-spacing:.12em;color:var(--gold);border:1px solid var(--gold-soft);
+         padding:.15rem .5rem;margin-left:.6rem;vertical-align:middle}
+</style>
+</head>
+<body>
+<div class="bar">
+  <div class="wrap masthead">
+    <a class="wordmark mono" href="https://rationalprince.com/"><b>Rational</b><i>Prince</i></a>
+    <nav class="mono">
+      <a href="https://rationalprince.com/strait-of-hormuz/">Strait of Hormuz</a>
+      <a href="https://rationalprince.com/brent-vs-wti/">Brent vs WTI</a>
+      <a href="https://rationalprince.com/oil-price-forecast/">Price forecasts</a>
+      <a href="https://rationalprince.com/sovereign-wealth-funds/">Sovereign capital</a>
+      <a href="https://rationalprince.com/#brief">The Brief</a>
+    </nav>
+  </div>
+</div>
+<main>
+<div class="narrow crumbs"><a href="https://rationalprince.com/">Home</a> / Oil price forecasts</div>
+
+<article class="narrow">
+  <h1>Oil price forecasts: how they are built, and how to read one</h1>
+  <p class="lede">Every bank publishes a crude oil price forecast. Almost none of them are right, and that is not the interesting part. What matters is the assumption stack underneath the number, because that is the thing you can actually check.</p>
+
+  <div class="authorbar">
+    <span>By <b>RationalPrince</b></span>
+    <span>Primary sources: <b>EIA STEO &middot; OPEC MOMR &middot; IEA OMR</b></span>
+    <span>Reviewed <b>September 2026</b></span>
+    <span>Reading time <b>6 min</b></span>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="#built">What a forecast is actually made of</a></li>
+      <li><a href="#horizon">Why the horizon changes everything</a></li>
+      <li><a href="#disagree">Why the banks disagree</a></li>
+      <li><a href="#read">How to read a forecast critically</a></li>
+      <li><a href="#faq">Common questions</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="built">What a forecast is actually made of</h2>
+  <p>A crude oil price forecast is not a prediction in the way a weather forecast is. It is a balance calculation with a price attached at the end. The forecaster estimates demand, estimates supply, works out whether inventories build or draw across the period, and then attaches the price level that historically corresponds to that inventory path.</p>
+  <p>That means every published number rests on three inputs, and only three really matter:</p>
+
+  <table class="dtable">
+    <caption>The three inputs behind any crude forecast</caption>
+    <thead><tr><th>Input</th><th>What it estimates</th><th>Reliability</th></tr></thead>
+    <tbody>
+      <tr><td>Demand growth</td><td>Global consumption, mostly driven by Asian industrial activity</td><td>Moderate</td></tr>
+      <tr><td>OPEC+ policy</td><td>Whether the group adds, holds or cuts production</td><td>Low &mdash; it is a political decision</td></tr>
+      <tr><td>Non-OPEC supply</td><td>US shale, Brazil, Guyana and the rest</td><td>Moderate, with long lead times</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:.9em;color:var(--slate);margin-top:-.6rem">A fourth input &mdash; disruption risk at chokepoints like <a href="https://rationalprince.com/strait-of-hormuz/">the Strait of Hormuz</a> &mdash; is usually excluded from the base case and carried as a scenario instead.</p>
+
+  <h2 id="horizon">Why the horizon changes everything</h2>
+  <p>The single most useful question about any forecast is how far out it goes, because the honesty of the exercise collapses as the horizon shortens.</p>
+  <p><strong>Next day or next week.</strong> Dominated by inventory surprises, positioning and headlines. None of those are forecastable, and the research literature is blunt about it: very few published short-horizon forecasts beat the assumption that tomorrow's price equals today's. If someone is selling you a next-week crude target, they are selling confidence rather than analysis.</p>
+  <p><strong>Next quarter.</strong> Balance arithmetic starts to bite. Inventory direction becomes visible in weekly data, and a forecast can be checked against it as the quarter progresses. This is the shortest horizon where a forecast is worth reading.</p>
+  <p><strong>One to three years.</strong> Supply lead times dominate. Projects sanctioned today land in this window regardless of sentiment, which makes the supply side genuinely estimable. Demand is the weak leg.</p>
+
+  <blockquote class="pull">A forecast you cannot check is not research. The value is in the assumptions, because assumptions can be falsified and numbers cannot.</blockquote>
+
+  <h2 id="disagree">Why the banks disagree</h2>
+  <p>When Goldman, Morgan Stanley and the EIA publish different crude targets for the same year, the gap is almost never a disagreement about method. They all run the same balance calculation. The gap comes from small differences in the three inputs, compounding.</p>
+  <p>A half-million barrel a day difference in assumed demand growth &mdash; well within normal estimation error &mdash; flips a year from surplus to deficit. The headline price target moves by ten dollars or more on the back of it. This is why quoting a bank's number without its assumption table tells you almost nothing.</p>
+  <p>The practical consequence: when you see a forecast revised, look at which input moved. A revision driven by an OPEC+ decision is a different animal from one driven by a demand markdown, and they imply different things about what happens next.</p>
+
+  <h2 id="read">How to read a forecast critically</h2>
+  <ul>
+    <li><strong>Find the assumption table first.</strong> If it is not published, the forecast is a marketing document. Agency forecasts publish theirs; the EIA Short-Term Energy Outlook is the accessible benchmark.</li>
+    <li><strong>Check which benchmark it prices.</strong> A Brent forecast and a WTI forecast are not interchangeable &mdash; see <a href="https://rationalprince.com/brent-vs-wti/">why the spread between them moves</a>.</li>
+    <li><strong>Note whether disruption risk is in the base case.</strong> Usually it is not, which means the published number implicitly assumes nothing goes wrong at any chokepoint.</li>
+    <li><strong>Track the revision, not the level.</strong> The direction and driver of a change carry more information than the target itself.</li>
+    <li><strong>Ignore anything with a next-week price target.</strong> The horizon is shorter than the method can support.</li>
+  </ul>
+
+  <div class="faq">
+    <h2 id="faq">Common questions</h2>
+
+    <h3>How accurate are crude oil price forecasts?</h3>
+    <p>Poor at short horizons, mixed at long ones. Few published forecasts beat the assumption that tomorrow's price equals today's. Read them for their assumptions rather than their numbers.</p>
+
+    <h3>Can anyone forecast the oil price for next week?</h3>
+    <p>Not reliably. At that horizon crude is driven by inventory surprises, positioning flows and headlines, none of which can be forecast. A next-week target is confidence sold as analysis.</p>
+
+    <h3>Why do bank oil price forecasts disagree?</h3>
+    <p>They use the same method with different assumptions about demand growth, OPEC+ policy and non-OPEC supply. Small input differences compound into large differences in the headline number.</p>
+
+    <h3>What is the EIA oil price forecast?</h3>
+    <p>The US Energy Information Administration's monthly Short-Term Energy Outlook publishes crude projections alongside the supply, demand and inventory assumptions behind them. Because the workings are public, it is a better reference point than a bank target quoted without context.</p>
+
+    <h3>Does RationalPrince publish price targets?</h3>
+    <p>No. The research maps scenarios and the conditions that would trigger each, along with what that implies for exposure. A single number would hide the reasoning that makes the analysis checkable.</p>
+  </div>
+
+  <div class="sources">
+    <h4>Primary sources</h4>
+    <ul>
+      <li>US Energy Information Administration &mdash; Short-Term Energy Outlook</li>
+      <li>OPEC &mdash; Monthly Oil Market Report</li>
+      <li>International Energy Agency &mdash; Oil Market Report</li>
+      <li>Published bank research assumption tables, where disclosed</li>
+    </ul>
+  </div>
+
+  <section class="offer">
+    <h2>Take this further</h2>
+    <p class="sub">This page explains how to read someone else's forecast. The research below is the scenario work &mdash; conditions, triggers and exposure rather than a single number.</p>
+
+    <div class="plist">
+
+      <a class="pitem" href="REPLACE_WITH_STAN_LINK">
+        <div>
+          <div class="pt">Energy Trading Desk<span class="pflag">START HERE</span></div>
+          <p class="pd2">How an energy book is actually built &mdash; benchmarks, spreads, curve structure, storage economics, and the risk that ends careers.</p>
+        </div>
+        <div class="pp">$47</div>
+      </a>
+
+      <a class="pitem" href="REPLACE_WITH_STAN_LINK">
+        <div>
+          <div class="pt">The Strait of Hormuz Playbook</div>
+          <p class="pd2">The disruption scenario most forecasts leave out of the base case, priced out rung by rung.</p>
+        </div>
+        <div class="pp">$17</div>
+      </a>
+
+      <a class="pitem" href="REPLACE_WITH_STAN_LINK">
+        <div>
+          <div class="pt">Defense Investment Thesis</div>
+          <p class="pd2">Where geopolitical risk converts into defense appropriations, and which parts of the industrial base book the revenue.</p>
+        </div>
+        <div class="pp">$97</div>
+      </a>
+
+      <a class="pitem" href="REPLACE_WITH_STAN_LINK">
+        <div>
+          <div class="pt">Sovereign Wealth Playbook</div>
+          <p class="pd2">How commodity revenue funds sovereign pools, and how to position ahead of their mandates rather than behind them.</p>
+        </div>
+        <div class="pp">$297</div>
+      </a>
+
+      <a class="pitem" href="https://rationalprince.com/#brief">
+        <div>
+          <div class="pt">The Sovereign Brief</div>
+          <p class="pd2">Standing coverage across energy, defense and sovereign capital. Sent as the flows move, not on a content calendar.</p>
+        </div>
+        <div class="pp">Free</div>
+      </a>
+
+    </div>
+
+    <div class="actions" style="margin-top:2.4rem">
+      <a class="btn" href="REPLACE_WITH_STAN_LINK">Browse the research</a>
+      <a class="btn alt" href="REPLACE_WITH_BEEHIIV_LINK">Subscribe free</a>
+    </div>
+  </section>
+
+  <p class="related">Related reading: <a href="https://rationalprince.com/brent-vs-wti/">Brent vs WTI and the spread</a> &middot; <a href="https://rationalprince.com/strait-of-hormuz/">the chokepoint outside the base case</a>.</p>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="social">
+      <a href="REPLACE_WITH_X_LINK">X</a>
+      <a href="REPLACE_WITH_LINKEDIN_LINK">LinkedIn</a>
+      <a href="REPLACE_WITH_THREADS_LINK">Threads</a>
+      <a href="REPLACE_WITH_INSTAGRAM_LINK">Instagram</a>
+      <a href="REPLACE_WITH_STAN_LINK">Store</a>
+    </div>
+    <div>RationalPrince &middot; Think Rationally. Build Wealth.</div>
+    <div>&copy; 2026 RationalPrince. All rights reserved.</div>
+    <p class="legal">Research and educational content only. Nothing published here is investment,
+    legal or tax advice, and nothing constitutes an offer or solicitation to buy or sell any security.
+    No forecast on this page is a prediction, a recommendation, or a basis for a trade. Figures are
+    approximate and change over time; verify against primary sources before acting. Markets carry
+    risk of loss, including total loss of capital. Do your own work.</p>
+  </div>
+</footer>
+</body>
+</html>
