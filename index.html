@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is the Strait of Hormuz Open? Desk Reference | RationalPrince</title>
+<meta name="description" content="Is the Strait of Hormuz open or closed? Status, who controls it, width and depth, transit counts, and what each answer does to oil prices — plus institutional research on energy, defense and sovereign capital.">
+<link rel="canonical" href="https://rationalprince.com/">
+<meta property="og:title" content="Is the Strait of Hormuz open? — RationalPrince desk reference">
+<meta property="og:description" content="Two tracks. Institutional research and foundations. Sold outright, delivered instantly.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rationalprince.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YGPK63N7G7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YGPK63N7G7');
+</script>
+
+<style>
+:root{
+  --ink:#050506;
+  --panel:#0c1013;
+  --ivory:#ece7de;
+  --ivory-2:#c3bdb3;
+  --dim:#8d887f;
+  --faint:#5c5852;
+  --gold:#c9a961;
+  --gold-2:#8d7640;
+  --rule:rgba(236,231,222,.10);
+  --rule-2:rgba(236,231,222,.055);
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --gutter:clamp(20px,5vw,60px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--ivory);font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:repeating-linear-gradient(to right,var(--rule-2) 0 1px,transparent 1px 12.5%);opacity:.75}
+.wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 var(--gutter)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+.mono{font-family:var(--mono)}
+
+/* nav */
+.topbar{position:sticky;top:0;z-index:5;background:rgba(5,5,6,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule-2)}
+.nav{display:flex;align-items:center;gap:30px;padding:20px 0}
+.mark{font-family:var(--serif);font-size:20px}
+.mark small{font-family:var(--mono);font-size:8.5px;letter-spacing:.22em;color:var(--dim);margin-left:8px;vertical-align:2px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 auto;padding:0}
+.nav ul a{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--dim);padding-bottom:6px;border-bottom:1px solid transparent}
+.nav ul a:hover,.nav ul a.on{color:var(--ivory);border-bottom-color:var(--gold-2)}
+.btn{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;padding:11px 18px;
+  border:1px solid var(--rule);color:var(--dim);background:transparent;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.btn:hover{border-color:var(--gold-2);color:var(--ivory)}
+.btn-solid{background:var(--gold);border-color:var(--gold);color:#14110a}
+.btn-solid:hover{background:#d8b972;border-color:#d8b972;color:#14110a}
+
+/* hero */
+.hero{padding:104px 0 0}
+.status{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--gold-2);margin:0}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,7vw,86px);line-height:1.03;margin:26px 0 0}
+h1 em{display:block;font-style:italic;color:var(--gold)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:56px;margin-top:54px;align-items:start}
+.lede{max-width:54ch;color:var(--ivory-2);margin:0}
+.aside p{font-size:13px;color:var(--dim);margin:0 0 20px;max-width:33ch}
+.aside .btn{display:block;text-align:center;margin-bottom:10px}
+
+/* ladder */
+.ladder{margin:150px 0 0}
+.ladder-head{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--dim)}
+.plot{position:relative;height:140px;margin-top:44px;border-bottom:1px solid var(--rule)}
+.tick{position:absolute;bottom:0;transform:translateX(-50%);text-align:center}
+.tick .stem{width:1px;margin:0 auto;background:linear-gradient(to bottom,var(--gold-2),rgba(201,169,97,.14))}
+.tick .lab{font-family:var(--mono);font-size:9.5px;color:var(--dim);margin-bottom:7px;white-space:nowrap}
+.tick.hi .stem{background:linear-gradient(to bottom,var(--gold),rgba(201,169,97,.2))}
+.tick.hi .lab{color:var(--ivory)}
+
+/* sections */
+section{scroll-margin-top:80px}
+.eyebrow{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--gold-2);margin:0 0 20px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.2vw,44px);line-height:1.1;margin:0}
+.sub{max-width:60ch;color:var(--ivory-2);margin:20px 0 0}
+.catalog{margin:150px 0 0}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:42px 0 0}
+.filters .btn[aria-pressed="true"]{color:var(--gold);border-color:var(--gold-2)}
+
+/* product rows */
+.rows{margin:48px 0 0;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:96px minmax(0,1fr) 200px;gap:0 28px;
+  padding:34px 0;border-bottom:1px solid var(--rule);transition:background .2s}
+.row:hover{background:rgba(236,231,222,.018)}
+.row[hidden]{display:none}
+.code{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--dim)}
+.code span{display:block;color:var(--faint);margin-top:6px;letter-spacing:.1em}
+.name{font-family:var(--serif);font-size:clamp(21px,2.3vw,26px);line-height:1.2;margin:0}
+.blurb{font-size:13px;color:var(--ivory-2);margin:12px 0 0;max-width:62ch}
+.feats{list-style:none;margin:16px 0 0;padding:0}
+.feats li{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--dim);margin-top:6px}
+.feats li::before{content:"— ";color:var(--gold-2)}
+.buy{text-align:right}
+.amount{font-family:var(--serif);font-size:30px;line-height:1;color:var(--ivory)}
+.amount sup{font-family:var(--mono);font-size:11px;vertical-align:12px;margin-right:1px;color:var(--dim)}
+.amount.free{font-style:italic;color:var(--gold)}
+.terms{font-family:var(--mono);font-size:9px;letter-spacing:.18em;color:var(--faint);margin:8px 0 18px}
+.buy .btn{white-space:nowrap}
+
+/* FAQ */
+.faq{margin:150px 0 0}
+.qindex{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0 0}
+.qindex a{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--dim);border:1px solid var(--rule);padding:8px 12px;transition:color .2s,border-color .2s}
+.qindex a:hover{color:var(--ivory);border-color:var(--gold-2)}
+.qs{margin:36px 0 0;border-top:1px solid var(--rule)}
+details{scroll-margin-top:96px}
+details{border-bottom:1px solid var(--rule)}
+summary{display:flex;gap:16px;align-items:baseline;cursor:pointer;list-style:none;padding:22px 0;
+  font-family:var(--serif);font-size:clamp(19px,2.1vw,23px);line-height:1.3}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";font-family:var(--mono);font-size:12px;color:var(--gold-2);flex:none;width:10px}
+details[open] summary::before{content:"×"}
+summary:hover{color:#fff}
+.answer{padding:0 0 26px 26px;max-width:62ch}
+.answer p{font-size:13px;color:var(--ivory-2);margin:0 0 14px}
+.answer p:last-child{margin-bottom:0}
+.answer a{color:var(--gold);border-bottom:1px solid var(--gold-2)}
+.refnote{font-family:var(--mono);font-size:9px;letter-spacing:.18em;color:var(--faint);margin:26px 0 0}
+
+/* brief */
+.brief{margin:130px 0 0;background:var(--panel);padding:clamp(28px,5vw,58px)}
+.brief h2{max-width:18ch}
+.brief p{max-width:52ch;color:var(--ivory-2);margin:20px 0 0;font-size:14px}
+.signup{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0}
+.signup input{flex:0 1 300px;background:#05070a;border:1px solid var(--rule);color:var(--ivory);
+  font-family:var(--mono);font-size:11px;letter-spacing:.05em;padding:13px 14px}
+.signup input::placeholder{color:var(--faint)}
+.fineprint{font-family:var(--mono);font-size:9px;letter-spacing:.18em;color:var(--faint);margin:14px 0 0}
+
+footer{margin:110px 0 0;border-top:1px solid var(--rule);padding:30px 0 60px}
+.foot{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--faint)}
+.foot a:hover{color:var(--dim)}
+.disclaim{max-width:74ch;font-size:11px;color:#46433f;margin:22px 0 0;line-height:1.7}
+
+@media (max-width:900px){
+  .nav{flex-wrap:wrap;gap:14px}
+  .nav ul{order:3;width:100%;margin:0;justify-content:space-between}
+  .nav > .btn{margin-left:auto}
+  .hero{padding-top:64px}
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .ladder,.catalog,.faq{margin-top:92px}
+  .plot{height:118px}
+  .row{grid-template-columns:70px minmax(0,1fr);gap:0 16px}
+  .buy{grid-column:2;text-align:left;margin-top:20px}
+  .terms{margin-bottom:12px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <nav class="nav">
+    <a class="mark" href="/">RationalPrince <small>EST. DESK</small></a>
+    <ul>
+      <li><a href="#catalog">RESEARCH</a></li>
+      <li><a href="#hormuz">HORMUZ</a></li>
+      <li><a href="#brief">FREE BRIEF</a></li>
+    </ul>
+    <a class="btn" href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=nav">ALL PRODUCTS</a>
+  </nav>
+</div></div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="status"><span class="dot"></span>DESK ACTIVE</p>
+    <h1>Think rationally.<em>Build wealth.</em></h1>
+    <div class="hero-grid">
+      <p class="lede">Two tracks. Institutional research on energy chokepoints, defense procurement and sovereign capital — and a foundations track for allocators still building the machinery underneath. Everything is sold outright. No advisory relationship, no signal group.</p>
+      <div class="aside">
+        <p>Nine products from $10 to $297, plus the brief. Start where your gap actually is.</p>
+        <a class="btn btn-solid" href="#catalog">SEE EVERYTHING</a>
+        <a class="btn" href="#brief">READ FREE FIRST</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="ladder" aria-label="Price ladder">
+    <div class="ladder-head"><span>THE LADDER</span><span>FREE — $297</span></div>
+    <div class="plot">
+      <div class="tick" style="left:3%"><div class="lab">Free</div><div class="stem" style="height:32px"></div></div>
+      <div class="tick" style="left:24%"><div class="lab">$10</div><div class="stem" style="height:42px"></div></div>
+      <div class="tick" style="left:29.5%"><div class="lab">$17</div><div class="stem" style="height:46px"></div></div>
+      <div class="tick" style="left:34.5%"><div class="lab">$27</div><div class="stem" style="height:50px"></div></div>
+      <div class="tick" style="left:39%"><div class="lab">$37</div><div class="stem" style="height:54px"></div></div>
+      <div class="tick" style="left:43%"><div class="lab">$47</div><div class="stem" style="height:58px"></div></div>
+      <div class="tick hi" style="left:58%"><div class="lab">$97</div><div class="stem" style="height:80px"></div></div>
+      <div class="tick hi" style="left:97%"><div class="lab">$297</div><div class="stem" style="height:104px"></div></div>
+    </div>
+  </section>
+
+  <section class="catalog" id="catalog">
+    <p class="eyebrow">EVERYTHING</p>
+    <h2>Buy the work, not a subscription.</h2>
+    <p class="sub">Each is standalone and delivered instantly. The research track assumes you already allocate; the foundations track builds that capability from the start.</p>
+
+    <div class="filters" role="group" aria-label="Filter catalog">
+      <button class="btn" data-filter="all" aria-pressed="true">ALL</button>
+      <button class="btn" data-filter="research" aria-pressed="false">INSTITUTIONAL RESEARCH</button>
+      <button class="btn" data-filter="foundations" aria-pressed="false">FOUNDATIONS</button>
+    </div>
+
+    <div class="rows" id="rows">
+
+      <article class="row" data-track="research">
+        <div class="code">00<span>Start here</span></div>
+        <div>
+          <h3 class="name">Get The Sovereign Brief</h3>
+          <p class="blurb">Energy macro intelligence for people who move capital — oil, geopolitics and sovereign flows, written straight. Read it before you buy anything else.</p>
+          <ul class="feats"><li>Delivered to your inbox</li><li>Unsubscribe in one click</li></ul>
+        </div>
+        <div class="buy">
+          <div class="amount free">Free</div>
+          <div class="terms">NO CARD</div>
+          <a class="btn" href="#brief">GET THE BRIEF</a>
+        </div>
+      </article>
+
+      <article class="row" data-track="research">
+        <div class="code">R1<span>Energy</span></div>
+        <div>
+          <h3 class="name">The Strait of Hormuz Playbook</h3>
+          <p class="blurb">One chokepoint, fully mapped. The escalation ladder with observable triggers, bypass capacity route by route, and why the permit regime matters more than reopening.</p>
+          <ul class="feats"><li>Five-tier escalation ladder</li><li>Bypass arithmetic and its gaps</li><li>What reprices first, second, last</li></ul>
+        </div>
+        <div class="buy">
+          <div class="amount"><sup>$</sup>17</div>
+          <div class="terms">ONE-TIME</div>
+          <a class="btn" href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=r1_hormuz">BUY THE PLAYBOOK</a>
+        </div>
+      </article>
+
+      <article class="row" data-track="research">
+        <div class="code">R2<span>Energy</span></div>
+        <div>
+          <h3 class="name">The Energy Trading Desk Blueprint · Vol. I</h3>
+          <p class="blurb">How an energy book is actually framed — the curve structures, spreads and inventory signals a desk reads before it takes a view, and the ones it ignores.</p>
+          <ul class="feats"><li>Contango and backwardation as positioning evidence</li><li>Cracks, storage and freight as confirmation</li><li>Sizing and invalidation discipline</li></ul>
+        </div>
+        <div class="buy">
+          <div class="amount"><sup>$</sup>47</div>
+          <div class="terms">ONE-TIME</div>
+          <a class="btn" href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=r2_vol1">BUY VOL. I</a>
+        </div>
+      </article>
+
+      <article class="row" data-track="research">
+        <div class="code">R3<span>Defense</span></div>
+        <div>
+          <h3 class="name">Defense &amp; Reconstruction Thesis · Vol. II</h3>
+          <p class="blurb">The rearmament cycle read from the budget line down: which programs are funded through the decade, who holds the backlog, and where the industrial base physically cannot expand.</p>
+          <ul class="feats"><li>Appropriations to backlog to revenue</li><li>Prime, tier-one and bottleneck supplier map</li><li>What breaks the thesis, stated up front</li></ul>
+        </div>
+        <div class="buy">
+          <div class="amount"><sup>$</sup>97</div>
+          <div class="terms">ONE-TIME</div>
+          <a class="btn" href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=r3_vol2">BUY VOL. II</a>
+        </div>
+      </article>
+
+      <article class="row" data-track="research">
+        <div class="code">R4<span>Flagship</span></div>
+        <div>
+          <h3 class="name">Sovereign Wealth Playbook · Vol. III</h3>
+          <p class="blurb">How the largest state allocators are mandated, what they disclose, how they have rotated — and how to read their filings as a forward indicator rather than a history lesson.</p>
+          <ul class="feats"><li>Fund-by-fund mandate and disclosure map</li><li>Rotation history and what it signalled in advance</li><li>Petrodollar recycling mechanics</li><li>Includes the Hormuz Playbook</li></ul>
+        </div>
+        <div class="buy">
+          <div class="amount"><sup>$</sup>297</div>
+          <div class="terms">ONE-TIME</div>
+          <a class="btn btn-solid" href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=r4_vol3">BUY VOL. III</a>
+        </div>
+      </article>
+
+      <article class="row" data-track="foundations">
+        <div class="code">F1<span>Entry</span></div>
+        <div>
+          <h3 class="name">The 5 Capital Systems</h3>
+          <p class="blurb">The five systems you're already running whether or not you've named them — income, reserve, deployment, protection, compounding. Naming them is what makes them fixable.</p>
+        </div>
+        <div class="buy">
+          <div class="amount"><sup>$</sup>10</div>
+          <div class="terms">ONE-TIME</div>
+          <a class="btn" href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=f1_systems">GET IT</a>
+        </div>
+      </article>
+
+      <article class="row" data-track="foundations">
+        <div class="code">F2<span>Tool</span></div>
+        <div>
+          <h3 class="name">Wealth Gap Tracker</h3>
+          <p class="blurb">A working tracker for the distance between where your capital is and where it needs to be. Numbers you update, not advice you read once.</p>
+        </div>
+        <div class="buy">
+          <div class="amount"><sup>$</sup>17</div>
+          <div class="terms">ONE-TIME</div>
+          <a class="btn" href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=f2_tracker">GET THE TRACKER</a>
+        </div>
+      </article>
+
+      <article class="row" data-track="foundations">
+        <div class="code">F3<span>Core</span></div>
+        <div>
+          <h3 class="name">Capital Foundations</h3>
+          <p class="blurb">The groundwork: how capital is structured, what it costs to hold, and the sequence decisions have to happen in before any position makes sense.</p>
+        </div>
+        <div class="buy">
+          <div class="amount"><sup>$</sup>27</div>
+          <div class="terms">ONE-TIME</div>
+          <a class="btn" href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=f3_foundations">GET THE COURSE</a>
+        </div>
+      </article>
+
+      <article class="row" data-track="foundations">
+        <div class="code">F4<span>Applied</span></div>
+        <div>
+          <h3 class="name">From Zero to First Position</h3>
+          <p class="blurb">For the reader who has the framework and still hasn't acted. Walks the distance between understanding a thesis and actually holding something.</p>
+        </div>
+        <div class="buy">
+          <div class="amount"><sup>$</sup>37</div>
+          <div class="terms">ONE-TIME</div>
+          <a class="btn" href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=f4_zero">GET THE GUIDE</a>
+        </div>
+      </article>
+
+      <article class="row" data-track="foundations">
+        <div class="code">F5<span>Complete</span></div>
+        <div>
+          <h3 class="name">The Wealth Blueprint Masterclass</h3>
+          <p class="blurb">The full foundations track in one place — the systems, the sequence and the application, taught end to end rather than in pieces.</p>
+        </div>
+        <div class="buy">
+          <div class="amount"><sup>$</sup>97</div>
+          <div class="terms">ONE-TIME</div>
+          <a class="btn btn-solid" href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=f5_masterclass">GET THE MASTERCLASS</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="faq" id="hormuz">
+    <p class="eyebrow">DESK REFERENCE</p>
+    <h2>Is the Strait of Hormuz open?</h2>
+    <p class="sub">The questions people are actually searching, answered with the part most coverage leaves out: what each answer does to price.</p>
+
+<nav class="qindex" aria-label="Hormuz questions">
+      <a href="#is-the-strait-of-hormuz-open">Is it open?</a>
+      <a href="#is-the-strait-of-hormuz-still-closed">Still closed?</a>
+      <a href="#who-owns-the-strait-of-hormuz">Who controls it</a>
+      <a href="#how-wide-is-the-strait-of-hormuz">How wide</a>
+      <a href="#how-deep-is-the-strait-of-hormuz">How deep</a>
+      <a href="#is-the-strait-of-hormuz-international-waters">International waters</a>
+      <a href="#how-many-ships-pass-through-the-strait-of-hormuz">Ships today</a>
+      <a href="#what-happens-to-oil-when-the-strait-of-hormuz-closes">Effect on oil</a>
+      <a href="#can-pipelines-bypass-the-strait-of-hormuz">Pipeline bypass</a>
+      <a href="#when-will-the-strait-of-hormuz-open">When it reopens</a>
+    </nav>
+
+    <div class="qs">
+      <details id="is-the-strait-of-hormuz-open" open>
+        <summary>Is the Strait of Hormuz open right now?</summary>
+        <div class="answer">
+          <p>No. The Strait of Hormuz has been closed in effect since late February 2026, when the United States and Israel began strikes on Iran. Iran has enforced the closure by attacking vessels attempting transit, and the United States has run a naval blockade alongside an escort operation.</p>
+          <p>Closed does not mean empty. Traffic has become conditional rather than absent — some vessels move by permit, some under escort, some dark with tracking disabled. Weekly transit counts have run at a fraction of pre-war levels, recovering and collapsing again with each round of attacks.</p>
+          <p>This page is a reference, not a live tracker. For current status check maritime advisories; for the framework that tells you what a change in status is worth, see <a href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=faq_playbook">the Playbook</a>.</p>
+        </div>
+      </details>
+
+      <details id="is-the-strait-of-hormuz-still-closed">
+        <summary>Is the Strait of Hormuz still closed today?</summary>
+        <div class="answer">
+          <p>Status has not reverted. What changes week to week is how much moves through, not whether the closure holds — permitted and escorted transits rise between strike rounds and collapse after them, which is why the same question gets a different-sounding answer depending on the week it is asked.</p>
+          <p>Treat any single day's headline as a data point in that pattern rather than a turning point. The durable signal is in war-risk insurance quotes and escort availability, both of which move before the news does.</p>
+        </div>
+      </details>
+
+      <details id="why-is-the-strait-of-hormuz-closed">
+        <summary>Why is the Strait of Hormuz closed?</summary>
+        <div class="answer">
+          <p>Closure is leverage, not strategy. Iran cannot match the strike campaign directly, so it applies cost to the one variable every counterparty prices: the movement of Gulf crude and LNG through a single passage.</p>
+          <p>The mechanism is cheap on Iran's side — mines, fast-attack craft, anti-ship missiles and drones from its own coastline — and expensive on everyone else's, because insurance, escort and rerouting costs land on cargo owners rather than on the party imposing them.</p>
+        </div>
+      </details>
+
+      <details id="who-owns-the-strait-of-hormuz">
+        <summary>Who owns and controls the Strait of Hormuz?</summary>
+        <div class="answer">
+          <p>No one owns it. The waterway runs between Iran to the north and Oman to the south, and both inbound and outbound shipping lanes sit inside Omani territorial waters at the narrowest point, under a traffic separation scheme.</p>
+          <p>Control in practice is a different question from control in law. Iran's coastline, islands and missile coverage give it the ability to make transit conditional; the United States Fifth Fleet and coalition escorts give the other side the ability to make transit possible. What moves is decided by that balance, not by title.</p>
+        </div>
+      </details>
+
+      <details id="is-the-strait-of-hormuz-international-waters">
+        <summary>Is the Strait of Hormuz international waters?</summary>
+        <div class="answer">
+          <p>It is an international strait, which is not the same thing as international waters. The lanes lie within territorial seas, but the Law of the Sea grants transit passage through straits used for international navigation, and that right is not supposed to be suspendable.</p>
+          <p>Iran signed the convention and never ratified it, and has long argued the right belongs only to parties — the legal seam the current closure is run through. For pricing purposes the entitlement matters less than the escort: law describes who may pass, underwriters decide what passing costs.</p>
+        </div>
+      </details>
+
+      <details id="how-wide-is-the-strait-of-hormuz">
+        <summary>How wide is the Strait of Hormuz?</summary>
+        <div class="answer">
+          <p>About 21 nautical miles at its narrowest point. The usable part is much narrower: two shipping lanes of roughly two miles each, separated by a buffer, because draft and depth rule out most of the remaining water for loaded tankers.</p>
+          <p>That is the whole reason the chokepoint is a chokepoint. A passage this narrow cannot be widened, escorted around, or replaced at the volumes involved — roughly a fifth of global oil consumption moved through it before the war.</p>
+        </div>
+      </details>
+
+      <details id="how-deep-is-the-strait-of-hormuz">
+        <summary>How deep is the Strait of Hormuz?</summary>
+        <div class="answer">
+          <p>Deep enough for the largest loaded tankers, and not by a wide margin. Depths in the transit lanes run on the order of 55 to 60 metres at the shallow end, against a laden VLCC draft of roughly 22.</p>
+          <p>The number that matters is not average depth but usable depth inside the lanes, because that is what forces every loaded tanker into the same corridor. Mines and lane denial work here precisely because there is no deeper alternative to route around them.</p>
+        </div>
+      </details>
+
+      <details id="why-is-the-strait-of-hormuz-important">
+        <summary>Why is the Strait of Hormuz important?</summary>
+        <div class="answer">
+          <p>Because nothing substitutes for it at volume. Roughly a fifth of the world's oil consumption and a comparable share of seaborne LNG moved through a few miles of water before the war, most of it heading to Asia.</p>
+          <p>It is also the shortest lever in the region. Any actor able to make transit uncertain can move global prices without matching anyone's military, which is why the strait shows up in every Gulf escalation regardless of what the fighting is nominally about.</p>
+        </div>
+      </details>
+
+      <details id="how-many-ships-pass-through-the-strait-of-hormuz">
+        <summary>How many ships pass through the Strait of Hormuz today?</summary>
+        <div class="answer">
+          <p>Before the closure, roughly 100 to 120 vessel movements a day, including 30 to 40 laden tankers carrying about 20 million barrels of crude and products. Since late February 2026 the count has run at a fraction of that, rising between strike rounds and falling after them.</p>
+          <p>No public number is exact right now. Transit counts are built from AIS, and a meaningful share of vessels are moving with transponders off, so trackers undercount the dark fleet and overcount confidence. Use the trend, not the day.</p>
+        </div>
+      </details>
+
+      <details id="what-happens-to-oil-when-the-strait-of-hormuz-closes">
+        <summary>What happens to oil when the Strait of Hormuz closes?</summary>
+        <div class="answer">
+          <p>Price moves before barrels do. The first reprice is risk premium and paper: front-month crude, then time spreads, as the market pays for prompt supply that is already outside the Gulf.</p>
+          <p>Freight and insurance follow within days — war risk premiums on hulls and cargo, then tanker day rates as tonnage repositions. Physical differentials move last and matter most, because they show which grades are genuinely short rather than which headlines are loudest.</p>
+          <p>The sequence is the tradeable part. Reading it in the wrong order is how positions get taken at the top of a premium that decays.</p>
+        </div>
+      </details>
+
+      <details id="can-pipelines-bypass-the-strait-of-hormuz">
+        <summary>Can pipelines bypass the Strait of Hormuz?</summary>
+        <div class="answer">
+          <p>Partly, and not for everyone. Saudi Arabia's East-West line to the Red Sea and the UAE's line from Habshan to Fujairah are the two that matter at scale, and together their nameplate capacity covers only a fraction of normal transit volumes.</p>
+          <p>Nameplate is not throughput. Bypass routes have their own vulnerabilities, sustained flow runs below rated capacity, and the crude that clears them is not the same grade mix buyers were contracted for. Kuwait, Qatar and Iraq's southern exports have no meaningful pipeline alternative at all — Qatari LNG has none whatsoever.</p>
+        </div>
+      </details>
+
+      <details id="when-will-the-strait-of-hormuz-open">
+        <summary>When will the Strait of Hormuz open again?</summary>
+        <div class="answer">
+          <p>Reopening is a gradient, not a switch. Once transit is granted case by case — by permit, by escort convoy, by flag or by counterparty — the strait can be functionally open for some cargoes and closed for others on the same day.</p>
+          <p>For pricing, that is the point. The market will not get a clean reopening headline to trade; it gets a slow change in who is allowed through and at what cost, which shows up in insurance quotes and transit counts well before it shows up in policy statements.</p>
+        </div>
+      </details>
+    </div>
+
+    <p class="refnote">REFERENCE CURRENT TO MID-AUGUST 2026 · SOURCES CITED IN FULL IN THE PLAYBOOK</p>
+  </section>
+
+  <section class="brief" id="brief">
+    <p class="eyebrow">THE SOVEREIGN BRIEF</p>
+    <h2>Start with the free brief.</h2>
+    <p>Energy, defense and sovereign capital — the desk's reasoning, in your inbox. Read a few. Buy only if the work holds up.</p>
+    <!-- Live now: sends readers to the free brief on the store.
+         When your beehiiv publication URL is ready, delete this block and
+         uncomment the form below, replacing YOUR-PUB with the real subdomain. -->
+    <p class="signup">
+      <a class="btn btn-solid" href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=brief_cta">SEND ME THE BRIEF</a>
+    </p>
+
+    <!--
+    <form class="signup" action="https://YOUR-PUB.beehiiv.com/subscribe" method="post" target="_blank" rel="noopener">
+      <input type="email" name="email" placeholder="you@domain.com" aria-label="Your email address" required>
+      <button class="btn btn-solid" type="submit">SEND ME THE BRIEF</button>
+    </form>
+    -->
+    <p class="fineprint">ONE CLICK TO UNSUBSCRIBE. NO LIST SHARING.</p>
+  </section>
+
+  <footer>
+    <div class="foot">
+      <span>RATIONALPRINCE — EST. DESK</span>
+      <a href="#catalog">RESEARCH</a>
+      <a href="#hormuz">HORMUZ</a>
+      <a href="#brief">FREE BRIEF</a>
+      <a href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=footer">ALL PRODUCTS</a>
+      <span style="margin-left:auto">© 2026</span>
+    </div>
+    <p class="disclaim">RationalPrince publishes research and educational material. Nothing here is investment, legal or tax advice, and nothing creates an advisory relationship. Products are sold outright and delivered digitally.</p>
+  </footer>
+
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is the Strait of Hormuz open right now?","acceptedAnswer":{"@type":"Answer","text":"No. The Strait of Hormuz has been closed in effect since late February 2026, when the United States and Israel began strikes on Iran. Iran has enforced the closure by attacking vessels attempting transit, and the United States has run a naval blockade alongside an escort operation. Closed does not mean empty: some vessels move by permit, some under escort, some dark, with weekly transit counts running at a fraction of pre-war levels."}},
+{"@type":"Question","name":"Is the Strait of Hormuz still closed today?","acceptedAnswer":{"@type":"Answer","text":"Status has not reverted. What changes week to week is how much moves through, not whether the closure holds: permitted and escorted transits rise between strike rounds and collapse after them. War-risk insurance quotes and escort availability move before the headlines do."}},
+{"@type":"Question","name":"Why is the Strait of Hormuz closed?","acceptedAnswer":{"@type":"Answer","text":"Closure is leverage. Iran cannot match the strike campaign directly, so it applies cost to Gulf crude and LNG movement through a single passage, using mines, fast-attack craft, anti-ship missiles and drones. The cost lands on cargo owners through insurance, escort and rerouting."}},
+{"@type":"Question","name":"Who owns and controls the Strait of Hormuz?","acceptedAnswer":{"@type":"Answer","text":"No single state owns it. The waterway runs between Iran and Oman, and the shipping lanes at the narrowest point sit within Omani territorial waters under a traffic separation scheme. In practice, transit is decided by the balance between Iranian coastal capability and coalition escort operations."}},
+{"@type":"Question","name":"Is the Strait of Hormuz international waters?","acceptedAnswer":{"@type":"Answer","text":"It is an international strait rather than international waters. The lanes lie inside territorial seas, but the Law of the Sea grants transit passage through straits used for international navigation. Iran signed the convention without ratifying it and disputes the scope of that right, which is the legal seam the closure is run through."}},
+{"@type":"Question","name":"How wide is the Strait of Hormuz?","acceptedAnswer":{"@type":"Answer","text":"About 21 nautical miles at its narrowest point, with two usable shipping lanes of roughly two miles each separated by a buffer. Draft and depth rule out most of the remaining water for loaded tankers."}},
+{"@type":"Question","name":"How deep is the Strait of Hormuz?","acceptedAnswer":{"@type":"Answer","text":"Depths in the transit lanes run on the order of 55 to 60 metres at the shallow end, against a laden very large crude carrier draft of roughly 22 metres. Usable depth inside the lanes is what forces loaded tankers into a single corridor."}},
+{"@type":"Question","name":"Why is the Strait of Hormuz important?","acceptedAnswer":{"@type":"Answer","text":"Roughly a fifth of world oil consumption and a comparable share of seaborne LNG moved through a few miles of water before the war, most of it bound for Asia. No route substitutes for it at that volume, which makes transit uncertainty the shortest lever on global prices."}},
+{"@type":"Question","name":"How many ships pass through the Strait of Hormuz today?","acceptedAnswer":{"@type":"Answer","text":"Before the closure, roughly 100 to 120 vessel movements a day, including 30 to 40 laden tankers carrying about 20 million barrels of crude and products. Counts have since run at a fraction of that. Public trackers rely on AIS and undercount vessels moving with transponders off."}},
+{"@type":"Question","name":"What happens to oil when the Strait of Hormuz closes?","acceptedAnswer":{"@type":"Answer","text":"Risk premium and front-month crude reprice first, then time spreads. Freight, war-risk insurance and tanker rates follow within days. Physical differentials move last and show which grades are genuinely short."}},
+{"@type":"Question","name":"Can pipelines bypass the Strait of Hormuz?","acceptedAnswer":{"@type":"Answer","text":"Only partly. Saudi Arabia's East-West pipeline and the UAE's Habshan-Fujairah line are the two at scale, and their combined nameplate capacity covers a fraction of normal transit volumes. Kuwait, Qatar and Iraq's southern exports have no meaningful alternative, and Qatari LNG has none."}},
+{"@type":"Question","name":"When will the Strait of Hormuz open again?","acceptedAnswer":{"@type":"Answer","text":"Reopening is a gradient rather than a switch. With transit granted case by case, the strait can be functionally open for some cargoes and closed for others on the same day, and the change shows up in insurance quotes and transit counts before policy statements."}}]}
+</script>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.filters .btn');
+  var rows = document.querySelectorAll('#rows .row');
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){
+      var f = b.dataset.filter;
+      buttons.forEach(function(x){ x.setAttribute('aria-pressed', String(x === b)); });
+      rows.forEach(function(r){ r.hidden = (f !== 'all' && r.dataset.track !== f); });
+    });
+  });
+  document.querySelectorAll('a[href*="stan.store/rationalprince"]').forEach(function(a){
+    a.setAttribute('rel','noopener');
+    a.addEventListener('click', function(){
+      if (typeof gtag !== 'function') return;
+      var m = a.href.match(/utm_campaign=([a-z0-9_]+)/);
+      gtag('event','select_item',{ item_list_name:'stan_store', item_id: m ? m[1] : 'unknown' });
+    });
+  });
+
+
+  function setHash(id){
+    try { if (history.replaceState) history.replaceState(null, '', '#' + id); }
+    catch (e) { /* sandboxed preview: history is blocked, scrolling still works */ }
+  }
+
+  function openFromHash(){
+    var h = decodeURIComponent(location.hash.replace('#',''));
+    if (!h) return;
+    var el = document.getElementById(h);
+    if (!el) return;
+    if (el.tagName.toLowerCase() === 'details') {
+      el.open = true;
+      el.scrollIntoView({ block: 'start' });
+    }
+  }
+  window.addEventListener('hashchange', openFromHash);
+  openFromHash();
+
+  document.querySelectorAll('details[id]').forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if (!d.open) return;
+      setHash(d.id);
+      if (typeof gtag === 'function') gtag('event','faq_open',{ question_id: d.id });
+    });
+  });
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(ev){
+      var id = a.getAttribute('href').slice(1);
+      if (!id) return;
+      var t = document.getElementById(id);
+      if (!t) return;
+      ev.preventDefault();                 // scroll in place; never hand the URL to the browser
+      if (t.tagName.toLowerCase() === 'details') t.open = true;
+      if (id === 'hormuz') {
+        var first = document.getElementById('is-the-strait-of-hormuz-open');
+        if (first) first.open = true;
+      }
+      t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      setHash(id);
+    });
+  });
+
+  var links = document.querySelectorAll('.nav ul a');
+  var secs = [].map.call(links, function(a){ return document.querySelector(a.getAttribute('href')); });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        var i = secs.indexOf(e.target);
+        links.forEach(function(a, j){ a.classList.toggle('on', i === j); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    secs.forEach(function(s){ if (s) io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
