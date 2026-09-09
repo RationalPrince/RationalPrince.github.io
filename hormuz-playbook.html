@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Strait of Hormuz Playbook — RationalPrince</title>
+<meta name="description" content="Closure scenarios, trigger levels, and the second-order trade chain for the world's most consequential shipping lane. $17.">
+
+<meta property="og:title" content="The Strait of Hormuz Playbook">
+<meta property="og:description" content="Closure scenarios, trigger levels, and the second-order trade chain for the world's most consequential shipping lane.">
+<meta property="og:type" content="product">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --midnight:#0B0C0E;
+  --charcoal:#15171A;
+  --slate:#2A2E34;
+  --steel:#6B7280;
+  --ivory:#EDE8DE;
+  --gold:#B08D4F;
+  --gold-dim:#7A6234;
+
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+
+body{
+  background:var(--midnight);
+  color:var(--ivory);
+  font-family:var(--serif);
+  font-size:19px;
+  line-height:1.72;
+  font-weight:300;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.75rem}
+.narrow{max-width:36rem}
+
+a{color:inherit}
+
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---------- masthead ---------- */
+.masthead{
+  border-bottom:1px solid var(--slate);
+  padding:1.4rem 0;
+}
+.masthead .wrap{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.wordmark{font-size:1.15rem;letter-spacing:.06em;font-weight:400}
+.masthead .desk{font-family:var(--mono);font-size:.68rem;color:var(--steel);letter-spacing:.09em}
+
+/* ---------- hero ---------- */
+.hero{padding:5rem 0 4rem;position:relative}
+
+.chart{
+  width:100%;
+  max-width:44rem;
+  margin:0 0 3.25rem;
+  display:block;
+}
+.chart .land{fill:var(--charcoal);stroke:var(--slate);stroke-width:1}
+.chart .water{fill:none}
+.chart .lane{fill:none;stroke:var(--gold);stroke-width:1.25;opacity:.85}
+.chart .lane-buffer{fill:none;stroke:var(--gold-dim);stroke-width:.75;stroke-dasharray:3 4;opacity:.55}
+.chart .tick{stroke:var(--steel);stroke-width:.75}
+.chart text{font-family:var(--mono);fill:var(--steel);font-size:8.5px;letter-spacing:.06em}
+.chart text.place{fill:var(--ivory);font-size:10px;opacity:.72}
+.chart text.gold{fill:var(--gold)}
+
+h1{
+  font-size:clamp(2.6rem,6.4vw,4.4rem);
+  line-height:1.04;
+  font-weight:400;
+  letter-spacing:-.015em;
+  max-width:16ch;
+  margin-bottom:1.6rem;
+}
+h1 em{font-style:italic;font-weight:300}
+
+.standfirst{
+  font-size:1.28rem;
+  color:#C9C2B4;
+  max-width:44ch;
+  margin-bottom:2.75rem;
+}
+
+/* ---------- buy ---------- */
+.buy{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+
+.btn{
+  display:inline-block;
+  font-family:var(--mono);
+  font-size:.82rem;
+  letter-spacing:.05em;
+  text-decoration:none;
+  background:var(--gold);
+  color:var(--midnight);
+  padding:1.05rem 2.1rem;
+  border:1px solid var(--gold);
+  transition:background .18s ease,color .18s ease;
+}
+.btn:hover{background:transparent;color:var(--gold)}
+
+.price-note{font-family:var(--mono);font-size:.74rem;color:var(--steel);line-height:1.7}
+
+/* ---------- rules & sections ---------- */
+.rule{border:0;border-top:1px solid var(--slate);margin:0}
+
+section{padding:4.5rem 0}
+
+h2{
+  font-size:clamp(1.75rem,3.4vw,2.4rem);
+  font-weight:400;
+  line-height:1.18;
+  letter-spacing:-.01em;
+  margin-bottom:1.5rem;
+  max-width:20ch;
+}
+
+p+p{margin-top:1.15rem}
+
+.lede{font-size:1.12rem;max-width:60ch;color:#C9C2B4}
+
+/* ---------- scenarios ---------- */
+.scenarios{margin-top:3rem;display:grid;gap:0}
+
+.scenario{
+  display:grid;
+  grid-template-columns:11rem 1fr;
+  gap:2.5rem;
+  padding:2rem 0;
+  border-top:1px solid var(--slate);
+  align-items:start;
+}
+.scenario:last-child{border-bottom:1px solid var(--slate)}
+
+.scenario .name{
+  font-family:var(--mono);
+  font-size:.78rem;
+  color:var(--gold);
+  letter-spacing:.04em;
+  line-height:1.65;
+  padding-top:.35rem;
+}
+.scenario .name span{display:block;color:var(--steel);margin-top:.3rem}
+.scenario p{font-size:1.05rem;max-width:52ch}
+
+@media (max-width:640px){
+  .scenario{grid-template-columns:1fr;gap:.75rem}
+  .scenario .name{padding-top:0}
+}
+
+/* ---------- contents list ---------- */
+.contents{margin-top:2.5rem;max-width:52ch}
+.contents li{
+  list-style:none;
+  padding:.95rem 0 .95rem 2.1rem;
+  border-bottom:1px solid var(--slate);
+  position:relative;
+  font-size:1.05rem;
+}
+.contents li:first-child{border-top:1px solid var(--slate)}
+.contents li::before{
+  content:"";
+  position:absolute;
+  left:.15rem;top:1.6rem;
+  width:.75rem;height:1px;
+  background:var(--gold);
+}
+
+/* ---------- who ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
+@media (max-width:760px){.split{grid-template-columns:1fr;gap:2.5rem}}
+
+.split h3{
+  font-family:var(--mono);
+  font-size:.78rem;
+  font-weight:500;
+  color:var(--gold);
+  letter-spacing:.05em;
+  margin-bottom:1rem;
+}
+.split .no h3{color:var(--steel)}
+.split ul{list-style:none}
+.split li{padding:.5rem 0;font-size:1.02rem;color:#C9C2B4}
+.split .no li{color:var(--steel)}
+
+/* ---------- close ---------- */
+.close{
+  background:var(--charcoal);
+  border-top:1px solid var(--slate);
+  border-bottom:1px solid var(--slate);
+  text-align:left;
+}
+.close .wrap{max-width:44rem}
+.close h2{max-width:24ch}
+
+/* ---------- footer ---------- */
+footer{padding:3rem 0 4rem;font-family:var(--mono);font-size:.72rem;color:var(--steel);line-height:1.9}
+footer a{color:var(--steel);text-decoration:none;border-bottom:1px solid var(--slate)}
+footer a:hover{color:var(--gold);border-color:var(--gold-dim)}
+.disclaimer{margin-top:1.25rem;max-width:60ch}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="wordmark">RationalPrince</div>
+    <div class="desk">Sovereign Desk</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+
+    <svg class="chart" viewBox="0 0 640 260" role="img" aria-labelledby="chartTitle chartDesc">
+      <title id="chartTitle">Strait of Hormuz traffic — navigational chart of the shipping lanes</title>
+      <desc id="chartDesc">The strait narrows to roughly 21 nautical miles at its tightest point, with inbound and outbound traffic lanes about two miles wide each, separated by a buffer zone under a traffic separation scheme.</desc>
+
+      <!-- Iran, north -->
+      <path class="land" d="M0,0 L640,0 L640,52 L556,60 L470,74 L392,72 L318,84 L250,80 L178,94 L96,88 L0,104 Z"/>
+
+      <!-- Musandam Peninsula, south -->
+      <path class="land" d="M0,260 L640,260 L640,196 L548,188 L470,200 L404,178 L352,164 L300,176 L232,190 L150,196 L64,214 L0,212 Z"/>
+      <text class="place" x="292" y="216">MUSANDAM · OMAN</text>
+
+      <!-- shipping lanes -->
+      <path class="lane" d="M20,124 C140,120 240,112 340,120 C440,128 540,120 624,116"/>
+      <path class="lane" d="M20,152 C140,148 240,140 340,148 C440,156 540,148 624,144"/>
+      <path class="lane-buffer" d="M20,138 C140,134 240,126 340,134 C440,142 540,134 624,130"/>
+
+      <text class="gold" x="20" y="112">INBOUND LANE</text>
+      <text class="gold" x="20" y="172">OUTBOUND LANE</text>
+
+      <!-- width callout -->
+      <line class="tick" x1="352" y1="86" x2="352" y2="164"/>
+      <line class="tick" x1="346" y1="86" x2="358" y2="86"/>
+      <line class="tick" x1="346" y1="164" x2="358" y2="164"/>
+      <text x="364" y="122">21 nm at the narrows</text>
+
+      <text x="20" y="244">Strait of Hormuz traffic · c. 20 million barrels per day</text>
+      <text x="480" y="244">c. 20% of global consumption</text>
+    </svg>
+
+    <h1>Two miles of water decide the price of <em>everything</em>.</h1>
+
+    <p class="standfirst">Every insurance desk in London prices this geography before breakfast. Most self-directed allocators have never looked at it once.</p>
+
+    <div class="buy">
+      <a class="btn" href="https://stan.store/rationalprince">Buy the playbook — $17</a>
+      <p class="price-note">Instant PDF download.<br>34 pages. No subscription.</p>
+    </div>
+
+  </div>
+</div>
+
+<hr class="rule">
+
+<section>
+  <div class="wrap">
+    <h2>Risk headlines are not a position.</h2>
+    <div class="narrow">
+      <p class="lede">You already know the strait matters. What you don't have is the part that turns a headline into a decision: what has to happen before you size in, what the second-order chain actually pays, and the specific level that tells you the thesis is wrong.</p>
+      <p class="lede">This playbook is that part. It was written the way a commodities desk writes an internal note — scenarios with probabilities attached, entry conditions, and an invalidation line on every trade.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Four scenarios, priced.</h2>
+    <p class="lede">Closure is the one everyone talks about and the least likely of the four. The money has historically been in the other three.</p>
+
+    <div class="scenarios">
+
+      <div class="scenario">
+        <div class="name">Harassment<span>Tanker seizures, GPS spoofing</span></div>
+        <p>The baseline state, not the exception. Freight and war-risk premiums move; the barrel barely notices. This is where the asymmetry usually sits, and where most retail positioning is pointed at the wrong instrument.</p>
+      </div>
+
+      <div class="scenario">
+        <div class="name">Mining<span>Partial lane denial</span></div>
+        <p>Sweeping takes weeks, insurance repricing takes hours. The trade is in the gap between those two clocks — and in the refiners who cannot substitute crude grades quickly.</p>
+      </div>
+
+      <div class="scenario">
+        <div class="name">Closure<span>Full transit halt</span></div>
+        <p>Low probability, high convexity, and the hardest to hold. Includes the bypass math: what East–West and Fujairah pipelines can actually absorb, and what they cannot.</p>
+      </div>
+
+      <div class="scenario">
+        <div class="name">De-escalation<span>The unhedged direction</span></div>
+        <p>The scenario nobody positions for and the one that has repeatedly cost the most. Where the crowded risk trade unwinds, and what to own on the other side of it.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section>
+  <div class="wrap">
+    <h2>What's in it.</h2>
+    <ul class="contents">
+      <li>The transit chain, from wellhead to refinery, with the chokepoints inside the chokepoint</li>
+      <li>Freight versus crude: why tanker day rates reprice on threat and the barrel reprices on delivery</li>
+      <li>War-risk insurance as a leading indicator, and where to read it without a Lloyd's terminal</li>
+      <li>Trigger levels and invalidation lines for each of the four scenarios</li>
+      <li>The bypass capacity table — pipeline routes, real throughput, and the shortfall</li>
+      <li>Instrument selection: which vehicles express each scenario, and the ones that quietly don't</li>
+      <li>Two historical case studies with entry, exit, and what the post-mortem showed</li>
+    </ul>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section>
+  <div class="wrap split">
+    <div>
+      <h3>Written for</h3>
+      <ul>
+        <li>Self-directed allocators running real size</li>
+        <li>Anyone who reads energy headlines and wants the mechanism underneath</li>
+        <li>Traders who want the freight and insurance leg, not just crude</li>
+        <li>People who prefer a stated invalidation to a confident narrative</li>
+      </ul>
+    </div>
+    <div class="no">
+      <h3>Not written for</h3>
+      <ul>
+        <li>Anyone looking for a signal to copy</li>
+        <li>Beginners who need position sizing explained first</li>
+        <li>Readers who want a geopolitical opinion piece</li>
+        <li>Anyone expecting a forecast with a date on it</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <h2>Seventeen dollars, and you stop guessing at the mechanism.</h2>
+    <p class="lede" style="margin-bottom:2.25rem">One read gives you a framework that survives the next headline, and the one after that. The strait isn't going anywhere.</p>
+    <div class="buy">
+      <a class="btn" href="https://stan.store/rationalprince">Buy the playbook — $17</a>
+      <p class="price-note">Instant PDF download.<br>Delivered to your email.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>RationalPrince · Think Rationally. Build Wealth.</div>
+    <div style="margin-top:.5rem"><a href="https://rationalprince.com">rationalprince.com</a></div>
+    <p class="disclaimer">Research and analysis published for informational purposes. Nothing here is investment advice, an offer, or a solicitation. Positions described are illustrative of a framework, not recommendations. You are responsible for your own decisions.</p>
+  </div>
+</footer>
+
+</body>
+</html>
