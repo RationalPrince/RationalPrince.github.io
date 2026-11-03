@@ -1,0 +1,30 @@
+# RationalPrince — Institutional Macro Research & Investor Desk Tools
+
+> RationalPrince publishes institutional-style research on energy, maritime chokepoints such as the Strait of Hormuz, and sovereign capital, plus desk tools for self-directed investors: AI research systems, portfolio trackers, planners and Notion dashboards. Products are sold outright through Gumroad and delivered instantly. Educational material only; not investment advice.
+
+## Key pages
+
+- [Home](https://rationalprince.com/): Store, flagship product, how purchasing works, and the Strait of Hormuz desk reference
+- [Home (Markdown)](https://rationalprince.com/index.md): Plain Markdown version of the homepage for agents
+- [Strait of Hormuz desk reference](https://rationalprince.com/#hormuz): Q&A on status, control, width, depth, transit counts and oil-price effects
+- [About](https://rationalprince.com/about): Who RationalPrince is and how the research is produced
+- [Contact](https://rationalprince.com/contact): How to reach RationalPrince
+- [Privacy](https://rationalprince.com/privacy): What data the site and its checkout partners collect
+
+## Products (Gumroad)
+
+- [The Sovereign Brief](https://rationalprince.gumroad.com/l/gndlgc): Free macro brief on energy, defense and sovereign capital (pay what you want, PDF)
+- [The Strait of Hormuz Playbook](https://rationalprince.gumroad.com/l/ejasp): $17 — disruption scenarios, winners and losers, signals to watch (PDF)
+- [Energy Trading Desk](https://rationalprince.gumroad.com/l/eqfyxq): $47 — how institutional desks read crude benchmarks, spreads, refining and shipping (PDF)
+- [AI Research Desk](https://rationalprince.gumroad.com/l/bhcki): $147 — flagship; run an institutional research workflow with AI (PDF + prompt library)
+- [The Wealth Planner](https://rationalprince.gumroad.com/l/wealth-planner): $14 — budget, net worth and debt payoff planner (printable PDF + GoodNotes)
+- [Investor AI Prompts](https://rationalprince.gumroad.com/l/investor-ai-prompts): $19 — 100 prompts for market research (PDF + Notion)
+- [Portfolio Tracker](https://rationalprince.gumroad.com/l/portfolio-tracker): $27 — Google Sheets investment dashboard
+- [Macro Research Dashboard](https://rationalprince.gumroad.com/l/srioej): $37 — Notion research terminal template
+- [Full Gumroad store](https://rationalprince.gumroad.com): All RationalPrince products
+
+## Optional
+
+- [Stan store](https://stan.store/rationalprince): Deeper volumes (Defense & Reconstruction Thesis, Sovereign Wealth Playbook) and the foundations track
+- [YouTube](https://www.youtube.com/@RationalPrinceHQ): Video briefs
+- [X](https://x.com/RationalPrince_): Daily commentary

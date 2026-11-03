@@ -1,0 +1,7 @@
+# robots.txt for rationalprince.com
+User-agent: *
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /files.zip
+
+Sitemap: https://rationalprince.com/sitemap.xml

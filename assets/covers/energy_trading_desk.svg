@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+<defs><radialGradient id="v" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#161b21"/><stop offset="1" stop-color="#07090c"/></radialGradient></defs>
+<rect width="1200" height="1200" fill="url(#v)"/>
+<rect x="44" y="44" width="1112" height="1112" fill="none" stroke="#8e7646" stroke-width="1.5"/>
+<text x="100" y="140" font-family="IBM Plex Mono,Menlo,monospace" font-size="30" fill="#c4a468" letter-spacing="3">ETD</text>
+<text x="1100" y="140" font-family="IBM Plex Mono,Menlo,monospace" font-size="30" fill="#ede6d8" text-anchor="end">$47</text>
+<line x1="100" y1="175" x2="1100" y2="175" stroke="#8e7646" stroke-width="1"/>
+<g opacity=".95"><line x1="170" y1="360" x2="1030" y2="360" stroke="#8e7646" stroke-width=".6" opacity=".6"/><line x1="170" y1="440" x2="1030" y2="440" stroke="#8e7646" stroke-width=".6" opacity=".6"/><line x1="170" y1="520" x2="1030" y2="520" stroke="#8e7646" stroke-width=".6" opacity=".6"/><line x1="170" y1="600" x2="1030" y2="600" stroke="#8e7646" stroke-width=".6" opacity=".6"/><line x1="170" y1="680" x2="1030" y2="680" stroke="#8e7646" stroke-width=".6" opacity=".6"/><rect x="180" y="660" width="30" height="40" fill="#8e7646" opacity=".55"/><rect x="266" y="630" width="30" height="70" fill="#8e7646" opacity=".55"/><rect x="352" y="645" width="30" height="55" fill="#8e7646" opacity=".55"/><rect x="438" y="610" width="30" height="90" fill="#8e7646" opacity=".55"/><rect x="524" y="580" width="30" height="120" fill="#8e7646" opacity=".55"/><rect x="610" y="600" width="30" height="100" fill="#8e7646" opacity=".55"/><rect x="696" y="560" width="30" height="140" fill="#8e7646" opacity=".55"/><rect x="782" y="530" width="30" height="170" fill="#8e7646" opacity=".55"/><rect x="868" y="550" width="30" height="150" fill="#8e7646" opacity=".55"/><rect x="954" y="510" width="30" height="190" fill="#8e7646" opacity=".55"/><path d="M170 490 L213 487 L256 485 L299 490 L342 505 L385 529 L428 561 L471 596 L514 629 L557 655 L600 671 L643 674 L686 664 L729 645 L772 621 L815 597 L858 579 L901 572 L944 576 L987 591 L1030 615" fill="none" stroke="#c4a468" stroke-width="2.4"/></g>
+<line x1="100" y1="790" x2="1100" y2="790" stroke="#8e7646" stroke-width="1"/>
+<text x="100" y="880" font-family="Cormorant Garamond,Georgia,serif" font-size="74" fill="#ede6d8">Energy Trading Desk</text>
+<text x="100" y="988" font-family="IBM Plex Sans,Helvetica,Arial,sans-serif" font-size="32" fill="#7d8590">How institutions trade energy structure</text>
+<text x="100" y="1110" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="34" fill="#c4a468">RationalPrince</text>
+<text x="1100" y="1110" font-family="IBM Plex Mono,Menlo,monospace" font-size="22" fill="#7d8590" text-anchor="end" letter-spacing="2">DESK SERIES</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+<defs><radialGradient id="v" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#161b21"/><stop offset="1" stop-color="#07090c"/></radialGradient></defs>
+<rect width="1200" height="1200" fill="url(#v)"/>
+<rect x="44" y="44" width="1112" height="1112" fill="none" stroke="#8e7646" stroke-width="1.5"/>
+<text x="100" y="140" font-family="IBM Plex Mono,Menlo,monospace" font-size="30" fill="#c4a468" letter-spacing="3">HRMZ</text>
+<text x="1100" y="140" font-family="IBM Plex Mono,Menlo,monospace" font-size="30" fill="#ede6d8" text-anchor="end">$17</text>
+<line x1="100" y1="175" x2="1100" y2="175" stroke="#8e7646" stroke-width="1"/>
+<g opacity=".95" transform="translate(600 500) scale(.84) translate(-600 -520)"><path d="M150 300 C300 320 380 420 470 440 C540 455 560 400 640 380 C760 350 850 300 1050 280" fill="none" stroke="#c4a468" stroke-width="1.6"/><path d="M150 760 C320 720 420 620 520 600 C600 585 650 640 740 640 C860 640 930 700 1050 720" fill="none" stroke="#c4a468" stroke-width="1.6"/><path d="M150 540 C350 540 450 515 600 515 C760 515 850 540 1050 540" fill="none" stroke="#ede6d8" stroke-width="1.4" stroke-dasharray="10 10"/><circle cx="600" cy="515" r="70" fill="none" stroke="#8e7646" stroke-width="1"/><circle cx="600" cy="515" r="5" fill="#c4a468"/></g>
+<line x1="100" y1="760" x2="1100" y2="760" stroke="#8e7646" stroke-width="1"/>
+<text x="100" y="850" font-family="Cormorant Garamond,Georgia,serif" font-size="74" fill="#ede6d8">The Strait of Hormuz</text><text x="100" y="928" font-family="Cormorant Garamond,Georgia,serif" font-size="74" fill="#ede6d8">Playbook</text>
+<text x="100" y="1036" font-family="IBM Plex Sans,Helvetica,Arial,sans-serif" font-size="32" fill="#7d8590">The chokepoint, fully mapped</text>
+<text x="100" y="1110" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="34" fill="#c4a468">RationalPrince</text>
+<text x="1100" y="1110" font-family="IBM Plex Mono,Menlo,monospace" font-size="22" fill="#7d8590" text-anchor="end" letter-spacing="2">DESK SERIES</text>
+</svg>
