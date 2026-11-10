@@ -11,6 +11,14 @@
 - [Contact](https://rationalprince.com/contact): How to reach RationalPrince
 - [Privacy](https://rationalprince.com/privacy): What data the site and its checkout partners collect
 
+## Research (free explainers)
+
+- [Research hub](https://rationalprince.com/research/): All free research from the desk
+- [Brent vs WTI: What Physical Flows and Geopolitics Reveal About the Spread](https://rationalprince.com/research/brent-vs-wti-spread/): Why Brent trades above WTI, what widens the Brent–WTI spread (Cushing, pipelines, exports, OPEC+, Hormuz risk) and how institutional desks trade it.
+- [Contango vs Backwardation: What the Oil Futures Curve Tells You](https://rationalprince.com/research/contango-vs-backwardation-oil/): Contango and backwardation explained for oil: cost of carry, convenience yield, calendar spreads, roll yield, the 2020 negative WTI price, and a desk checklist.
+- [Crack Spread Explained: How Refining Margins Signal Oil Demand](https://rationalprince.com/research/crack-spread-explained/): What the oil crack spread is, how to calculate the 3-2-1 crack with a worked example, gasoline vs diesel cracks, what moves refining margins and why investors watch it.
+- [What Is a Sovereign Wealth Fund? How State Capital Moves Markets](https://rationalprince.com/research/sovereign-wealth-funds-explained/): Sovereign wealth funds explained: how they are funded, the five types, the biggest funds (Norway, PIF, ADIA, KIA, QIA, CIC, GIC), and why oil prices move state capital.
+
 ## Products (Gumroad)
 
 - [The Sovereign Brief](https://rationalprince.gumroad.com/l/gndlgc): Free macro brief on energy, defense and sovereign capital (pay what you want, PDF)

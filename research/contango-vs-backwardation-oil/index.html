@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contango vs Backwardation in Oil: How to Read the Futures Curve</title>
+<meta name="description" content="Contango and backwardation explained for oil: cost of carry, convenience yield, calendar spreads, roll yield, the 2020 negative WTI price, and a desk checklist.">
+<link rel="canonical" href="https://rationalprince.com/research/contango-vs-backwardation-oil/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#07090c">
+<meta property="og:site_name" content="RationalPrince">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Contango vs Backwardation in Oil: How to Read the Futures Curve">
+<meta property="og:description" content="Contango and backwardation explained for oil: cost of carry, convenience yield, calendar spreads, roll yield, the 2020 negative WTI price, and a desk checklist.">
+<meta property="og:url" content="https://rationalprince.com/research/contango-vs-backwardation-oil/">
+<meta property="og:image" content="https://rationalprince.com/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@RationalPrince_">
+<link rel="describedby" type="text/markdown" href="/llms.txt">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/pages.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YGPK63N7G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YGPK63N7G7');</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Contango vs Backwardation: What the Oil Futures Curve Tells You", "description": "Contango and backwardation explained for oil: cost of carry, convenience yield, calendar spreads, roll yield, the 2020 negative WTI price, and a desk checklist.", "image": ["https://rationalprince.com/assets/og-default.png"], "datePublished": "2026-11-09", "dateModified": "2026-11-09", "wordCount": 1029, "articleSection": "Energy", "inLanguage": "en", "author": {"@type": "Person", "name": "Andy", "alternateName": "Rational Prince", "url": "https://rationalprince.com/about"}, "publisher": {"@type": "Organization", "name": "RationalPrince", "url": "https://rationalprince.com/", "logo": {"@type": "ImageObject", "url": "https://rationalprince.com/apple-touch-icon.png"}, "sameAs": ["https://x.com/RationalPrince_", "https://www.youtube.com/@RationalPrinceHQ", "https://www.facebook.com/RationalPrinceHQ", "https://www.linkedin.com/in/rationalprincehq", "https://www.threads.net/@rationalprince_", "https://www.tiktok.com/@rationalprince_"]}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://rationalprince.com/research/contango-vs-backwardation-oil/"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is contango in oil?", "acceptedAnswer": {"@type": "Answer", "text": "Contango is when later-dated oil futures trade above the nearest contract. It signals a well-supplied market where the forward premium pays for storage, financing and insurance."}}, {"@type": "Question", "name": "What is backwardation in oil?", "acceptedAnswer": {"@type": "Answer", "text": "Backwardation is when the nearest oil futures contract trades above later-dated contracts. It signals tight prompt supply and falling inventories, because buyers pay a premium for barrels now."}}, {"@type": "Question", "name": "Is backwardation bullish for oil?", "acceptedAnswer": {"@type": "Answer", "text": "Backwardation reflects current tightness and usually accompanies inventory draws, which is supportive for prices. It also gives long futures holders positive roll yield. It does not guarantee prices will rise, because the curve already prices in an expected easing."}}, {"@type": "Question", "name": "Why did WTI go negative in April 2020?", "acceptedAnswer": {"@type": "Answer", "text": "Demand collapsed during pandemic lockdowns and storage at Cushing, Oklahoma, the WTI delivery point, ran short. Holders of the expiring May 2020 contract had nowhere to put the oil, so on April 20 it settled at minus $37.63 a barrel."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rationalprince.com/"}, {"@type": "ListItem", "position": 2, "name": "Research", "item": "https://rationalprince.com/research/"}, {"@type": "ListItem", "position": 3, "name": "Contango vs Backwardation: What the Oil Futures Curve Tells You", "item": "https://rationalprince.com/research/contango-vs-backwardation-oil/"}]}]</script>
+</head>
+<body>
+<header class="site-head"><div class="wrap head-in">
+  <a class="brand" href="/" aria-label="RationalPrince home"><span class="brand-mark" aria-hidden="true">R</span><span class="brand-name">RationalPrince</span></a>
+  <ul class="menu">
+    <li><a href="/#shop">Shop</a></li>
+    <li><a href="/#hormuz">Hormuz reference</a></li>
+    <li><a href="/research/" aria-current="page">Research</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</div></header>
+<main class="wrap">
+<article class="page article">
+<nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/research/">Research</a> / Energy</nav>
+<h1>Contango vs Backwardation: What the Oil Futures Curve Tells You</h1>
+<p class="lead">The shape of the oil futures curve says more about the physical market than the headline price. Here is how desks read contango and backwardation.</p>
+<div class="byline"><span>By <a href="/about">Rational Prince</a></span><span><time datetime="2026-11-09">November 9, 2026</time></span><span>8 min read</span></div>
+
+<div class="prose">
+<p>Most people watch one oil price. Desks watch the whole curve. The shape of the futures curve, meaning how prices for delivery next month compare with prices six or twelve months out, tells you more about the physical balance of the market than the headline number does. The two shapes that matter are <strong>contango</strong> and <strong>backwardation</strong>.</p>
+
+<h2>The short definitions</h2>
+<p><strong>Contango</strong> is when later-dated futures trade above the nearest contract. Barrels for delivery in a year cost more than barrels for delivery next month.</p>
+<p><strong>Backwardation</strong> is the reverse: the nearest contract trades above later-dated ones. The market pays a premium to have oil now rather than later.</p>
+<p>Neither shape is good or bad on its own. Each is a reading of supply, demand and storage, and the reading changes how producers, refiners, traders and investors behave.</p>
+
+<h2>Why contango happens: the cost of carry</h2>
+<p>Holding physical oil costs money. You pay for tank space, financing and insurance. If the market is well supplied, a buyer who takes oil today has to carry those costs until the oil is used, so the forward price drifts above spot to compensate. That gap is the <em>carry</em>.</p>
+<p>Contango has a ceiling of sorts, called <em>full carry</em>. If the forward price rises above spot by more than the cost of storing and financing the barrel, a trader can buy spot oil, store it, sell it forward and lock in a profit. That trade, known as cash-and-carry, pulls barrels into storage until tanks fill up. When onshore tanks run out, traders charter tankers and store crude at sea. Floating storage is a reliable sign that the market is badly oversupplied.</p>
+<p>The extreme case came in April 2020. Pandemic lockdowns collapsed demand, storage at Cushing, Oklahoma, the delivery point for WTI futures, ran short, and on April 20 the expiring May WTI contract settled below zero, at minus $37.63 a barrel. Holders of the expiring contract had nowhere to put the oil, so they paid others to take it. That was contango with no storage left to absorb it.</p>
+
+<h2>Why backwardation happens: barrels now are worth more</h2>
+<p>When inventories are low, refiners and traders will pay up for prompt barrels because running short is more expensive than paying a premium. Economists call this the convenience yield: the value of having the physical commodity on hand. When the convenience yield is greater than the cost of carry, the curve tips into backwardation.</p>
+<p>Steep backwardation tells you three things at once:</p>
+<ul class="bul">
+<li>Inventories are being drawn down, not built.</li>
+<li>Nobody is paid to store oil, so barrels flow straight to refineries.</li>
+<li>The market expects today's tightness to ease over time, as new supply or demand destruction catches up.</li>
+</ul>
+
+<h2>How desks actually read the curve</h2>
+<p>Flat price mixes many things: the dollar, risk appetite, positioning and headlines. Calendar spreads strip most of that out and isolate the physical balance. These are the spreads that matter most:</p>
+<h3>Prompt spread (M1–M2)</h3>
+<p>The difference between the first and second contracts. This is the most sensitive gauge of near-term tightness and the first to react to an outage or a stock build.</p>
+<h3>Six-month spread (M1–M7)</h3>
+<p>Smooths out one-off delivery quirks and shows whether tightness or surplus is lasting.</p>
+<h3>December–December spread</h3>
+<p>Compares this year's December contract with next year's. Producers watch it because it reflects hedging conditions and the market's view of the next year's balance.</p>
+<p>Two further habits separate a desk read from a retail one. First, spreads are checked against inventory data. For WTI that means Cushing stocks in the weekly EIA report; for Brent, North Sea loadings and broader OECD stock estimates. A spread that moves without a matching inventory story deserves suspicion. Second, the Brent curve and the WTI curve are read together. When one is in backwardation and the other is not, the difference is usually about logistics, which we cover in <a class="inline" href="/research/brent-vs-wti-spread/">Brent vs WTI: what physical flows reveal about the spread</a>.</p>
+
+<h2>What curve shape means for investors</h2>
+<p>Curve shape is not just a trader's concern. It drives returns for anyone who holds oil exposure through futures, including most commodity funds and oil ETFs.</p>
+<p>A futures position has to be rolled before expiry: you sell the contract that is about to expire and buy the next one. In backwardation you sell the expiring contract high and buy the next contract cheaper, which adds return over time (positive roll yield). In contango you sell low and buy high, which drains return even if spot prices go nowhere (negative roll yield). This is why oil funds can lose money during long contango periods while spot prices barely move.</p>
+<p>Curve shape also shows up in equities. Producers can hedge future output at attractive prices when the back of the curve is strong. Storage owners and tanker operators benefit when steep contango creates demand for tank and ship space.</p>
+
+<h2>Supply shocks and the curve</h2>
+<p>A sudden loss of supply hits the front of the curve hardest, because the market needs barrels now and believes the disruption will eventually be resolved. Backwardation steepens fast, often faster than flat price moves. A chokepoint disruption is the textbook case: prompt barrels in the Atlantic Basin get bid up while deferred contracts rise far less. The <a class="inline" href="/#hormuz">Strait of Hormuz desk reference</a> covers the current situation in that passage, and <a class="inline" href="https://rationalprince.gumroad.com/l/ejasp?utm_source=rationalprince.com&amp;utm_medium=research&amp;utm_campaign=contango">The Strait of Hormuz Playbook</a> sets out disruption scenarios and the signals that move first.</p>
+
+<h2>A five-point curve checklist</h2>
+<ul class="bul">
+<li><strong>Shape:</strong> is the front of the curve in contango or backwardation, and has it changed this month?</li>
+<li><strong>Prompt spread:</strong> is M1–M2 widening or narrowing, and how fast?</li>
+<li><strong>Inventories:</strong> do weekly stock changes match what the spreads imply?</li>
+<li><strong>Cross-check:</strong> are Brent and WTI curves telling the same story?</li>
+<li><strong>Storage:</strong> any sign of floating storage or unusual tank demand?</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>Price tells you what oil costs. The curve tells you why. Contango says the market has more oil than it needs right now and is paying someone to store it. Backwardation says it needs barrels today and will pay for them. Read the spreads before the headline, and check them against inventories, and you will see shifts in the physical market before they show up in flat price.</p>
+
+</div>
+<section class="faq" aria-labelledby="faq-title">
+<h2 id="faq-title">Frequently asked questions</h2>
+<details class="faq-item"><summary>What is contango in oil?</summary><p>Contango is when later-dated oil futures trade above the nearest contract. It signals a well-supplied market where the forward premium pays for storage, financing and insurance.</p></details>
+<details class="faq-item"><summary>What is backwardation in oil?</summary><p>Backwardation is when the nearest oil futures contract trades above later-dated contracts. It signals tight prompt supply and falling inventories, because buyers pay a premium for barrels now.</p></details>
+<details class="faq-item"><summary>Is backwardation bullish for oil?</summary><p>Backwardation reflects current tightness and usually accompanies inventory draws, which is supportive for prices. It also gives long futures holders positive roll yield. It does not guarantee prices will rise, because the curve already prices in an expected easing.</p></details>
+<details class="faq-item"><summary>Why did WTI go negative in April 2020?</summary><p>Demand collapsed during pandemic lockdowns and storage at Cushing, Oklahoma, the WTI delivery point, ran short. Holders of the expiring May 2020 contract had nowhere to put the oil, so on April 20 it settled at minus $37.63 a barrel.</p></details>
+</section>
+<aside class="cta-box">
+<p class="kicker">From the desk</p>
+<h2>Energy Trading Desk</h2>
+<p>Benchmarks, curve structure, refining and shipping, the way an institutional desk reads them. $47, instant PDF.</p>
+<p class="cta-row"><a class="btn-gold" href="https://rationalprince.gumroad.com/l/eqfyxq?utm_source=rationalprince.com&amp;utm_medium=research&amp;utm_campaign=contango-vs-backwardation-oil">Get Energy Trading Desk</a> <a class="btn-line" href="https://rationalprince.gumroad.com/l/gndlgc?utm_source=rationalprince.com&amp;utm_medium=research&amp;utm_campaign=contango-vs-backwardation-oil">Free Sovereign Brief</a></p>
+</aside>
+<section class="related" aria-labelledby="rel-title">
+<h2 id="rel-title">More from the research desk</h2>
+<ul class="list">
+<li><a href="/research/brent-vs-wti-spread/"><span>Brent vs WTI</span><span>Energy</span></a></li>
+<li><a href="/research/crack-spread-explained/"><span>Crack Spread Explained</span><span>Energy</span></a></li>
+<li><a href="/research/sovereign-wealth-funds-explained/"><span>What Is a Sovereign Wealth Fund? How State Capital Moves Markets</span><span>Sovereign capital</span></a></li>
+<li><a href="/#hormuz"><span>Strait of Hormuz desk reference</span><span>Chokepoints</span></a></li>
+</ul>
+</section>
+<p class="updated">Educational material only, not investment advice. Last reviewed <time datetime="2026-11-09">November 9, 2026</time>.</p>
+</article>
+</main>
+<footer class="site-foot"><div class="wrap">
+  <div class="foot-in">
+    <a href="/">Home</a><a href="/#shop">Shop</a><a href="/research/">Research</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a>
+    <span>© 2026 RationalPrince</span>
+  </div>
+  <p class="legal" data-nosnippet>RationalPrince publishes research and educational material. Nothing here is investment, legal or tax advice, and nothing creates an advisory relationship.</p>
+</div></footer>
+</body>
+</html>

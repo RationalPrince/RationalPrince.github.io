@@ -33,3 +33,27 @@ ul.bul{padding-left:1.1em;margin:14px 0 0;color:var(--ivory-2)}ul.bul li{margin:
 .foot-in span{margin-left:auto}
 .legal{font-size:12.5px;color:#5d646d;max-width:80ch;margin:18px 0 0}
 @media (max-width:700px){.menu{gap:18px}.menu li:nth-child(-n+2){display:none}.menu a{white-space:nowrap}}
+/* research articles */
+.article{max-width:740px}
+.crumb{font-size:13px;color:var(--slate);margin:0 0 22px}.crumb a{color:var(--ivory-2)}.crumb a:hover{color:var(--gold)}
+.byline{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--slate);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:28px 0 0}
+.byline a{color:var(--ivory-2)}
+.hero-img{margin:32px 0 0}.hero-img img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+.prose h3{font-family:var(--sans);font-weight:500;font-size:16px;letter-spacing:.02em;color:var(--gold);margin:30px 0 0}
+.prose ul{padding-left:1.1em;margin:14px 0 0;color:var(--ivory-2)}.prose li{margin:8px 0}
+.prose strong{color:var(--ivory);font-weight:500}
+.prose a{color:var(--gold);border-bottom:1px solid var(--gold-deep)}.prose a:hover{color:var(--ivory)}
+.formula{font-family:var(--sans);font-weight:500;color:var(--ivory);background:var(--charcoal);border:1px solid var(--line-2);padding:14px 18px;overflow-x:auto}
+.faq{margin-top:12px}
+.faq-item{border-bottom:1px solid var(--line)}.faq-item:first-of-type{border-top:1px solid var(--line-2);margin-top:20px}
+.faq-item summary{cursor:pointer;padding:16px 0;font-family:var(--serif);font-size:21px;color:var(--ivory);list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}.faq-item summary::after{content:"+";float:right;color:var(--gold)}
+.faq-item[open] summary::after{content:"–"}.faq-item p{margin:0 0 18px}
+.cta-box{margin-top:56px;padding:28px;border:1px solid var(--gold-deep);background:var(--charcoal)}
+.cta-box h2{margin-top:0}.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn-gold,.btn-line{display:inline-block;font-size:14px;font-weight:500;padding:12px 20px;border:1px solid var(--gold)}
+.btn-gold{background:var(--gold);color:var(--midnight)}.btn-gold:hover{background:var(--ivory);border-color:var(--ivory)}
+.btn-line{color:var(--gold)}.btn-line:hover{color:var(--ivory);border-color:var(--ivory)}
+.related{margin-top:16px}
+@media (max-width:700px){.head-in{gap:16px}.brand-name{font-size:20px}.menu{gap:14px}.menu a{font-size:13px}}
+@media (max-width:430px){.menu li:nth-child(4){display:none}}

@@ -129,3 +129,10 @@ RationalPrince publishes research and educational material. Nothing here is inve
 - About: https://rationalprince.com/about
 - Contact: https://rationalprince.com/contact
 - Privacy: https://rationalprince.com/privacy
+
+## Free research
+
+- [Brent vs WTI: What Physical Flows and Geopolitics Reveal About the Spread](https://rationalprince.com/research/brent-vs-wti-spread/)
+- [Contango vs Backwardation: What the Oil Futures Curve Tells You](https://rationalprince.com/research/contango-vs-backwardation-oil/)
+- [Crack Spread Explained: How Refining Margins Signal Oil Demand](https://rationalprince.com/research/crack-spread-explained/)
+- [What Is a Sovereign Wealth Fund? How State Capital Moves Markets](https://rationalprince.com/research/sovereign-wealth-funds-explained/)
