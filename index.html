@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RationalPrince — Institutional Macro Research &amp; Investor Tools</title>
-<meta name="description" content="Institutional research on oil, energy and the Strait of Hormuz, plus investor desk tools: AI research system, portfolio tracker and Notion dashboard.">
+<title>RationalPrince — Energy Trading &amp; Strait of Hormuz Research</title>
+<meta name="description" content="Is the Strait of Hormuz open? Institutional oil and energy trading research, plus investor tools: portfolio tracker, net worth tracker, AI prompts.">
 <link rel="canonical" href="https://rationalprince.com/">
 <link rel="alternate" type="text/markdown" href="/index.md" title="Markdown version">
 <link rel="describedby" type="text/markdown" href="/llms.txt">
@@ -15,7 +15,12 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://rationalprince.com/">
 <meta property="og:image" content="https://rationalprince.com/assets/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RationalPrince — Institutional research, priced for the individual.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rationalprince.com/assets/og-default.png">
+<meta name="twitter:image:alt" content="RationalPrince — Institutional research, priced for the individual.">
 <meta name="twitter:site" content="@RationalPrince_">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -103,8 +108,8 @@ h3{font-size:clamp(22px,2vw,27px);line-height:1.18}
 .menu-toggle span{display:block;width:16px;height:1px;background:currentColor;margin:4px auto}
 
 /* ---------- hero ---------- */
-.hero{padding:clamp(56px,8vw,104px) 0 clamp(64px,8vw,112px);border-bottom:1px solid var(--line)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.04fr);gap:clamp(40px,5vw,72px);align-items:center}
+.hero{padding:clamp(48px,6.5vw,88px) 0 clamp(56px,7vw,96px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:clamp(40px,5vw,72px);align-items:center}
 .hero h1 span{display:block;color:var(--ivory-2)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
 .proof{display:flex;flex-wrap:wrap;gap:10px 28px;margin:40px 0 0;padding:0;list-style:none;font-size:14px;color:var(--slate)}
@@ -116,12 +121,11 @@ h3{font-size:clamp(22px,2vw,27px);line-height:1.18}
 .board-top{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--line)}
 .board-title{font-family:var(--mono);font-size:12px;color:var(--ivory-2)}
 .board-title b{color:var(--gold);font-weight:500}
-.live{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--slate)}
-.live i{width:7px;height:7px;border-radius:50%;background:#6fae7c;box-shadow:0 0 0 3px rgba(111,174,124,.15)}
+.board-note{font-family:var(--mono);font-size:12px;color:var(--slate)}
 .board-head,.quote{display:grid;grid-template-columns:76px minmax(0,1fr) 112px 76px;gap:14px;align-items:center;padding:0 20px}
 .board-head{height:36px;font-family:var(--mono);font-size:11px;color:var(--slate);border-bottom:1px solid var(--line)}
 .board-head span:last-child,.quote .price{text-align:right}
-.quote{min-height:52px;border-bottom:1px solid var(--line);font-size:14.5px;transition:background .15s}
+.quote{min-height:54px;border-bottom:1px solid var(--line);font-size:14.5px;transition:background .15s}
 .quote:last-child{border-bottom:0}
 .quote:hover{background:var(--charcoal-2)}
 .quote:hover .q-name{color:var(--gold)}
@@ -140,7 +144,7 @@ h3{font-size:clamp(22px,2vw,27px);line-height:1.18}
 
 /* ---------- sections ---------- */
 section{scroll-margin-top:84px}
-.sec{padding:clamp(72px,9vw,128px) 0}
+.sec{padding:clamp(56px,7vw,100px) 0}
 .sec + .sec{border-top:1px solid var(--line)}
 .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:clamp(36px,4vw,56px)}
 .sec-head .lead{margin-top:16px}
@@ -214,7 +218,7 @@ summary:hover{color:#fff}
 .answer a{color:var(--gold);border-bottom:1px solid var(--gold-deep)}
 .refnote{font-size:13px;color:var(--slate);margin:24px 0 0}
 
-/* Stan */
+/* link list */
 .more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;list-style:none;margin:0;padding:0;border-top:1px solid var(--line-2)}
 .more li a{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
 .more .n{font-family:var(--serif);font-size:21px;transition:color .15s}
@@ -241,27 +245,7 @@ summary:hover{color:#fff}
 
 /* ---------- responsive ---------- */
 
-/* ---------- cover showcase (hero) ---------- */
-.showcase{position:relative;aspect-ratio:1/1.02;max-width:560px;width:100%;justify-self:end}
-.sc{position:absolute;display:block;width:62%;aspect-ratio:1/1;background:var(--charcoal);border:1px solid var(--line-2);overflow:hidden;
-  box-shadow:0 30px 60px -24px rgba(0,0,0,.85),0 0 0 1px rgba(0,0,0,.4);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
-.sc img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
-.sc-back{top:0;left:0;transform:rotate(-4deg);filter:brightness(.62)}
-.sc-mid{top:6%;right:0;transform:rotate(3.5deg);filter:brightness(.78)}
-.sc-front{bottom:0;left:19%;width:66%;border-color:var(--gold-deep);z-index:2}
-.showcase:hover .sc-back{transform:rotate(-6deg) translate(-8px,-4px)}
-.showcase:hover .sc-mid{transform:rotate(5.5deg) translate(8px,-4px)}
-.sc:hover{filter:none}
-.sc-tag{position:absolute;z-index:3;right:-4px;bottom:9%;background:var(--midnight);border:1px solid var(--gold-deep);padding:12px 16px;display:grid;gap:2px;min-width:170px}
-.sc-tag span{font-size:12px;color:var(--gold)}
-.sc-tag strong{font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.15}
-.sc-tag em{font-style:normal;font-size:14px;color:var(--ivory-2)}
-
 /* ---------- board section ---------- */
-.board-sec{padding:clamp(56px,7vw,96px) 0 0}
-.board-sec .board-head,.board-sec .quote{grid-template-columns:40px 70px minmax(0,1fr) 150px 90px}
-.board-sec .quote{min-height:64px}
-.q-img{width:40px;height:40px;object-fit:cover;border:1px solid var(--line);background:var(--charcoal-2);color:transparent;font-size:0}
 
 /* ---------- card actions ---------- */
 .item-act{display:flex;align-items:center;gap:16px;margin-top:18px}
@@ -300,18 +284,10 @@ summary:hover{color:#fff}
 body.locked{overflow:hidden}
 
 @media (max-width:900px){
-  .showcase{justify-self:center;max-width:440px;margin-top:8px}
   .qv-in{grid-template-columns:1fr}
   .qv-media{border-right:0;border-bottom:1px solid var(--line);padding:16px}
   .qv-main{max-height:44vh;width:auto;margin:0 auto}
   .qv-close{position:fixed;top:28px;right:28px;z-index:2;background:rgba(7,9,12,.9)}
-}
-@media (max-width:560px){
-  .board-sec .board-head,.board-sec .quote{grid-template-columns:36px minmax(0,1fr) 62px;padding:0 14px}
-  .board-sec .q-sym{display:none}
-  .board-sec .board-head span:nth-child(2){display:none}
-  .q-img{width:36px;height:36px}
-  .sc-tag{right:0;min-width:0}
 }
 
 @media (max-width:1080px){
@@ -336,6 +312,34 @@ body.locked{overflow:hidden}
   .q-fmt,.board-head span:nth-child(3){display:none}
   .grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr}
+}
+/* ---------- standards band ---------- */
+.std{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--charcoal);padding:clamp(36px,4.5vw,56px) 0}
+.std-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.std-head h2{font-size:clamp(26px,2.6vw,32px);font-weight:400}
+.std-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:0;border-top:1px solid var(--line-2)}
+.std-grid > div{padding:22px 28px 0 0}
+.std-grid > div + div{padding-left:28px;border-left:1px solid var(--line)}
+.std-grid dt{font-family:var(--serif);font-weight:500;font-size:21px;line-height:1.2;color:var(--ivory)}
+.std-grid dd{margin:8px 0 0;font-size:14.5px;color:var(--ivory-2)}
+.std + .sec{border-top:0}
+@media (max-width:900px){
+  .std-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .std-grid > div:nth-child(odd){padding-left:0;border-left:0}
+  .std-grid > div:nth-child(n+3){margin-top:22px;border-top:1px solid var(--line)}
+}
+@media (max-width:560px){
+  .std-grid{grid-template-columns:1fr}
+  .std-grid > div,.std-grid > div + div{padding:18px 0 0;border-left:0}
+  .std-grid > div + div{margin-top:18px;border-top:1px solid var(--line)}
+  /* product cards: cover beside the text, so eight products fit in a few screens */
+  .item{display:grid;grid-template-columns:104px minmax(0,1fr);column-gap:16px;align-content:start}
+  .item-cover{grid-row:1 / span 4;align-self:start}
+  .item-cover::after{display:none}
+  .item-meta{margin-top:0}
+  .item h4{font-size:20px;margin-top:4px}
+  .item p{font-size:14px}
+  .grid{gap:32px 0}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
@@ -368,7 +372,7 @@ body.locked{overflow:hidden}
       <div>
         <p class="kicker">Think rationally. Build wealth.</p>
         <h1>Institutional research, <span>priced for the individual.</span></h1>
-        <p class="lead">Energy, chokepoints and sovereign capital, analyzed the way a desk analyzes them. Plus the tools to run your own: AI research systems, portfolio trackers and Notion dashboards.</p>
+        <p class="lead">Energy trading, the Strait of Hormuz and sovereign wealth funds, analyzed the way a desk analyzes them. Plus the tools to run your own: AI research systems, portfolio trackers and Notion dashboards.</p>
         <div class="hero-cta">
           <a class="btn btn-gold" href="#shop">Browse the store</a>
           <a class="btn" href="https://rationalprince.gumroad.com/l/gndlgc?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=hero_brief" data-item="sovereign_brief" data-price="0">Get the free brief</a>
@@ -380,37 +384,43 @@ body.locked{overflow:hidden}
         </ul>
       </div>
 
-      <div class="showcase" aria-label="Featured products">
-        <a class="sc sc-back" href="#shop" data-quick="energy_trading_desk" aria-label="Energy Trading Desk details"><img referrerpolicy="no-referrer" data-fallback="assets/covers/energy_trading_desk.svg" src="https://public-files.gumroad.com/ntqxgzpv0fphd4tl31ilg9rl2dmx" alt="Energy Trading Desk cover" width="520" height="520"></a>
-        <a class="sc sc-mid" href="#shop" data-quick="hormuz_playbook" aria-label="Strait of Hormuz Playbook details"><img referrerpolicy="no-referrer" data-fallback="assets/covers/hormuz_playbook.svg" src="https://public-files.gumroad.com/r45bux2s3ubp84s2ttgznt0lhy00" alt="The Strait of Hormuz Playbook cover" width="520" height="520"></a>
-        <a class="sc sc-front" href="#flagship" data-quick="ai_research_desk" aria-label="AI Research Desk details"><img referrerpolicy="no-referrer" data-fallback="assets/covers/ai_research_desk.svg" src="https://public-files.gumroad.com/1ohgxr27km0smwrl1pu4z3wyk0j4" alt="AI Research Desk cover" width="520" height="520"></a>
-        <div class="sc-tag"><span>Flagship</span><strong>AI Research Desk</strong><em class="price">$147</em></div>
+      <div class="board" role="region" aria-label="Product price board">
+        <div class="board-top">
+          <span class="board-title"><b>RPDK</b> Desk store</span>
+          <span class="board-note">Prices in USD</span>
+        </div>
+        <div class="board-head" aria-hidden="true"><span>Symbol</span><span>Product</span><span>Format</span><span>Price</span></div>
+        <div class="board-body">
+          <a class="quote" href="https://rationalprince.gumroad.com/l/gndlgc?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_brief" data-item="sovereign_brief" data-price="0"><span class="q-sym">BRIEF</span><span class="q-name">The Sovereign Brief</span><span class="q-fmt">PDF</span><span class="price free">Free</span></a>
+          <a class="quote" href="https://rationalprince.gumroad.com/l/ejasp?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_hormuz" data-item="hormuz_playbook" data-price="17"><span class="q-sym">HRMZ</span><span class="q-name">Hormuz Playbook</span><span class="q-fmt">PDF</span><span class="price">17.00</span></a>
+          <a class="quote" href="https://rationalprince.gumroad.com/l/eqfyxq?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_energy" data-item="energy_trading_desk" data-price="47"><span class="q-sym">ETD</span><span class="q-name">Energy Trading Desk</span><span class="q-fmt">PDF</span><span class="price">47.00</span></a>
+          <a class="quote" href="https://rationalprince.gumroad.com/l/bhcki?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_ai_desk" data-item="ai_research_desk" data-price="147"><span class="q-sym">AIRD</span><span class="q-name">AI Research Desk</span><span class="q-fmt">PDF + prompts</span><span class="price">147.00</span></a>
+          <a class="quote" href="https://rationalprince.gumroad.com/l/wealth-planner?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_planner" data-item="wealth_planner" data-price="14"><span class="q-sym">WLTH</span><span class="q-name">The Wealth Planner</span><span class="q-fmt">PDF + GoodNotes</span><span class="price">14.00</span></a>
+          <a class="quote" href="https://rationalprince.gumroad.com/l/investor-ai-prompts?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_prompts" data-item="investor_ai_prompts" data-price="19"><span class="q-sym">PRMT</span><span class="q-name">Investor AI Prompts</span><span class="q-fmt">PDF + Notion</span><span class="price">19.00</span></a>
+          <a class="quote" href="https://rationalprince.gumroad.com/l/portfolio-tracker?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_tracker" data-item="portfolio_tracker" data-price="27"><span class="q-sym">PTRK</span><span class="q-name">Portfolio Tracker</span><span class="q-fmt">Sheets / Excel</span><span class="price">27.00</span></a>
+          <a class="quote" href="https://rationalprince.gumroad.com/l/srioej?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_dashboard" data-item="macro_dashboard" data-price="37"><span class="q-sym">MRD</span><span class="q-name">Macro Dashboard</span><span class="q-fmt">Notion</span><span class="price">37.00</span></a>
+        </div>
+        <div class="board-foot"><span>Select a row to buy</span><span>Checkout by Gumroad</span></div>
       </div>
     </div>
   </section>
 
-  <section class="board-sec" aria-label="Product price board">
-    <div class="wrap">
-      <div class="board" role="region" aria-label="Product price board">
-        <div class="board-top">
-          <span class="board-title"><b>RPDK</b> &lt;GO&gt; Desk store</span>
-          <span class="live"><i></i>Open</span>
-        </div>
-        <div class="board-head" aria-hidden="true"><span></span><span>Symbol</span><span>Product</span><span>Format</span><span>Price</span></div>
-        <div class="board-body">
-          <a class="quote" href="https://rationalprince.gumroad.com/l/gndlgc?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_brief" data-item="sovereign_brief" data-price="0"><img referrerpolicy="no-referrer" data-fallback="assets/covers/sovereign_brief.svg" class="q-img" src="https://public-files.gumroad.com/5dan7tvczu5z1545bn8vju2ew3qb" alt="" width="40" height="40" loading="lazy"><span class="q-sym">BRIEF</span><span class="q-name">The Sovereign Brief</span><span class="q-fmt">PDF</span><span class="price free">Free</span></a>
-          <a class="quote" href="https://rationalprince.gumroad.com/l/ejasp?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_hormuz" data-item="hormuz_playbook" data-price="17"><img referrerpolicy="no-referrer" data-fallback="assets/covers/hormuz_playbook.svg" class="q-img" src="https://public-files.gumroad.com/r45bux2s3ubp84s2ttgznt0lhy00" alt="" width="40" height="40" loading="lazy"><span class="q-sym">HRMZ</span><span class="q-name">Hormuz Playbook</span><span class="q-fmt">PDF</span><span class="price">17.00</span></a>
-          <a class="quote" href="https://rationalprince.gumroad.com/l/eqfyxq?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_energy" data-item="energy_trading_desk" data-price="47"><img referrerpolicy="no-referrer" data-fallback="assets/covers/energy_trading_desk.svg" class="q-img" src="https://public-files.gumroad.com/ntqxgzpv0fphd4tl31ilg9rl2dmx" alt="" width="40" height="40" loading="lazy"><span class="q-sym">ETD</span><span class="q-name">Energy Trading Desk</span><span class="q-fmt">PDF</span><span class="price">47.00</span></a>
-          <a class="quote" href="https://rationalprince.gumroad.com/l/bhcki?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_ai_desk" data-item="ai_research_desk" data-price="147"><img referrerpolicy="no-referrer" data-fallback="assets/covers/ai_research_desk.svg" class="q-img" src="https://public-files.gumroad.com/1ohgxr27km0smwrl1pu4z3wyk0j4" alt="" width="40" height="40" loading="lazy"><span class="q-sym">AIRD</span><span class="q-name">AI Research Desk</span><span class="q-fmt">PDF + prompts</span><span class="price">147.00</span></a>
-          <a class="quote" href="https://rationalprince.gumroad.com/l/wealth-planner?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_planner" data-item="wealth_planner" data-price="14"><img referrerpolicy="no-referrer" data-fallback="assets/covers/wealth_planner.svg" class="q-img" src="https://public-files.gumroad.com/gkrz0h3vew40gkbx0txhqg952gic" alt="" width="40" height="40" loading="lazy"><span class="q-sym">WLTH</span><span class="q-name">The Wealth Planner</span><span class="q-fmt">PDF planner</span><span class="price">14.00</span></a>
-          <a class="quote" href="https://rationalprince.gumroad.com/l/investor-ai-prompts?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_prompts" data-item="investor_ai_prompts" data-price="19"><img referrerpolicy="no-referrer" data-fallback="assets/covers/investor_ai_prompts.svg" class="q-img" src="https://public-files.gumroad.com/eym848y5nzndm4ekoutt08eso76e" alt="" width="40" height="40" loading="lazy"><span class="q-sym">PRMT</span><span class="q-name">Investor AI Prompts</span><span class="q-fmt">PDF + Notion</span><span class="price">19.00</span></a>
-          <a class="quote" href="https://rationalprince.gumroad.com/l/portfolio-tracker?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_tracker" data-item="portfolio_tracker" data-price="27"><img referrerpolicy="no-referrer" data-fallback="assets/covers/portfolio_tracker.svg" class="q-img" src="https://public-files.gumroad.com/v50n0t0oybzhknxxrtum7ubbkcoy" alt="" width="40" height="40" loading="lazy"><span class="q-sym">PTRK</span><span class="q-name">Portfolio Tracker</span><span class="q-fmt">Google Sheets</span><span class="price">27.00</span></a>
-          <a class="quote" href="https://rationalprince.gumroad.com/l/srioej?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=board_dashboard" data-item="macro_dashboard" data-price="37"><img referrerpolicy="no-referrer" data-fallback="assets/covers/macro_dashboard.svg" class="q-img" src="https://public-files.gumroad.com/doyqwm6rnx7f8vnu2g5z9gk7yrbp" alt="" width="40" height="40" loading="lazy"><span class="q-sym">MRD</span><span class="q-name">Macro Dashboard</span><span class="q-fmt">Notion</span><span class="price">37.00</span></a>
-        </div>
-        <div class="board-foot"><span>Prices in USD</span><span>Select a row to buy</span></div>
+  <section class="std" aria-labelledby="std-title">
+    <div class="wrap std-in">
+      <div class="std-head">
+        <h2 id="std-title">How the work is made</h2>
+        <a class="link-btn" href="/about">About the desk</a>
       </div>
+      <dl class="std-grid">
+        <div><dt>Frameworks over predictions</dt><dd>Scenarios and checklists you can reuse, with the assumptions stated plainly.</dd></div>
+        <div><dt>Sources where figures matter</dt><dd>Numbers are cited, and every product teaches you to verify before you act.</dd></div>
+        <div><dt>Sold outright</dt><dd>One price, paid once through Gumroad. No subscription and no signal group.</dd></div>
+        <div><dt>Research, not advice</dt><dd>RationalPrince is not an investment adviser. Nothing here is a recommendation to buy or sell.</dd></div>
+      </dl>
     </div>
   </section>
+
+
 
   <section class="sec" id="flagship" aria-labelledby="flag-title">
     <div class="wrap flag">
@@ -455,28 +465,28 @@ body.locked{overflow:hidden}
         <div class="group-title"><h3>Research</h3><p>The frameworks institutions use to read energy and geopolitics.</p></div>
         <div class="grid">
           <article class="item">
-            <a class="item-cover" href="https://rationalprince.gumroad.com/l/gndlgc?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_brief" data-quick="sovereign_brief" aria-label="View details"><img referrerpolicy="no-referrer" data-fallback="assets/covers/sovereign_brief.svg" src="https://public-files.gumroad.com/5dan7tvczu5z1545bn8vju2ew3qb" alt="" width="400" height="400" loading="lazy"></a>
+            <a class="item-cover" href="https://rationalprince.gumroad.com/l/gndlgc?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_brief" data-quick="sovereign_brief" aria-label="View details: The Sovereign Brief"><img referrerpolicy="no-referrer" data-fallback="assets/covers/sovereign_brief.svg" src="https://public-files.gumroad.com/5dan7tvczu5z1545bn8vju2ew3qb" alt="The Sovereign Brief cover" width="400" height="400" loading="lazy"></a>
             <div class="item-meta"><span class="item-fmt">PDF</span><span class="price free">Free</span></div>
             <h4>The Sovereign Brief</h4>
             <p>The macro forces shaping energy, defense and sovereign capital, and where retail misreads the risk.</p>
             <div class="item-act"><a class="btn btn-sm" href="https://rationalprince.gumroad.com/l/gndlgc?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_brief" data-item="sovereign_brief" data-price="0">Get it free</a><button class="link-btn" type="button" data-quick="sovereign_brief">Details</button></div>
           </article>
           <article class="item">
-            <a class="item-cover" href="https://rationalprince.gumroad.com/l/ejasp?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_hormuz" data-quick="hormuz_playbook" aria-label="View details"><img referrerpolicy="no-referrer" data-fallback="assets/covers/hormuz_playbook.svg" src="https://public-files.gumroad.com/r45bux2s3ubp84s2ttgznt0lhy00" alt="" width="400" height="400" loading="lazy"></a>
+            <a class="item-cover" href="https://rationalprince.gumroad.com/l/ejasp?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_hormuz" data-quick="hormuz_playbook" aria-label="View details: The Strait of Hormuz Playbook"><img referrerpolicy="no-referrer" data-fallback="assets/covers/hormuz_playbook.svg" src="https://public-files.gumroad.com/r45bux2s3ubp84s2ttgznt0lhy00" alt="The Strait of Hormuz Playbook cover" width="400" height="400" loading="lazy"></a>
             <div class="item-meta"><span class="item-fmt">PDF</span><span class="price">$17</span></div>
             <h4>The Strait of Hormuz Playbook</h4>
             <p>Disruption scenarios from harassment to full closure, who wins and loses, and the signals that move first.</p>
             <div class="item-act"><a class="btn btn-sm" href="https://rationalprince.gumroad.com/l/ejasp?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_hormuz" data-item="hormuz_playbook" data-price="17">Buy for $17</a><button class="link-btn" type="button" data-quick="hormuz_playbook">Details</button></div>
           </article>
           <article class="item">
-            <a class="item-cover" href="https://rationalprince.gumroad.com/l/eqfyxq?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_energy" data-quick="energy_trading_desk" aria-label="View details"><img referrerpolicy="no-referrer" data-fallback="assets/covers/energy_trading_desk.svg" src="https://public-files.gumroad.com/ntqxgzpv0fphd4tl31ilg9rl2dmx" alt="" width="400" height="400" loading="lazy"></a>
+            <a class="item-cover" href="https://rationalprince.gumroad.com/l/eqfyxq?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_energy" data-quick="energy_trading_desk" aria-label="View details: Energy Trading Desk"><img referrerpolicy="no-referrer" data-fallback="assets/covers/energy_trading_desk.svg" src="https://public-files.gumroad.com/ntqxgzpv0fphd4tl31ilg9rl2dmx" alt="Energy Trading Desk cover" width="400" height="400" loading="lazy"></a>
             <div class="item-meta"><span class="item-fmt">PDF</span><span class="price">$47</span></div>
             <h4>Energy Trading Desk</h4>
-            <p>Benchmarks, spreads, refining and shipping: how a desk builds an energy thesis from structure, not headlines.</p>
+            <p>Energy trading explained through benchmarks, spreads, refining and shipping: how a desk builds a thesis from structure, not headlines.</p>
             <div class="item-act"><a class="btn btn-sm" href="https://rationalprince.gumroad.com/l/eqfyxq?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_energy" data-item="energy_trading_desk" data-price="47">Buy for $47</a><button class="link-btn" type="button" data-quick="energy_trading_desk">Details</button></div>
           </article>
           <article class="item">
-            <a class="item-cover" href="https://rationalprince.gumroad.com/l/bhcki?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_ai_desk" data-quick="ai_research_desk" aria-label="View details"><img referrerpolicy="no-referrer" data-fallback="assets/covers/ai_research_desk.svg" src="https://public-files.gumroad.com/1ohgxr27km0smwrl1pu4z3wyk0j4" alt="" width="400" height="400" loading="lazy"></a>
+            <a class="item-cover" href="https://rationalprince.gumroad.com/l/bhcki?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_ai_desk" data-quick="ai_research_desk" aria-label="View details: AI Research Desk"><img referrerpolicy="no-referrer" data-fallback="assets/covers/ai_research_desk.svg" src="https://public-files.gumroad.com/1ohgxr27km0smwrl1pu4z3wyk0j4" alt="AI Research Desk cover" width="400" height="400" loading="lazy"></a>
             <div class="item-meta"><span class="item-fmt">PDF + prompt library</span><span class="price">$147</span></div>
             <h4>AI Research Desk</h4>
             <p>Run an institutional research workflow yourself, with AI doing the scanning and you doing the judging.</p>
@@ -489,31 +499,31 @@ body.locked{overflow:hidden}
         <div class="group-title"><h3>Desk tools</h3><p>Templates and trackers to apply the research to your own capital.</p></div>
         <div class="grid">
           <article class="item">
-            <a class="item-cover" href="https://rationalprince.gumroad.com/l/wealth-planner?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_planner" data-quick="wealth_planner" aria-label="View details"><img referrerpolicy="no-referrer" data-fallback="assets/covers/wealth_planner.svg" src="https://public-files.gumroad.com/gkrz0h3vew40gkbx0txhqg952gic" alt="" width="400" height="400" loading="lazy"></a>
-            <div class="item-meta"><span class="item-fmt">Printable + GoodNotes</span><span class="price">$14</span></div>
+            <a class="item-cover" href="https://rationalprince.gumroad.com/l/wealth-planner?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_planner" data-quick="wealth_planner" aria-label="View details: The Wealth Planner"><img referrerpolicy="no-referrer" data-fallback="assets/covers/wealth_planner.svg" src="https://public-files.gumroad.com/gkrz0h3vew40gkbx0txhqg952gic" alt="The Wealth Planner cover" width="400" height="400" loading="lazy"></a>
+            <div class="item-meta"><span class="item-fmt">Printable PDF + GoodNotes</span><span class="price">$14</span></div>
             <h4>The Wealth Planner</h4>
-            <p>Budget, net worth, debt payoff (snowball and avalanche), savings goals and an annual review.</p>
+            <p>Budget planner, net worth tracker and debt payoff planner (snowball and avalanche), plus savings goals and an annual review.</p>
             <div class="item-act"><a class="btn btn-sm" href="https://rationalprince.gumroad.com/l/wealth-planner?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_planner" data-item="wealth_planner" data-price="14">Buy for $14</a><button class="link-btn" type="button" data-quick="wealth_planner">Details</button></div>
           </article>
           <article class="item">
-            <a class="item-cover" href="https://rationalprince.gumroad.com/l/investor-ai-prompts?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_prompts" data-quick="investor_ai_prompts" aria-label="View details"><img referrerpolicy="no-referrer" data-fallback="assets/covers/investor_ai_prompts.svg" src="https://public-files.gumroad.com/eym848y5nzndm4ekoutt08eso76e" alt="" width="400" height="400" loading="lazy"></a>
+            <a class="item-cover" href="https://rationalprince.gumroad.com/l/investor-ai-prompts?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_prompts" data-quick="investor_ai_prompts" aria-label="View details: Investor AI Prompts"><img referrerpolicy="no-referrer" data-fallback="assets/covers/investor_ai_prompts.svg" src="https://public-files.gumroad.com/eym848y5nzndm4ekoutt08eso76e" alt="Investor AI Prompts cover" width="400" height="400" loading="lazy"></a>
             <div class="item-meta"><span class="item-fmt">PDF + Notion</span><span class="price">$19</span></div>
             <h4>Investor AI Prompts</h4>
-            <p>100 copy-paste prompts for stock deep-dives, earnings, macro briefs and thesis stress tests.</p>
+            <p>100 copy-paste AI prompts for investing: stock deep-dives, earnings, macro briefs and thesis stress tests.</p>
             <div class="item-act"><a class="btn btn-sm" href="https://rationalprince.gumroad.com/l/investor-ai-prompts?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_prompts" data-item="investor_ai_prompts" data-price="19">Buy for $19</a><button class="link-btn" type="button" data-quick="investor_ai_prompts">Details</button></div>
           </article>
           <article class="item">
-            <a class="item-cover" href="https://rationalprince.gumroad.com/l/portfolio-tracker?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_tracker" data-quick="portfolio_tracker" aria-label="View details"><img referrerpolicy="no-referrer" data-fallback="assets/covers/portfolio_tracker.svg" src="https://public-files.gumroad.com/v50n0t0oybzhknxxrtum7ubbkcoy" alt="" width="400" height="400" loading="lazy"></a>
+            <a class="item-cover" href="https://rationalprince.gumroad.com/l/portfolio-tracker?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_tracker" data-quick="portfolio_tracker" aria-label="View details: Portfolio Tracker"><img referrerpolicy="no-referrer" data-fallback="assets/covers/portfolio_tracker.svg" src="https://public-files.gumroad.com/v50n0t0oybzhknxxrtum7ubbkcoy" alt="Portfolio Tracker cover" width="400" height="400" loading="lazy"></a>
             <div class="item-meta"><span class="item-fmt">Google Sheets / Excel</span><span class="price">$27</span></div>
             <h4>Portfolio Tracker</h4>
-            <p>Live prices, allocation, dividends and P&amp;L on one screen. No bank linking; your data stays yours.</p>
+            <p>A stock portfolio tracker for Google Sheets: live prices, allocation, dividends and P&amp;L on one screen. No bank linking.</p>
             <div class="item-act"><a class="btn btn-sm" href="https://rationalprince.gumroad.com/l/portfolio-tracker?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_tracker" data-item="portfolio_tracker" data-price="27">Buy for $27</a><button class="link-btn" type="button" data-quick="portfolio_tracker">Details</button></div>
           </article>
           <article class="item">
-            <a class="item-cover" href="https://rationalprince.gumroad.com/l/srioej?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_dashboard" data-quick="macro_dashboard" aria-label="View details"><img referrerpolicy="no-referrer" data-fallback="assets/covers/macro_dashboard.svg" src="https://public-files.gumroad.com/doyqwm6rnx7f8vnu2g5z9gk7yrbp" alt="" width="400" height="400" loading="lazy"></a>
+            <a class="item-cover" href="https://rationalprince.gumroad.com/l/srioej?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_dashboard" data-quick="macro_dashboard" aria-label="View details: Macro Research Dashboard"><img referrerpolicy="no-referrer" data-fallback="assets/covers/macro_dashboard.svg" src="https://public-files.gumroad.com/doyqwm6rnx7f8vnu2g5z9gk7yrbp" alt="Macro Research Dashboard cover" width="400" height="400" loading="lazy"></a>
             <div class="item-meta"><span class="item-fmt">Notion template</span><span class="price">$37</span></div>
             <h4>Macro Research Dashboard</h4>
-            <p>A thesis database, thematic watchlists, macro calendar and trade journal in one Notion workspace.</p>
+            <p>A Notion macro research dashboard: thesis database, thematic watchlists, macro calendar and trade journal.</p>
             <div class="item-act"><a class="btn btn-sm" href="https://rationalprince.gumroad.com/l/srioej?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=g_dashboard" data-item="macro_dashboard" data-price="37">Buy for $37</a><button class="link-btn" type="button" data-quick="macro_dashboard">Details</button></div>
           </article>
         </div>
@@ -543,7 +553,7 @@ body.locked{overflow:hidden}
       <div class="ref-side">
         <p class="kicker">Desk reference</p>
         <h2 id="hormuz-title">Is the Strait of Hormuz open?</h2>
-        <p class="lead">The questions people are searching, answered with the part most coverage leaves out: what each answer does to price.</p>
+        <p class="lead">Who owns the Strait of Hormuz, how wide it is, whether it is open or closed: the questions people are searching, answered with the part most coverage leaves out, what each answer does to the oil price.</p>
         <nav class="qindex" aria-label="Hormuz questions">
       <a href="#is-the-strait-of-hormuz-open">Is it open?</a>
       <a href="#is-the-strait-of-hormuz-still-closed">Still closed?</a>
@@ -557,7 +567,7 @@ body.locked{overflow:hidden}
       <a href="#when-will-the-strait-of-hormuz-open">When it reopens</a>
     </nav>
         <div class="ref-cta">
-          <img referrerpolicy="no-referrer" data-fallback="assets/covers/hormuz_playbook.svg" src="https://public-files.gumroad.com/r45bux2s3ubp84s2ttgznt0lhy00" alt="" width="72" height="72" loading="lazy">
+          <img referrerpolicy="no-referrer" data-fallback="assets/covers/hormuz_playbook.svg" src="https://public-files.gumroad.com/r45bux2s3ubp84s2ttgznt0lhy00" alt="The Strait of Hormuz Playbook cover" width="72" height="72" loading="lazy">
           <div>
             <p><strong>The Strait of Hormuz Playbook</strong>The full framework: scenarios, bypass arithmetic and what reprices first.</p>
             <a class="btn btn-sm btn-gold" href="https://rationalprince.gumroad.com/l/ejasp?wanted=true&amp;utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=ref_cta" data-item="hormuz_playbook" data-price="17">Buy the Playbook for $17</a>
@@ -676,41 +686,20 @@ body.locked{overflow:hidden}
       <div class="sec-head">
         <div>
           <p class="kicker">Free research</p>
-          <h2 id="research-title">Explainers from the research desk.</h2>
+          <h2 id="research-title">Oil market explainers from the research desk.</h2>
           <p class="lead">How institutional desks read oil spreads, futures curves, refining margins and sovereign capital. Free to read.</p>
         </div>
         <a class="btn" href="/research/">All research</a>
       </div>
       <ul class="more">
-        <li><a href="/research/brent-vs-wti-spread/"><span class="n">Brent vs WTI</span><span class="price">Energy</span></a></li>
+        <li><a href="/research/brent-vs-wti-spread/"><span class="n">Brent vs WTI Crude Oil</span><span class="price">Energy</span></a></li>
         <li><a href="/research/contango-vs-backwardation-oil/"><span class="n">Contango vs Backwardation</span><span class="price">Energy</span></a></li>
-        <li><a href="/research/crack-spread-explained/"><span class="n">Crack Spread Explained</span><span class="price">Energy</span></a></li>
-        <li><a href="/research/sovereign-wealth-funds-explained/"><span class="n">What Is a Sovereign Wealth Fund? How State Capital Moves Markets</span><span class="price">Sovereign capital</span></a></li>
+        <li><a href="/research/crack-spread-explained/"><span class="n">The 3-2-1 Crack Spread Explained</span><span class="price">Energy</span></a></li>
+        <li><a href="/research/sovereign-wealth-funds-explained/"><span class="n">What Is a Sovereign Wealth Fund?</span><span class="price">Sovereign capital</span></a></li>
       </ul>
     </div>
   </section>
 
-  <section class="sec" id="more" aria-labelledby="more-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <p class="kicker">Also from the desk</p>
-          <h2 id="more-title">Deeper volumes and the foundations track.</h2>
-          <p class="lead">These titles are sold through the RationalPrince Stan store.</p>
-        </div>
-        <a class="btn" href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=more_all">Open the Stan store</a>
-      </div>
-      <ul class="more">
-        <li><a href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=s_vol2"><span class="n">Defense &amp; Reconstruction Thesis, Vol. II</span><span class="price">$97</span></a></li>
-        <li><a href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=s_vol3"><span class="n">Sovereign Wealth Playbook, Vol. III</span><span class="price">$297</span></a></li>
-        <li><a href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=s_systems"><span class="n">The 5 Capital Systems</span><span class="price">$10</span></a></li>
-        <li><a href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=s_gap"><span class="n">Wealth Gap Tracker</span><span class="price">$17</span></a></li>
-        <li><a href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=s_foundations"><span class="n">Capital Foundations</span><span class="price">$27</span></a></li>
-        <li><a href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=s_zero"><span class="n">From Zero to First Position</span><span class="price">$37</span></a></li>
-        <li><a href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=s_masterclass"><span class="n">The Wealth Blueprint Masterclass</span><span class="price">$97</span></a></li>
-      </ul>
-    </div>
-  </section>
 
   <section class="sec" id="brief" aria-labelledby="brief-title">
     <div class="wrap">
@@ -743,7 +732,6 @@ body.locked{overflow:hidden}
           <li><a href="#shop">All products</a></li>
           <li><a href="#flagship">AI Research Desk</a></li>
           <li><a href="https://rationalprince.gumroad.com?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=footer" data-gumroad-overlay-checkout="false">Gumroad store</a></li>
-          <li><a href="https://stan.store/rationalprince?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=footer">Stan store</a></li>
         </ul>
       </div>
       <div>
@@ -754,12 +742,12 @@ body.locked{overflow:hidden}
           <li><a href="/privacy">Privacy</a></li>
           <li><a href="/research/">Research</a></li>
           <li><a href="#hormuz">Hormuz reference</a></li>
-          <li><a href="https://www.youtube.com/@RationalPrinceHQ" rel="noopener">YouTube</a></li>
         </ul>
       </div>
       <div>
         <h5>Follow</h5>
         <ul>
+          <li><a href="https://www.youtube.com/@RationalPrinceHQ" rel="noopener">YouTube</a></li>
           <li><a href="https://x.com/RationalPrince_" rel="noopener">X</a></li>
           <li><a href="https://www.linkedin.com/in/rationalprincehq" rel="noopener">LinkedIn</a></li>
           <li><a href="https://www.facebook.com/RationalPrinceHQ" rel="noopener">Facebook</a></li>
@@ -804,7 +792,7 @@ body.locked{overflow:hidden}
 </script>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"RationalPrince","url":"https://rationalprince.com/","slogan":"Think rationally. Build wealth.","sameAs":["https://x.com/RationalPrince_","https://www.youtube.com/@RationalPrinceHQ","https://www.facebook.com/RationalPrinceHQ","https://www.linkedin.com/in/rationalprincehq","https://www.threads.net/@rationalprince_","https://www.tiktok.com/@rationalprince_","https://rationalprince.gumroad.com","https://stan.store/rationalprince"]}
+{"@context":"https://schema.org","@type":"Organization","name":"RationalPrince","url":"https://rationalprince.com/","slogan":"Think rationally. Build wealth.","sameAs":["https://x.com/RationalPrince_","https://www.youtube.com/@RationalPrinceHQ","https://www.facebook.com/RationalPrinceHQ","https://www.linkedin.com/in/rationalprincehq","https://www.threads.net/@rationalprince_","https://www.tiktok.com/@rationalprince_","https://rationalprince.gumroad.com"]}
 </script>
 
 <dialog class="qv" id="qv" aria-labelledby="qv-title">
@@ -822,7 +810,7 @@ body.locked{overflow:hidden}
       <ul id="qv-list"></ul>
       <div class="qv-buy">
         <span class="price" id="qv-price"></span>
-        <a class="btn btn-gold" id="qv-cta" href="#">Buy now</a>
+        <a class="btn btn-gold" id="qv-cta" href="https://rationalprince.gumroad.com/?utm_source=rationalprince.com&amp;utm_medium=site&amp;utm_campaign=qv_fallback">Buy now</a>
       </div>
       <p class="qv-note">Instant download. Secure checkout by Gumroad.</p>
     </div>
@@ -854,14 +842,14 @@ body.locked{overflow:hidden}
   menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ menu.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }); });
 
   /* analytics */
-  document.querySelectorAll('a[href*="stan.store/rationalprince"], a[href*="gumroad.com"]').forEach(function(a){
+  document.querySelectorAll('a[href*="gumroad.com"]').forEach(function(a){
     a.setAttribute('rel','noopener');
     a.addEventListener('click', function(){
       if (typeof gtag !== 'function') return;
       var m = a.href.match(/utm_campaign=([a-z0-9_]+)/);
       var isG = a.href.indexOf('gumroad.com') > -1;
       var item = { item_id: a.dataset.item || (m ? m[1] : 'unknown'), item_name: a.dataset.item || '', price: Number(a.dataset.price || 0) };
-      gtag('event','select_item',{ item_list_name: isG ? 'gumroad' : 'stan_store', items:[item], placement: m ? m[1] : '' });
+      gtag('event','select_item',{ item_list_name: 'gumroad', items:[item], placement: m ? m[1] : '' });
       if (isG && a.dataset.item) gtag('event','begin_checkout',{ currency:'USD', value:item.price, items:[item] });
     });
   });
@@ -951,7 +939,7 @@ body.locked{overflow:hidden}
 
   /* active section in header */
   var links = document.querySelectorAll('.menu a');
-  var secs = [].map.call(links, function(a){ return document.querySelector(a.getAttribute('href')); });
+  var secs = [].map.call(links, function(a){ var h = a.getAttribute('href') || ''; return h.charAt(0) === '#' ? document.querySelector(h) : null; });
   if ('IntersectionObserver' in window){
     var io = new IntersectionObserver(function(es){
       es.forEach(function(e){ if (!e.isIntersecting) return; var i = secs.indexOf(e.target);
