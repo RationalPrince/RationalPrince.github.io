@@ -30,18 +30,6 @@ Energy, chokepoints and sovereign capital, analyzed the way a desk analyzes them
 2. Pay once through Gumroad. No subscription, no account required.
 3. Download instantly. Files arrive by email and stay in your Gumroad library.
 
-## Also from the desk (Stan store)
-
-- Defense & Reconstruction Thesis, Vol. II — $97
-- Sovereign Wealth Playbook, Vol. III — $297
-- The 5 Capital Systems — $10
-- Wealth Gap Tracker — $17
-- Capital Foundations — $27
-- From Zero to First Position — $37
-- The Wealth Blueprint Masterclass — $97
-
-All at https://stan.store/rationalprince
-
 ## Desk reference: Is the Strait of Hormuz open?
 
 Reference current to mid-August 2026. Sources are cited in full in the Playbook.
